@@ -2,7 +2,10 @@ import React from "react";
 import { Link } from 'react-router-dom'
 import SectionTitle from "../SectionTitle/SectionTitle";
 import Services from "../../api/Services";
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 
 
@@ -14,39 +17,31 @@ const ServiceSection = (props) => {
 
     const { SectionTitleShow = true, ServiceAllBtn = true } = props
 
-    const settings = {
-        dots: true,
-        autoplay: true,
-        infinite: true,
-        arrows: false,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1199,
-                settings: {
-                    slidesToShow: 2,
-                }
+    const swiperParams = {
+        modules: [Pagination, Autoplay],
+        spaceBetween: 30,
+        slidesPerView: 3,
+        autoplay: {
+            delay: 30000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            clickable: true,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
             },
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                    dots: true,
-                    arrows: false,
-                }
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
             },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    dots: true,
-                    arrows: false,
-                }
-            }
-
-        ]
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
     };
 
 
@@ -69,26 +64,28 @@ const ServiceSection = (props) => {
                 </div>
             </div>
             <div className="container-fluid g-0">
-                <Slider {...settings} className="service-slider">
+                <Swiper {...swiperParams} className="service-slider">
                     {Services.map((service, item) => (
-                        <div className="service-card" key={item}>
-                            {service.isCommingSoon && (
-                                <span className="coming-soon-badge">Coming Soon</span>
-                            )}
-                            <img className="image " src={service.image} alt="" />
-                            <div className="content">
-                                <service.Icon />
-                                <div className="text">
-                                    <h2><Link to={`/service-single/${service.slug}`} onClick={ClickHandler}>{service.title}</Link></h2>
-                                    <p className="">{service.subtitle}</p>
-                                    <Link to={`/service-single/${service.slug}`} onClick={ClickHandler} className="service-single-link">
-                                        <i className="flaticon-right-arrow"></i>
-                                    </Link>
+                        <SwiperSlide key={item}>
+                            <div className="service-card">
+                                {service.isCommingSoon && (
+                                    <span className="coming-soon-badge">Coming Soon</span>
+                                )}
+                                <img className="image " src={service.image} alt="" />
+                                <div className="content">
+                                    <service.Icon />
+                                    <div className="text">
+                                        <h2><Link to={`/service-single/${service.slug}`} onClick={ClickHandler}>{service.title}</Link></h2>
+                                        <p className="">{service.subtitle}</p>
+                                        <Link to={`/service-single/${service.slug}`} onClick={ClickHandler} className="service-single-link">
+                                            <i className="flaticon-right-arrow"></i>
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </SwiperSlide>
                     ))}
-                </Slider>
+                </Swiper>
             </div>
 
         </div>
