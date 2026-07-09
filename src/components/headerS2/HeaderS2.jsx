@@ -7,8 +7,7 @@ import { totalPrice } from "../../utils";
 
 // ✅ redux toolkit action
 import { removeFromCart } from "../../store/slices/cartSlice";
-
-
+import LogoLight from '../../images/logo-light.png'
 
 const Header = (props) => {
     const ClickHandler = () => window.scrollTo(10, 0);
@@ -26,7 +25,7 @@ const Header = (props) => {
                             <div className="col-lg-2 col-md-6 col-6">
                                 <div className="navbar-header">
                                     <Link onClick={ClickHandler} className="navbar-brand" to="/home">
-                                        <img className="" src={'src/images/logo-light.png'} width="100" height="90" alt="logo" />
+                                        <img className="" src={LogoLight} width="100" height="90" alt="logo" />
                                     </Link>
                                 </div>
                             </div>
