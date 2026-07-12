@@ -8,12 +8,26 @@ import Ab21 from '../../images/about-shape.svg'
 import Ab22 from '../../images/homepage/aboutS2Left.png'
 import Ab23 from '../../images/about/profile.jpg'
 import Ab24 from '../../images/about/signature.png'
-import Ab25 from '../../images/about/ab7.png'
+import Ab25 from '../../images/homepage/delivery-man.jpeg'
 
 const aboutS2 = () => {
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
+
+        const scrollToServices = (e) => {
+        e.preventDefault();
+        const scroll = () => {
+            const el = document.getElementById('services');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        };
+        if (location.pathname === '/' || location.pathname === '/home' || location.pathname === '/home-2') {
+            scroll();
+        } else {
+            navigate('/home');
+            setTimeout(scroll, 300);
+        }
+    };
 
     return (
         <section className="wpo-about-section-s2">
@@ -65,25 +79,17 @@ const aboutS2 = () => {
 
                             <div className="about-btn">
                                 <div className="btn-1">
-                                    <Link onClick={ClickHandler} to="/about" className="theme-btn">Explore more about <i
+                                    <Link onClick={scrollToServices} to={'#services'} className="theme-btn">Explore more about <i
                                         className="ti-angle-right"></i></Link>
                                 </div>
-                                <div className="author">
-                                    <div className="image">
-                                        <img src={Ab23} alt="" />
-                                    </div>
-                                    <div className="text">
-                                        <img src={Ab24} alt="" />
-                                        <span>Ceo & Founder</span>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="right-img">
-                <img src={Ab25} alt="" />
+                <img src={Ab25} alt="" width={240} height={324}  />
             </div>
         </section>
     );

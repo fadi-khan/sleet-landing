@@ -46,7 +46,7 @@ const ServiceSection = (props) => {
 
 
     return (
-        <div className={"" + props.hclass}>
+        <div id="services" className={"" + props.hclass}>
             <div className="container">
                 <div className="row align-items-end">
                     <div className="col-lg-7 col-12">
@@ -57,7 +57,7 @@ const ServiceSection = (props) => {
                     <div className="col-lg-5 col-12">
                         {ServiceAllBtn && (
                             <div className="service-all-btn">
-                                <Link onClick={ClickHandler} to="/services" className="theme-btn">All Services</Link>
+                                <Link onClick={ClickHandler} to="/contact" className="theme-btn">Contact Us</Link>
                             </div>
                         )}
                     </div>

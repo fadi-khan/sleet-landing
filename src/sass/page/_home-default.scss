@@ -2698,6 +2698,10 @@
 .wpo-map-section {
     .wpo-map {
         height: 410px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.08);
+        position: relative;
     }
 
     iframe {
@@ -2705,7 +2709,12 @@
         height: 100%;
         border: 0;
         outline: 0;
-        filter: grayscale(100%);
+        filter: grayscale(85%) contrast(0.92) brightness(1.03);
+        transition: filter .3s ease-in-out;
+    }
+
+    .wpo-map:hover iframe {
+        filter: grayscale(35%) contrast(1) brightness(1);
     }
 
     h2.hidden {

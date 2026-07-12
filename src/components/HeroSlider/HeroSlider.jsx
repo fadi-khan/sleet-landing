@@ -43,14 +43,14 @@ const HeroSlider = () => {
                         <div className="container">
                             <div className="content">
                                 <h2 className="animated" data-animation-in="fadeInUp">Sleet</h2>
-                                <h3 className="animated" data-animation-in="fadeInUp">Future of Smart Logistics</h3>
+                                <h3 className="animated" data-animation-in="fadeInUp">The Future of Smart Logistics Starts with Sleet</h3>
                                 <p className="animated" data-animation-in="fadeInUp">Sleet Automation Logistics is an all-in-one logistics technology platform that combines intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace to help businesses move faster, operate smarter, and scale with confidence.</p>
                                 <div className="hero-btn animated d-flex gap-4" data-animation-in="fadeInUp">
                                     <div className="btn-1">
-                                        <Link onClick={ClickHandler} to="/about" className="theme-btn">Get Started</Link>
+                                        <Link onClick={ClickHandler} to="/contact" className="theme-btn">Get Started</Link>
                                     </div>
-                                    <Link onClick={ClickHandler} to="/about" className="hero-btn text-info fs-5 fw-bold ">
-                                        <span className='text-decoration-underline'>Learn More</span> <i className="ti-angle-right"></i>
+                                    <Link onClick={ClickHandler} to="/contact" className="hero-btn text-info fs-5 fw-bold ">
+                                        <span className='text-decoration-underline'>Book a Demo</span> <i className="ti-angle-right"></i>
                                     </Link>
                                 </div>
                             </div>

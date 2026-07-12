@@ -7,13 +7,13 @@ import CtaSection from '../../components/CtaSection/CtaSection';
 import MapSection from '../../components/MapSection/MapSection';
 import FooterS2 from '../../components/FooterS2/FooterS2';
 import Scrollbar from '../../components/scrollbar/scrollbar';
-import Logo from '../../images/logo.svg'
+import Logo from '../../images/logo.png'
 import MyForm from '../../components/GetTouchSection/MyForm';
 
 const FaqPage = () => {
     return (
         <Fragment>
-            <HeaderTop />
+            {/* <HeaderTop /> */}
             <Navbar hclass={'wpo-site-header'} Logo={Logo} />
             <PageTitle pageTitle={'Internation Logistics'} pagesub={'Faq'} />
             <FaqSection hclass={'wpo-faq-section section-padding'} />

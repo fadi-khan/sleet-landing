@@ -12,10 +12,10 @@ const CtaSection = (props) => {
             <div className="container">
                 <div className="cta-wrapr">
                     <div className="wpo-section-title">
-                        <h2>Trusted transport service</h2>
-                        <h3>Transport & Logistics
-                            proejcts that we providde</h3>
-                        <Link onClick={ClickHandler} to="/contact" className="theme-btn">Contact support</Link>
+                        <h2>Ready to transform your logistics operations?</h2>
+                        <h3>Join businesses embracing
+                            smarter logistics with Sleet</h3>
+                        <Link onClick={ClickHandler} to="/contact" className="theme-btn">Request a Demo</Link>
                     </div>
                     <div className="contact-info">
                         <div className="item">

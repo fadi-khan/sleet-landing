@@ -13,10 +13,12 @@ const ServiceSidebar = (props) => {
         <div className="service-sidebar">
             <div className="service-catagory">
                 <ul>
-                    {Services.slice(0, 5).map((serves, index) => (
+                    {Services.map((serves, index) => (
                         <li key={index}>
-                            <Link to={`/service-single/${serves.slug}`}  onClick={ClickHandler}>{serves.title} <i
-                                className="flaticon-right-arrow-1"></i></Link>
+                            <Link to={`/service-single/${serves.slug}`}  onClick={ClickHandler}>
+                                <span>{serves.title}{serves.isCommingSoon && <span className="soon-tag">Soon</span>}</span>
+                                <i className="flaticon-right-arrow-1"></i>
+                            </Link>
                         </li>
                     ))}
                 </ul>
@@ -30,7 +32,7 @@ const ServiceSidebar = (props) => {
                     Provider?</h2>
                 <span>Call anytime</span>
                 <div className="num">
-                    <span>+(2) 871 382 023</span>
+                    <span>+(966) 592344447</span>
                 </div>
             </div>
         </div>

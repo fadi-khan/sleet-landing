@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import HeaderTopS2 from '../HeaderTopS2/HeaderTopS2'
 import { useDispatch, useSelector } from "react-redux";
@@ -11,6 +11,22 @@ import LogoLight from '../../images/logo-light.png'
 
 const Header = (props) => {
     const ClickHandler = () => window.scrollTo(10, 0);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const scrollToServices = (e) => {
+        e.preventDefault();
+        const scroll = () => {
+            const el = document.getElementById('services');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        };
+        if (location.pathname === '/' || location.pathname === '/home' || location.pathname === '/home-2') {
+            scroll();
+        } else {
+            navigate('/home');
+            setTimeout(scroll, 300);
+        }
+    };
 
     return (
         <header id="header" className='wpo-site-header-s2'>
@@ -38,15 +54,15 @@ const Header = (props) => {
                                             <Link onClick={ClickHandler} to="/home">Home</Link>
                                         
                                         </li>
+                                        
                                         <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} to="/about">About</Link>
+                                            <Link onClick={scrollToServices} to="/home#services">services </Link>
+
+                                        </li>
+                                        <li className="menu-item-has-children">
+                                            <Link onClick={ClickHandler} to="/faq">FAQ</Link>
                                           
                                         </li>
-                                        <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} to="/services">services </Link>
-                                            
-                                        </li>
-                                       
                                         
                                         <li><Link onClick={ClickHandler} to="/contact">Contact</Link></li>
                                     </ul>

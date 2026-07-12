@@ -21,6 +21,10 @@ import Scrollbar from '../../components/scrollbar/scrollbar';
 import Logo from '../../images/logo-2.svg'
 import ServiceSection from '../../components/ServiceSection/ServiceSection';
 import HeroSlider from '../../components/HeroSlider/HeroSlider';
+import AboutSleetSection from '../../components/AboutSleetSection/AboutSleetSection';
+import WhyChooseSection from '../../components/WhyChooseSection/WhyChooseSection';
+import IndustriesSection from '../../components/IndustriesSection/IndustriesSection';
+import VisionSection from '../../components/VisionSection/VisionSection';
 
 const HomePage2 = () => {
     return (
@@ -30,11 +34,15 @@ const HomePage2 = () => {
             <FunFactS2 hclass={'wpo-funfact-section-s2 section-padding'} />
 
             <ServiceSection hclass={"wpo-service-section section-padding"} SectionTitleShow={true} ServiceBtn={true} />
+            <AboutSleetSection />
             <AboutS2 />
+            <WhyChooseSection />
             <ProcessSectionS2 hclass={'wpo-process-section-s2'} />
             <FeaturesSectionS2 hclass={'wpo-features-section-s2'} />
+            <IndustriesSection />
             {/* <ProjectTestimonialSection /> */}
             {/* <PartnersSection CollClass={'wpo-partner-section-s2 section-padding'} /> */}
+            <VisionSection />
             <FaqSection hclass={'wpo-faq-section section-padding'} />
             <GetTouchSection hclass={'wpo-get-touch-section section-padding'} />
             <MapSection />

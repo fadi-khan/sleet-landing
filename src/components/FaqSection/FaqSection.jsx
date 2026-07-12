@@ -5,7 +5,7 @@ const FaqSection = (props) => {
     return (
         <section className={"" +props.hclass}>
             <div className="container">
-                <div className="row align-items-center">
+                <div className="row align-items-start">
                     <div className="col-lg-6 col-12">
                         <div className="faq-left-content">
                             <div className="wpo-section-title">

@@ -22,8 +22,7 @@ const Contactpage = () => {
                                     </div>
                                     <div className="office-info-text">
                                         <h2>address line</h2>
-                                        <p>Bowery St, New York, 37 USA
-                                            <br /> NY 10013,USA</p>
+                                        <p>Street 1b, Al Khaleej road, Al Muhammadiyah, Dammam</p>
                                     </div>
                                 </div>
                             </div>
@@ -36,8 +35,7 @@ const Contactpage = () => {
                                     </div>
                                     <div className="office-info-text">
                                         <h2>Phone Number</h2>
-                                        <p>+1255 - 568 - 6523 4374-221 <br />
-                                            +1255 - 568 - 6523</p>
+                                        <p>+966 59 234 4447</p>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +48,7 @@ const Contactpage = () => {
                                     </div>
                                     <div className="office-info-text">
                                         <h2>Address</h2>
-                                        <p>contact@logistika.com <br /> info@logistika.com</p>
+                                        <p>sleetlogistics@gmail.com</p>
                                     </div>
                                 </div>
                             </div>

@@ -5,7 +5,7 @@
     z-index: 9999;
     height: 100vh;
     width: 300px;
-    background: #006e5e;
+    background: #064058;
     transition: all 0.3s ease 0s;
     box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
     overflow-x: auto;
@@ -13,7 +13,7 @@
 }
 
 .responsivemenu .card-body {
-    background: #1A1729;
+    background: #0B3742;
 }
 
 .mobileMenu h2 {
@@ -41,13 +41,21 @@
 .responsivemenu li p,
 .responsivemenu ul {
     display: block;
-    padding: 10px 35px;
-    font-size: 13px;
+    padding: 14px 35px;
+    font-size: 14px;
     letter-spacing: 0;
     text-transform: capitalize;
-    font-weight: 500;
+    font-weight: 600;
     color: #fff;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.responsivemenu li a:hover,
+.responsivemenu li a.active {
+    color: #04cfe6ad;
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .responsivemenu li p {

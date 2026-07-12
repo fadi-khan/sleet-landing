@@ -6,11 +6,14 @@ import Simg2 from '../images/homepage/service2.jpg'
 import Simg3 from '../images/homepage/service3.png'
 import Simg4 from '../images/homepage/service4.png'
 
+import sassBanner from '../images/homepage/sass-banner.jpg'
+
 const Services = [
     {
         id: 1,
         image: Simg1,
         simag: Simg1,
+        banner: Simg1,
         Icon: FaTruck,
         subtitle: 'Our Fleet Management Solution For Your Business ',
         title: 'Sleet Logistics',
@@ -33,6 +36,7 @@ const Services = [
         id: 2,
         image: Simg2,
         simag: Simg2,
+        banner: Simg2,
         Icon: FaCloud,
         subtitle: 'Your Fleet. Your Brand. Our Technology.',
         title: 'Sleet SaaS',
@@ -56,6 +60,7 @@ const Services = [
         id: 3,
         image: Simg3,
         simag: Simg3,
+        banner: Simg3,
         Icon: FaTaxi,
         subtitle: 'The Uber for Trucks',
         title: 'Sleet TNC',
@@ -78,12 +83,39 @@ const Services = [
         id: 4,
         image: Simg4,
         simag: Simg4,
+        banner: Simg4,
         Icon: FaRobot,
         subtitle: 'Your Intelligent Logistics Assistant',
         title: 'Sleet AI',
         isCommingSoon: true,
         description: 'Sleet AI transforms operational data into meaningful insights with the power of artificial intelligence. Simply describe what you need in plain language, and Sleet AI will analyze your logistics data, generate reports, summarize operations, and provide actionable recommendations.',
-        slug: 'sleet-ai'
+        slug: 'sleet-ai',
+        features: [
+            'Natural Language Queries',
+            'Automatic Report Generation',
+            'Operational Insights',
+            'Predictive Analytics',
+            'Fleet Performance Analysis',
+            'Cost Optimization Suggestions',
+            'Driver Performance Reports',
+            'Custom Dashboard Analytics'
+        ],
+        sampleQuestions: [
+            "Generate this month's fuel consumption report.",
+            'Compare driver performance for the last 90 days.',
+            'Create a PDF report of delayed deliveries.',
+            "Export today's completed trips to Excel."
+        ],
+        outputFormats: [
+            'PDF',
+            'Microsoft Word',
+            'Excel',
+            'CSV',
+            'Charts & Graphs',
+            'Business Summaries',
+            'Executive Reports'
+        ],
+        note: 'Simply describe what you need in plain language, and Sleet AI will analyze your logistics data, generate reports, summarize operations, and provide actionable recommendations.'
     }
 ];
 export default Services;
