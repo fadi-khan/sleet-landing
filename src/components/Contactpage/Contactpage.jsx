@@ -1,6 +1,6 @@
 import React from 'react';
 import ContactForm from '../ContactFrom/ContactForm'
-import Img01 from '../../images/contact-left-img.jpg'
+import Img01 from '../../images/homepage/get-in-touch.jpeg'
 
 
 
@@ -48,7 +48,7 @@ const Contactpage = () => {
                                     </div>
                                     <div className="office-info-text">
                                         <h2>Address</h2>
-                                        <p>mohammad@sleet.sa</p>
+                                        <p><a href="mailto:mohammad@sleet.sa" target="_blank" rel="noopener noreferrer">mohammad@sleet.sa</a></p>
                                     </div>
                                 </div>
                             </div>

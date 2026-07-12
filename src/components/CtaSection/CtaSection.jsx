@@ -33,7 +33,7 @@ const CtaSection = (props) => {
                             </div>
                             <div className="text">
                                 <span>Send Us Email</span>
-                                <p>mohammad@sleet.sa</p>
+                                <p><a href="mailto:mohammad@sleet.sa" target="_blank" rel="noopener noreferrer">mohammad@sleet.sa</a></p>
                             </div>
                         </div>
                     </div>

@@ -32,7 +32,7 @@ const ServiceSidebar = (props) => {
                     Provider?</h2>
                 <span>Call anytime</span>
                 <div className="num">
-                    <span>+(966) 592344447</span>
+                    <span>+966 53 775 0600</span>
                 </div>
             </div>
         </div>

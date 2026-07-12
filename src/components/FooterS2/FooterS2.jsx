@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import SimpleReactValidator from 'simple-react-validator';
 
 import logo from '../../images/logo-light.png'
-import Fbg from '../../images/footer-bg-s2.jpg'
 
 import Img1 from '../../images/banck/1.png'
 import Img2 from '../../images/banck/2.png'
@@ -59,13 +58,8 @@ const FooterS2 = () => {
                                 </div>
                                 <p>Street 1b, Al Khaleej road, Al Muhammadiyah,
                                     Dammam</p>
-                                <h4>Opening Hours</h4>
                                 <ul>
-                                    <li>9.30am – 6.30pm</li>
-                                    <li>Monday to Friday</li>
-                                </ul>
-                                <ul>
-                                    <li>mohammad@sleet.sa</li>
+                                    <li><a href="mailto:mohammad@sleet.sa" target="_blank" rel="noopener noreferrer">mohammad@sleet.sa</a></li>
                                     <li>+966 53 775 0600</li>
                                 </ul>
                             </div>
@@ -88,8 +82,6 @@ const FooterS2 = () => {
                                     <h3>Useful links</h3>
                                 </div>
                                 <ul>
-                                    <li><Link onClick={ClickHandler} to="/about">How it Works</Link></li>
-                                    <li><Link onClick={ClickHandler} to="/services">Help Link</Link></li>
                                     <li><Link onClick={ClickHandler} to="/contact">Terms & Conditions</Link></li>
                                     <li><Link onClick={ClickHandler} to="/contact">Contact Us</Link></li>
                                     <li><Link onClick={ClickHandler} to="/contact">Privacy Policy</Link></li>
@@ -158,9 +150,6 @@ const FooterS2 = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-image">
-                <img src={Fbg} alt="" />
             </div>
             <div className="shape">
                 <svg width="191" height="208" viewBox="0 0 191 208" fill="none">

@@ -10,7 +10,7 @@ const HeaderTop = () => {
                     <div className="col-lg-5 col-12">
                         <ul className="contact-info">
                             <li>
-                                <i className="ti-email"></i><span>mohammad@sleet.sa</span>
+                                <a href="mailto:mohammad@sleet.sa" target="_blank" rel="noopener noreferrer"><i className="ti-email"></i><span>mohammad@sleet.sa</span></a>
                             </li>
                             <li>
                                 <a href="tel:+966537750600">

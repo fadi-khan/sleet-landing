@@ -97,7 +97,7 @@ const Footer = (props) => {
                                                 </defs>
                                             </svg>
                                         </div>
-                                        <span>mohammad@sleet.sa</span>
+                                        <a href="mailto:mohammad@sleet.sa" target="_blank" rel="noopener noreferrer"><span>mohammad@sleet.sa</span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -137,7 +137,7 @@ const Footer = (props) => {
                                     Dammam</p>
                                 <ul>
                                     <li>Contact</li>
-                                    <li>mohammad@sleet.sa</li>
+                                    <li><a href="mailto:mohammad@sleet.sa" target="_blank" rel="noopener noreferrer">mohammad@sleet.sa</a></li>
                                     <li>+966 53 775 0600</li>
                                 </ul>
                             </div>
