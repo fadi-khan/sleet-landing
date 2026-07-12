@@ -74,7 +74,7 @@ const Header = (props) => {
                                     {/* CART */}
                                     
                                     <div className="close-form">
-                                        <Link onClick={ClickHandler} className="theme-btn" to="/contact">Get Started</Link>
+                                        <Link className="theme-btn" to="https://app.sleet.sa/login" target="_blank">Get Started</Link>
                                     </div>
                                 </div>
                             </div>

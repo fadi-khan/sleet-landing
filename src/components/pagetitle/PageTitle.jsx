@@ -5,10 +5,10 @@ const PageTitle = (props) => {
     return (
         <section
             className="wpo-breadcumb-area"
-            style={{ backgroundImage: `url(${Slider1}) cover`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            style={{ backgroundImage: `url(${Slider1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
             <div className="container">
-                <div className="row">
+                <div className="row text-center">
                     <div className="col col-xs-12">
                         <div className="wpo-breadcumb-wrap">
                             <h2>{props.pageTitle}</h2>

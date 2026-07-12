@@ -77,7 +77,7 @@ const FooterS2 = () => {
                                 </div>
                                 <ul>
                                     {Services.slice(0, 5).map((service, item) => (
-                                        <li key={item}><Link onClick={ClickHandler} to={`/services-single/${service.slug}`}>{service.title}</Link></li>
+                                        <li key={item}><Link onClick={ClickHandler} to={`/service-single/${service.slug}`}>{service.title}</Link></li>
                                     ))}
                                 </ul>
                             </div>
@@ -143,7 +143,7 @@ const FooterS2 = () => {
                             </div>
                         </div>
                         <div className="col col-lg-6 col-12">
-                            <p className="copyright"> &copy; 2026 <Link onClick={ClickHandler} to="/home">wpOcean</Link> - Logistics service. All
+                            <p className="copyright"> &copy; 2026 <Link onClick={ClickHandler} to="/home">Sleet Logistics</Link> - Logistics service. All
                                 rights reserved.</p>
                         </div>
                         <div className="col col-lg-4 col-12">
