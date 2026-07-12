@@ -103,12 +103,12 @@ const FooterS3 = () => {
                                 <div className="widget-title">
                                     <h3>Locations</h3>
                                 </div>
-                                <p>55 Main Street, 2nd block
-                                    Malborne, Australia</p>
+                                <p>Street 1b, Al Khaleej road, Al Muhammadiyah,
+                                    Dammam</p>
                                 <ul>
                                     <li>Contact</li>
-                                    <li>support@logistika.com</li>
-                                    <li>+880 (123) 456 88</li>
+                                    <li>mohammad@sleet.sa</li>
+                                    <li>+966 53 775 0600</li>
                                 </ul>
                             </div>
                         </div>

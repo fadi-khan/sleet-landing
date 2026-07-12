@@ -66,8 +66,8 @@ const Footer = (props) => {
                                                 d="M12.3107 6.3125C9.93191 6.3125 7.99609 8.24737 7.99609 10.625C7.99609 13.0026 9.93191 14.9375 12.3107 14.9375C14.6895 14.9375 16.6253 13.0026 16.6253 10.625C16.6253 8.24737 14.6895 6.3125 12.3107 6.3125ZM12.3107 13.5C10.7244 13.5 9.43429 12.2106 9.43429 10.625C9.43429 9.03944 10.7244 7.75 12.3107 7.75C13.897 7.75 15.1871 9.03944 15.1871 10.625C15.1871 12.2106 13.897 13.5 12.3107 13.5Z"
                                                 fill="#04cfe6ad" />
                                         </svg></div>
-                                        <span>86 Road Broklyn Street, 600
-                                            New York, USA</span>
+                                        <span>Street 1b, Al Khaleej road,
+                                            Al Muhammadiyah, Dammam</span>
                                     </li>
                                     <li>
                                         <div className="icon">
@@ -97,7 +97,7 @@ const Footer = (props) => {
                                                 </defs>
                                             </svg>
                                         </div>
-                                        <span>needhelp@logistika.com</span>
+                                        <span>mohammad@sleet.sa</span>
                                     </li>
                                 </ul>
                             </div>
@@ -133,12 +133,12 @@ const Footer = (props) => {
                                 <div className="widget-title">
                                     <h3>Locations</h3>
                                 </div>
-                                <p>55 Main Street, 2nd block
-                                    Malborne, Australia</p>
+                                <p>Street 1b, Al Khaleej road, Al Muhammadiyah,
+                                    Dammam</p>
                                 <ul>
                                     <li>Contact</li>
-                                    <li>support@logistika.com</li>
-                                    <li>+880 (123) 456 88</li>
+                                    <li>mohammad@sleet.sa</li>
+                                    <li>+966 53 775 0600</li>
                                 </ul>
                             </div>
                         </div>

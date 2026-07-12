@@ -24,7 +24,7 @@ const CtaSection = (props) => {
                             </div>
                             <div className="text">
                                 <span>Call For Inquiry</span>
-                                <p>+236 (456) 896 22</p>
+                                <p>+966 53 775 0600</p>
                             </div>
                         </div>
                         <div className="item">
@@ -33,7 +33,7 @@ const CtaSection = (props) => {
                             </div>
                             <div className="text">
                                 <span>Send Us Email</span>
-                                <p>contact@logistika.com</p>
+                                <p>mohammad@sleet.sa</p>
                             </div>
                         </div>
                     </div>

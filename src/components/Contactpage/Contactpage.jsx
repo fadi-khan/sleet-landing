@@ -35,7 +35,7 @@ const Contactpage = () => {
                                     </div>
                                     <div className="office-info-text">
                                         <h2>Phone Number</h2>
-                                        <p>+966 59 234 4447</p>
+                                        <p>+966 53 775 0600</p>
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ const Contactpage = () => {
                                     </div>
                                     <div className="office-info-text">
                                         <h2>Address</h2>
-                                        <p>sleetlogistics@gmail.com</p>
+                                        <p>mohammad@sleet.sa</p>
                                     </div>
                                 </div>
                             </div>
@@ -60,8 +60,7 @@ const Contactpage = () => {
                             <div className="col-lg-6 col-12">
                                 <div className="contact-left">
                                     <h2>Get in touch</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit mattis
-                                        faucibus odio feugiat arc dolor.</p>
+                                    <p>Have questions about our logistics services? Need a customized shipping solution? Our team is here to help you optimize your supply chain and streamline your operations. Reach out to us today and let's discuss how we can support your business needs.</p>
                                     <img className="image" src={Img01} alt="" />
                                 </div>
                             </div>

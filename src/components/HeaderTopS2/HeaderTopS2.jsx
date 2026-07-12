@@ -13,8 +13,8 @@ const HeaderTopS2 = () => {
                         <div className="col-lg-5 col-12">
                             <ul className="contact-info">
                                 <li>
-                                    <i className="flaticon-location"></i><span>55 Main Street, 2nd block, Malborne
-                                        ,Australia</span>
+                                    <i className="flaticon-location"></i><span>Street 1b, Al Khaleej road, Al Muhammadiyah
+                                        , Dammam</span>
                                 </li>
                                 <li></li>
                             </ul>

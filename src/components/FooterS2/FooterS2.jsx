@@ -3,7 +3,7 @@ import Services from '../../api/Services';
 import { Link } from 'react-router-dom';
 import SimpleReactValidator from 'simple-react-validator';
 
-import logo from '../../images/logo-2.svg'
+import logo from '../../images/logo-light.png'
 import Fbg from '../../images/footer-bg-s2.jpg'
 
 import Img1 from '../../images/banck/1.png'
@@ -57,12 +57,16 @@ const FooterS2 = () => {
                                 <div className="widget-title">
                                     <h3>Address</h3>
                                 </div>
-                                <p>570 8th Ave, New York,NY 10018
-                                    United States</p>
+                                <p>Street 1b, Al Khaleej road, Al Muhammadiyah,
+                                    Dammam</p>
                                 <h4>Opening Hours</h4>
                                 <ul>
                                     <li>9.30am – 6.30pm</li>
                                     <li>Monday to Friday</li>
+                                </ul>
+                                <ul>
+                                    <li>mohammad@sleet.sa</li>
+                                    <li>+966 53 775 0600</li>
                                 </ul>
                             </div>
                         </div>

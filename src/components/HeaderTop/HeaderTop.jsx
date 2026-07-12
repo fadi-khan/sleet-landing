@@ -10,11 +10,11 @@ const HeaderTop = () => {
                     <div className="col-lg-5 col-12">
                         <ul className="contact-info">
                             <li>
-                                <i className="ti-email"></i><span>support@logistika.com</span>
+                                <i className="ti-email"></i><span>mohammad@sleet.sa</span>
                             </li>
                             <li>
-                                <a href="tel:+887869587496">
-                                    <i className="flaticon-call"></i><span>+88 7869 5874 96</span>
+                                <a href="tel:+966537750600">
+                                    <i className="flaticon-call"></i><span>+966 53 775 0600</span>
                                 </a>
                             </li>
                         </ul>
