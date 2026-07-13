@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Services from '../../api/Services';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SimpleReactValidator from 'simple-react-validator';
 
 import logo from '../../images/logo-light.png'
@@ -17,6 +18,7 @@ const ClickHandler = () => {
 }
 
 const FooterS2 = () => {
+    const { t } = useTranslation();
 
     const [formData, setFormData] = useState({
         email: '',
@@ -54,20 +56,24 @@ const FooterS2 = () => {
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="widget address-widget">
                                 <div className="widget-title">
-                                    <h3>Address</h3>
+                                    <h3>{t('footer.address')}</h3>
                                 </div>
-                                <p>Street 1b, Al Khaleej road, Al Muhammadiyah,
-                                    Dammam</p>
+                                <p>{t('footer.addressText')}</p>
                                 <ul>
-                                    <li><a href="mailto:mohammad@sleet.sa" target="_blank" rel="noopener noreferrer">mohammad@sleet.sa</a></li>
-                                    <li>+966 53 775 0600</li>
+                                    <li dir="ltr"><a href="mailto:mohammad@sleet.sa" target="_blank" rel="noopener noreferrer">mohammad@sleet.sa</a></li>
+                                    <li dir="ltr">+966 53 775 0600</li>
+                                </ul>
+                                <ul className="social-list">
+                                    <li><a href="https://www.linkedin.com/company/sleet-sa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://www.instagram.com/sleet.sa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://x.com/sleet_sa?s=21&t=Pp3MNfVjHFWqTcUrnmTAmw" target="_blank" rel="noopener noreferrer" aria-label="X"><i className="fa fa-twitter"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="widget link-widget">
                                 <div className="widget-title">
-                                    <h3>Services</h3>
+                                    <h3>{t('footer.services')}</h3>
                                 </div>
                                 <ul>
                                     {Services.slice(0, 5).map((service, item) => (
@@ -79,19 +85,19 @@ const FooterS2 = () => {
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="widget link-widget">
                                 <div className="widget-title">
-                                    <h3>Useful links</h3>
+                                    <h3>{t('footer.usefulLinks')}</h3>
                                 </div>
                                 <ul>
-                                    <li><Link onClick={ClickHandler} to="/contact">Terms & Conditions</Link></li>
-                                    <li><Link onClick={ClickHandler} to="/contact">Contact Us</Link></li>
-                                    <li><Link onClick={ClickHandler} to="/contact">Privacy Policy</Link></li>
+                                    <li><Link onClick={ClickHandler} to="/contact">{t('footer.termsConditions')}</Link></li>
+                                    <li><Link onClick={ClickHandler} to="/contact">{t('footer.contactUs')}</Link></li>
+                                    <li><Link onClick={ClickHandler} to="/contact">{t('footer.privacyPolicy')}</Link></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="widget newsletter-widget">
                                 <div className="widget-title">
-                                    <h3>newsletter</h3>
+                                    <h3>{t('footer.newsletter')}</h3>
                                 </div>
                                 <div className="newsletter">
                                     <form className="form-fild" onSubmit={handleSubmit}>
@@ -99,7 +105,7 @@ const FooterS2 = () => {
                                             className="fild"
                                             type="email"
                                             name="email"
-                                            placeholder="Enter Email Address"
+                                            placeholder={t('footer.enterEmail')}
                                             value={formData.email}
                                             onChange={handleChange}
                                         />
@@ -115,7 +121,7 @@ const FooterS2 = () => {
                                                 onChange={handleChange}
                                             />
                                             <label htmlFor="Insurance">
-                                                I agree to all your <Link onClick={handleChange} to="/">terms</Link> and policies
+                                                {t('footer.agreeText')} <Link onClick={handleChange} to="/">{t('footer.terms')}</Link> {t('footer.andPolicies')}
                                             </label>
                                             {validator.message('agree', formData.agree, 'accepted')}
                                         </div>
@@ -135,8 +141,7 @@ const FooterS2 = () => {
                             </div>
                         </div>
                         <div className="col col-lg-6 col-12">
-                            <p className="copyright"> &copy; 2026 <Link onClick={ClickHandler} to="/home">Sleet Logistics</Link> - Logistics service. All
-                                rights reserved.</p>
+                            <p className="copyright"> &copy; 2026 <Link onClick={ClickHandler} to="/home">Sleet Logistics</Link> - {t('footer.copyrightSuffix')}</p>
                         </div>
                         <div className="col col-lg-4 col-12">
                             <ul>

@@ -1,0 +1,220 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "common": {
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "bookADemo": "Book a Demo",
+    "allServices": "All Services",
+    "exploreMore": "Explore more about",
+    "sendUsMessages": "Send Us Messages",
+    "moreAboutUs": "more about us",
+    "backToHome": "Back To Home",
+    "features": "Features"
+  },
+  "home": {
+    "hero": {
+      "title": "Sleet",
+      "subtitle": "The Future of Smart Logistics Starts with Sleet",
+      "description": "Sleet Automation Logistics is an all-in-one logistics technology platform that combines intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace to help businesses move faster, operate smarter, and scale with confidence."
+    },
+    "funfact": {
+      "happyCustomers": "Happy Customers",
+      "customerSatisfaction": "Customer Satisfaction",
+      "citiesCovered": "Cities Covered",
+      "totalServices": "Total Services"
+    },
+    "service": {
+      "subtitle": "Trusted transport service",
+      "title": "Transport & Logistics Services We are the best"
+    },
+    "aboutSleet": {
+      "title": "About Sleet",
+      "subtitle": "Driving the future of logistics",
+      "p1": "Sleet Automation Logistics is transforming the logistics industry through technology. Our integrated ecosystem brings together transportation, fleet management, artificial intelligence, and digital logistics services into one powerful platform.",
+      "p2": "Whether you manage a single fleet or thousands of vehicles, Sleet gives you complete visibility, automation, and control through intelligent software built for modern logistics."
+    },
+    "aboutS2": {
+      "builtFor": "Built for",
+      "modernFleets": "modern fleets",
+      "fleetTripsTracked": "Fleet Trips",
+      "tracked": "Tracked",
+      "poweringTitle": "Powering modern logistics",
+      "poweringSubtitle": "One platform for your entire fleet",
+      "description": "Sleet Automation Logistics is a logistics technology company that provides intelligent transportation solutions through four integrated services — Sleet Logistics, Sleet SaaS, Sleet TNC, and Sleet AI.",
+      "realTimeVisibility": "Real-Time Fleet Visibility",
+      "tripManagement": "End-to-End Trip Management",
+      "liveGps": "Live GPS Tracking",
+      "maintenanceScheduling": "Maintenance Scheduling"
+    },
+    "whyChoose": {
+      "title": "Why Choose Sleet?",
+      "subtitle": "One platform. Endless possibilities.",
+      "description": "Instead of using separate software for fleet management, reporting, AI, and transportation services, Sleet combines everything into one intelligent ecosystem.",
+      "items": [
+        "End-to-End Logistics Platform",
+        "AI-Powered Decision Making",
+        "Real-Time Fleet Visibility",
+        "Cloud-Based Infrastructure",
+        "Scalable for Any Business Size",
+        "Enterprise-Level Security",
+        "Easy Integration",
+        "Modern User Experience",
+        "Actionable Analytics",
+        "Built for the Future of Logistics"
+      ]
+    },
+    "process": {
+      "step1": "Enter Delivery Details",
+      "step2": "Assign Driver & Vehicle",
+      "step3": "Track Delivery in Real-Time",
+      "step4": "Delivery Completed"
+    },
+    "features": {
+      "subtitle": "Trusted transport service",
+      "title": "Logistics features that we can provideing",
+      "warehouseTitle": "Warehouse",
+      "warehouseDesc": "Warehouse: hub for storage, distribution, and logistics.",
+      "supportTitle": "Support 24/7",
+      "supportDesc": "Warehouse: hub for storage, distribution, and logistics.",
+      "cargoTitle": "Cargo Insurance",
+      "cargoDesc": "Warehouse: hub for storage, distribution, and logistics."
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "subtitle": "Built for every kind of fleet",
+      "items": [
+        "Logistics Companies",
+        "Transportation Providers",
+        "Manufacturing",
+        "Retail",
+        "Construction",
+        "Oil & Gas",
+        "Distribution Companies",
+        "Freight Forwarders",
+        "E-commerce",
+        "Government & Enterprise Fleets"
+      ]
+    },
+    "vision": {
+      "subtitle": "Our Vision",
+      "title": "To become the world's leading intelligent logistics ecosystem by combining transportation, artificial intelligence, cloud software, and automation into one connected platform that empowers businesses to move goods more efficiently, sustainably, and intelligently."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "subtitle": "Everything you need to know about Sleet",
+      "description": "Sleet Automation Logistics brings four integrated services — Sleet Logistics, Sleet SaaS, Sleet TNC, and Sleet AI — together on one platform so you can manage fleets and make data-driven decisions with ease.",
+      "item1": "Manage your entire fleet from a single intelligent dashboard",
+      "item2": "Built for logistics companies, fleet owners, and enterprises alike",
+      "fleetManagement": "Fleet Management",
+      "cloudBasedPlatform": "Cloud-Based Platform"
+    },
+    "getTouch": {
+      "subtitle": "Trusted transport service",
+      "title": "Let’s Work Together"
+    }
+  },
+  "about": {
+    "pageTitle": "Internation Logistics",
+    "pageSub": "About us",
+    "trustedTransport": "Trusted transport service",
+    "heading": "Transport & Logistics Services We are the best",
+    "subContent": "Logistika is the world's leading global logistics provider — we expertly facilitate industry and commerce in the international exchange of goods through land transport.",
+    "operations": "operations around the world and across various transporation sectors.",
+    "list": [
+      "Domestic and International Service emergency support",
+      "Compliance and Enforcement actions",
+      "Becoming a registered provider Today"
+    ],
+    "since": "Since",
+    "ceoFounder": "Ceo & Founder"
+  },
+  "faqPage": {
+    "pageTitle": "Internation Logistics",
+    "pageSub": "Faq",
+    "accordion": [
+      { "title": "What is Sleet Automation Logistics?", "content": "Sleet Automation Logistics is a logistics technology company that provides intelligent transportation solutions through four integrated services: Sleet Logistics, Sleet SaaS, Sleet TNC, and Sleet AI. Our platform helps businesses manage fleets, automate operations, and make data-driven decisions from a single dashboard." },
+      { "title": "What is Sleet SaaS?", "content": "Sleet SaaS is a cloud-based logistics management platform designed for logistics companies, transport providers, and enterprises. It enables businesses to manage fleets, drivers, customers, deliveries, and operations without developing software from scratch." },
+      { "title": "Who can use Sleet SaaS?", "content": "Sleet SaaS is ideal for Logistics Companies, Fleet Owners, Freight Forwarders, Manufacturing Companies, Retail & E-commerce Businesses, Construction Companies, Oil & Gas Companies, and Distribution & Supply Chain Businesses." },
+      { "title": "What is Sleet Logistics?", "content": "Sleet Logistics is our end-to-end fleet management solution that combines Sleet's own fleet of trucks with a powerful management dashboard. Businesses can monitor vehicles, drivers, deliveries, fuel usage, maintenance, and overall fleet performance in real time." },
+      { "title": "What is Sleet TNC?", "content": "Sleet TNC is a digital truck-booking marketplace that works similarly to ride-hailing platforms, but specifically for commercial transportation. Businesses can book trucks on demand, while fleet owners receive delivery requests through the platform." },
+      { "title": "How does Sleet AI work?", "content": "Sleet AI is your intelligent logistics assistant built directly into the Sleet dashboard. Simply type your request in natural language, and Sleet AI analyzes your operational data to generate reports, summaries, insights, and recommendations within seconds." },
+      { "title": "What types of reports can Sleet AI generate?", "content": "Sleet AI can generate reports for Fleet Performance, Driver Performance, Fuel Consumption, Delivery Status, Trip History, Vehicle Utilization, Operational KPIs, Financial Summaries, and Custom Business Reports." },
+      { "title": "Which file formats does Sleet AI support?", "content": "Sleet AI can export reports in multiple formats, including PDF, Microsoft Word (.docx), Microsoft Excel (.xlsx), CSV, Charts & Graphs, and presentation-ready summaries." },
+      { "title": "Can Sleet integrate with my existing systems?", "content": "Yes. Sleet provides secure APIs that allow integration with ERP systems, accounting software, GPS tracking devices, telematics hardware, IoT sensors, and other third-party business applications." },
+      { "title": "Is my business data secure?", "content": "Absolutely. We prioritize enterprise-grade security through encrypted data transmission, secure cloud infrastructure, role-based access control, regular backups, and industry best practices to keep your data protected." },
+      { "title": "Can I monitor my fleet in real time?", "content": "Yes. Sleet provides live vehicle tracking, trip monitoring, driver activity, route visibility, fuel analytics, and operational insights through a centralized dashboard accessible from anywhere." },
+      { "title": "Is Sleet suitable for small businesses?", "content": "Yes. Whether you manage a handful of vehicles or a large enterprise fleet, Sleet scales with your business and provides the tools needed to optimize logistics operations efficiently." },
+      { "title": "Can I customize the platform for my business?", "content": "Yes. Sleet offers customizable dashboards, reports, workflows, user roles, and integrations to match your operational requirements." },
+      { "title": "Does Sleet offer mobile applications?", "content": "Yes. Sleet includes mobile applications for drivers, fleet managers, and administrators, enabling seamless communication, trip updates, delivery tracking, and operational management on the go." },
+      { "title": "What industries does Sleet serve?", "content": "Sleet supports a wide range of industries, including Logistics & Transportation, Freight & Distribution, Manufacturing, Retail & E-commerce, Construction, Oil & Gas, Cold Chain Logistics, Government Fleets, and Enterprise Fleet Operations." },
+      { "title": "Can Sleet reduce operational costs?", "content": "Yes. By automating workflows, optimizing routes, improving fleet utilization, reducing fuel consumption, and providing AI-powered insights, Sleet helps businesses lower operational costs and improve overall efficiency." },
+      { "title": "How do I get started with Sleet?", "content": "Getting started is simple. Contact our team to schedule a personalized demo, discuss your business requirements, and choose the Sleet solution that best fits your operations. Our onboarding specialists will help you every step of the way." },
+      { "title": "Why choose Sleet over other logistics platforms?", "content": "Sleet brings everything together in one intelligent ecosystem. Instead of juggling multiple systems, you get fleet management, cloud-based logistics software, AI-powered reporting, and an on-demand truck marketplace, all connected through a single platform. This means less complexity, greater visibility, faster decision-making, and a smarter way to manage logistics." }
+    ]
+  },
+  "serviceSingle": {
+    "pageTitle": "Our Solutions",
+    "comingSoon": "Coming Soon",
+    "features": "Features",
+    "generateReports": "Generate Reports In Seconds",
+    "askQuestions": "Ask questions like:",
+    "outputFormats": "Output Formats"
+  },
+  "contact": {
+    "pageTitle": "Sleet Logistics",
+    "pageSub": "Contact Us",
+    "addressLine": "address line",
+    "addressText": "Street 1b, Al Khaleej road, Al Muhammadiyah, Dammam",
+    "phoneNumber": "Phone Number",
+    "addressLabel": "Address",
+    "getInTouch": "Get in touch",
+    "getInTouchDesc": "Have questions about our logistics services? Need a customized shipping solution? Our team is here to help you optimize your supply chain and streamline your operations. Reach out to us today and let's discuss how we can support your business needs.",
+    "fillForm": "Fill Up The Form",
+    "fillFormDesc": "Your email address will not be published. Required fields are marked *",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Your Number",
+      "trackingId": "Enter your tracking id",
+      "message": "Write Message",
+      "getInTouch": "Get In Touch"
+    }
+  },
+  "errorPage": {
+    "pageTitle": "Internation Logistics",
+    "pageSub": "404",
+    "code": "404",
+    "message": "we’re sorry page not found"
+  },
+  "languageSelector": {
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "cta": {
+    "title": "Ready to transform your logistics operations?",
+    "subtitle": "Join businesses embracing smarter logistics with Sleet",
+    "requestDemo": "Request a Demo",
+    "callForInquiry": "Call For Inquiry",
+    "sendUsEmail": "Send Us Email"
+  },
+  "footer": {
+    "address": "Address",
+    "addressText": "Street 1b, Al Khaleej road, Al Muhammadiyah, Dammam",
+    "services": "Services",
+    "usefulLinks": "Useful links",
+    "termsConditions": "Terms & Conditions",
+    "contactUs": "Contact Us",
+    "privacyPolicy": "Privacy Policy",
+    "newsletter": "Newsletter",
+    "enterEmail": "Enter Email Address",
+    "agreeText": "I agree to all your",
+    "terms": "terms",
+    "andPolicies": "and policies",
+    "copyrightSuffix": "Logistics service. All rights reserved."
+  }
+}

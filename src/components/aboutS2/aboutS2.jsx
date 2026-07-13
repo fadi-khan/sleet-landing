@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -10,7 +11,8 @@ import Ab23 from '../../images/about/profile.jpg'
 import Ab24 from '../../images/about/signature.png'
 import Ab25 from '../../images/homepage/delivery-man.jpeg'
 
-const aboutS2 = () => {
+const AboutS2 = () => {
+    const { t } = useTranslation();
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
@@ -35,11 +37,11 @@ const aboutS2 = () => {
                 <div className="row">
                     <div className="col-lg-6 col-12">
                         <div className="about-left">
-                            <h3>Built for <span>modern fleets</span></h3>
+                            <h3>{t('home.aboutS2.builtFor')} <span>{t('home.aboutS2.modernFleets')}</span></h3>
                             <div className="people">
                                 <h2><CountUp end={20} enableScrollSpy />k+</h2>
-                                <p>Fleet Trips <br />
-                                    Tracked</p>
+                                <p>{t('home.aboutS2.fleetTripsTracked')} <br />
+                                    {t('home.aboutS2.tracked')}</p>
                             </div>
                             <div className="shape">
                                 <img src={Ab21} alt="" />
@@ -52,37 +54,32 @@ const aboutS2 = () => {
                     <div className="col-lg-6 col-12">
                         <div className="about-content">
                             <div className="wpo-section-title">
-                                <h2>Powering modern logistics</h2>
-                                <h3>One platform for your
-                                    entire fleet</h3>
+                                <h2>{t('home.aboutS2.poweringTitle')}</h2>
+                                <h3>{t('home.aboutS2.poweringSubtitle')}</h3>
                             </div>
-                            <p>Sleet Automation Logistics is a logistics technology company that provides
-                                intelligent transportation solutions through four integrated services — Sleet
-                                Logistics, Sleet SaaS, Sleet TNC, and Sleet AI.
+                            <p>{t('home.aboutS2.description')}
                             </p>
                             <ul>
                                 <li>
                                     <i className="flaticon-logistics"></i>
-                                    <h3>Real-Time Fleet
-                                        Visibility</h3>
+                                    <h3>{t('home.aboutS2.realTimeVisibility')}</h3>
                                 </li>
                                 <li>
                                     <i className="flaticon-nanotechnology"></i>
-                                    <h3>End-to-End Trip
-                                        Management</h3>
+                                    <h3>{t('home.aboutS2.tripManagement')}</h3>
                                 </li>
                             </ul>
                             <ul className="logistics">
-                                <li>Live GPS Tracking</li>
-                                <li>Maintenance Scheduling</li>
+                                <li>{t('home.aboutS2.liveGps')}</li>
+                                <li>{t('home.aboutS2.maintenanceScheduling')}</li>
                             </ul>
 
                             <div className="about-btn">
                                 <div className="btn-1">
-                                    <Link onClick={scrollToServices} to={'#services'} className="theme-btn">Explore more about <i
+                                    <Link onClick={scrollToServices} to={'#services'} className="theme-btn">{t('common.exploreMore')} <i
                                         className="ti-angle-right"></i></Link>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -95,4 +92,4 @@ const aboutS2 = () => {
     );
 };
 
-export default aboutS2;
+export default AboutS2;

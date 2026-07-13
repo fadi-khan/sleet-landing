@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
+import { useTranslation } from 'react-i18next';
 
 const ContactForm = () => {
+    const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -41,7 +43,7 @@ const ContactForm = () => {
                     name="name"
                     className="fild"
                     type="text"
-                    placeholder="Your Name*"
+                    placeholder={`${t('contact.form.name')}*`}
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -55,7 +57,7 @@ const ContactForm = () => {
                     name="email"
                     className="fild"
                     type="email"
-                    placeholder="Email Address*"
+                    placeholder={`${t('contact.form.email')}*`}
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -68,7 +70,7 @@ const ContactForm = () => {
                     id="message"
                     name="message"
                     className="fild textarea"
-                    placeholder="Enter Your Message here"
+                    placeholder={t('contact.form.message')}
                     value={formData.message}
                     onChange={handleChange}
                     required
@@ -77,7 +79,7 @@ const ContactForm = () => {
                 <label><i className="flaticon-edit"></i></label>
             </div>
             <div className="input-item submitbtn">
-                <input className="fild" type="submit" value="Get In Touch" />
+                <input className="fild" type="submit" value={t('contact.form.getInTouch')} />
                 <label><i className="flaticon-send"></i></label>
             </div>
         </form>

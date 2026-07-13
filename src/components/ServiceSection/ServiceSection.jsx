@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 import SectionTitle from "../SectionTitle/SectionTitle";
 import Services from "../../api/Services";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,6 +11,7 @@ import 'swiper/css/pagination';
 
 
 const ServiceSection = (props) => {
+    const { t } = useTranslation();
 
     const ClickHandler = () => {
         window.scrollTo(10, 0);
@@ -51,13 +53,13 @@ const ServiceSection = (props) => {
                 <div className="row align-items-end">
                     <div className="col-lg-7 col-12">
                         {SectionTitleShow && (
-                            <SectionTitle subtitle={'Trusted transport service'} title={'Transport & Logistics Services We are the best'} />
+                            <SectionTitle subtitle={t('home.service.subtitle')} title={t('home.service.title')} />
                         )}
                     </div>
                     <div className="col-lg-5 col-12">
                         {ServiceAllBtn && (
                             <div className="service-all-btn">
-                                <Link onClick={ClickHandler} to="/contact" className="theme-btn">Contact Us</Link>
+                                <Link onClick={ClickHandler} to="/contact" className="theme-btn">{t('common.contactUs')}</Link>
                             </div>
                         )}
                     </div>
@@ -69,7 +71,7 @@ const ServiceSection = (props) => {
                         <SwiperSlide key={item}>
                             <div className="service-card">
                                 {service.isCommingSoon && (
-                                    <span className="coming-soon-badge">Coming Soon</span>
+                                    <span className="coming-soon-badge">{t('serviceSingle.comingSoon')}</span>
                                 )}
                                 <img className="image " src={service.image} alt="" />
                                 <div className="content">
@@ -94,6 +96,5 @@ const ServiceSection = (props) => {
 }
 
 export default ServiceSection;
-
 
 

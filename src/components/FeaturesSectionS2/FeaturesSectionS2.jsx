@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const FeaturesSectionS2 = (props) => {
+    const { t } = useTranslation();
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
@@ -13,14 +15,13 @@ const FeaturesSectionS2 = (props) => {
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-12">
                             <div className="wpo-section-title">
-                                <h2>Trusted transport service</h2>
-                                <h3>Logistics features
-                                    that we can provideing</h3>
+                                <h2>{t('home.features.subtitle')}</h2>
+                                <h3>{t('home.features.title')}</h3>
                             </div>
                         </div>
                         <div className="col-lg-6 col-12">
                             <div className="f-btn">
-                                <Link onClick={ClickHandler} to="/services" className="theme-btn">All Services</Link>
+                                <Link onClick={ClickHandler} to="/services" className="theme-btn">{t('common.allServices')}</Link>
                             </div>
                         </div>
                     </div>
@@ -36,8 +37,8 @@ const FeaturesSectionS2 = (props) => {
                                         <i className="flaticon-distribution-center"></i>
                                     </div>
                                     <div className="content">
-                                        <h3>Warehouse</h3>
-                                        <p>Warehouse: hub for storage, distribution, and logistics.</p>
+                                        <h3>{t('home.features.warehouseTitle')}</h3>
+                                        <p>{t('home.features.warehouseDesc')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -47,8 +48,8 @@ const FeaturesSectionS2 = (props) => {
                                         <i className="flaticon-customer-support-1"></i>
                                     </div>
                                     <div className="content">
-                                        <h3>Support 24/7</h3>
-                                        <p>Warehouse: hub for storage, distribution, and logistics.</p>
+                                        <h3>{t('home.features.supportTitle')}</h3>
+                                        <p>{t('home.features.supportDesc')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -58,8 +59,8 @@ const FeaturesSectionS2 = (props) => {
                                         <i className="flaticon-delivery-box"></i>
                                     </div>
                                     <div className="content">
-                                        <h3>Cargo Insurance</h3>
-                                        <p>Warehouse: hub for storage, distribution, and logistics.</p>
+                                        <h3>{t('home.features.cargoTitle')}</h3>
+                                        <p>{t('home.features.cargoDesc')}</p>
                                     </div>
                                 </div>
                             </div>

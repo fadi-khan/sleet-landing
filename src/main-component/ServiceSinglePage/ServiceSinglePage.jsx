@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { useParams } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 import Services from '../../api/Services';
 import ServiceSidebar from './sidebar'
 import HeaderTop from '../../components/HeaderTop/HeaderTop'
@@ -13,6 +14,7 @@ import Logo from '../../images/logo.png'
 
 const ServiceSinglePage = (props) => {
 
+    const { t } = useTranslation();
     const { slug } = useParams()
     const serviceDetails = Services.find(item => item.slug === slug)
 
@@ -20,7 +22,7 @@ const ServiceSinglePage = (props) => {
         <Fragment>
             {/* <HeaderTop /> */}
             <Navbar hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Our Solutions'} pagesub={serviceDetails.title} bgimg={serviceDetails.banner} />
+            <PageTitle pageTitle={t('serviceSingle.pageTitle')} pagesub={serviceDetails.title} bgimg={serviceDetails.banner} />
             <section className="wpo-service-single-page section-padding">
                 <div className="container">
                     <div className="row">
@@ -28,7 +30,7 @@ const ServiceSinglePage = (props) => {
                             <div className="service-single-wrap">
                                 <div className="title-image">
                                     {serviceDetails.isCommingSoon && (
-                                        <span className="coming-soon-badge">Coming Soon</span>
+                                        <span className="coming-soon-badge">{t('serviceSingle.comingSoon')}</span>
                                     )}
                                     <img src={serviceDetails.simag} alt={serviceDetails.title} />
                                 </div>
@@ -39,7 +41,7 @@ const ServiceSinglePage = (props) => {
 
                                 {serviceDetails.features && serviceDetails.features.length > 0 && (
                                     <div className="feature-block">
-                                        <h3>Features</h3>
+                                        <h3>{t('serviceSingle.features')}</h3>
                                         <ul className="feature-grid">
                                             {serviceDetails.features.map((feature, index) => (
                                                 <li key={index}>{feature}</li>
@@ -50,15 +52,15 @@ const ServiceSinglePage = (props) => {
 
                                 {serviceDetails.slug === 'sleet-ai' && (
                                     <div className="ai-extra-block">
-                                        <h3>Generate Reports In Seconds</h3>
-                                        <p>Ask questions like:</p>
+                                        <h3>{t('serviceSingle.generateReports')}</h3>
+                                        <p>{t('serviceSingle.askQuestions')}</p>
                                         <ul className="sample-questions">
                                             {serviceDetails.sampleQuestions.map((question, index) => (
                                                 <li key={index}>“{question}”</li>
                                             ))}
                                         </ul>
 
-                                        <h3>Output Formats</h3>
+                                        <h3>{t('serviceSingle.outputFormats')}</h3>
                                         <ul className="feature-grid">
                                             {serviceDetails.outputFormats.map((format, index) => (
                                                 <li key={index}>{format}</li>

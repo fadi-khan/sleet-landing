@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 import HeaderTop from '../../components/HeaderTop/HeaderTop';
 import Navbar from '../../components/Navbar/Navbar';
 import PageTitle from '../../components/pagetitle/PageTitle'
@@ -11,11 +12,12 @@ import Logo from '../../images/logo.svg'
 
 
 const ErrorPage = () => {
+    const { t } = useTranslation();
     return (
         <Fragment>
             <HeaderTop />
             <Navbar hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Internation Logistics'} pagesub={'404'} />
+            <PageTitle pageTitle={t('errorPage.pageTitle')} pagesub={t('errorPage.pageSub')} />
             <Error/>
             <MapSection />
             <CtaSection hclass={'wpo-cta-section-s2'} />

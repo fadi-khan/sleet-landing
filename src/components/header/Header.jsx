@@ -1,9 +1,15 @@
 import React, { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import MobileMenu from '../MobileMenu/MobileMenu'
+import LanguageSelector from '../LanguageSelector/LanguageSelector'
 import Call from '../../images/call.svg'
+import { useSelector } from 'react-redux'
 
 const Header = (props) => {
+    const { t } = useTranslation();
+    const language = useSelector((state) => state.language.language); // 'en' | 'ar'
+
     const [menuActive, setMenuState] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
@@ -50,29 +56,33 @@ const Header = (props) => {
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0 gap-3">
                                         <li className="menu-item">
-                                            <Link onClick={ClickHandler} to="/home">Home</Link>
+                                            <Link onClick={ClickHandler} to="/home">{t('nav.home')}</Link>
                                         </li>
                                         <li className="menu-item">
-                                            <Link onClick={scrollToServices} to="/home#services">Services</Link>
+                                            <Link onClick={scrollToServices} to="/home#services">{t('nav.services')}</Link>
                                         </li>
                                         {/* <li className="menu-item">
                                             <Link onClick={ClickHandler} to="/about">About</Link>
                                         </li> */}
                                         <li className="menu-item">
-                                            <Link onClick={ClickHandler} to="/faq">FAQ</Link>
+                                            <Link onClick={ClickHandler} to="/faq">{t('nav.faq')}</Link>
                                         </li>
-                                       
-                                        <li><Link onClick={ClickHandler} to="/contact">Contact</Link></li>
+
+                                        <li><Link onClick={ClickHandler} to="/contact">{t('nav.contact')}</Link></li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-2 col-2">
-                                <div className="header-right">
-                                 
-                                  
+                                <div className="header-right d-flex align-items-center gap-3">
+                                    <LanguageSelector />
                                     <div className="close-form">
-                                        <Link onClick={ClickHandler}  className="theme-btn" to="https://app.sleet.sa/login" target="_blank">Get Started <i
-                                            className="flaticon-next"></i></Link>
+                                        
+                                        <Link onClick={ClickHandler}  className="theme-btn" to="https://app.sleet.sa/login" target="_blank">
+                                           <i className={`flaticon-next ${language === 'ar' ? 'rotate-180' : 'd-none'}`}></i>
+                                            {t('common.getStarted')}
+                                            <i
+                                                className={`flaticon-next ${language === 'ar' ? 'd-none' : 'ms-2'}`}></i>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

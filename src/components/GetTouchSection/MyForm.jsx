@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
+import { useTranslation } from 'react-i18next';
 
 const MyForm = () => {
+    const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -41,7 +43,7 @@ const MyForm = () => {
                         id="name"
                         className="fild"
                         type="text"
-                        placeholder="Your Name"
+                        placeholder={t('contact.form.name')}
                         value={formData.name}
                         onChange={handleChange}
                         required
@@ -53,7 +55,7 @@ const MyForm = () => {
                         id="email"
                         className="fild"
                         type="email"
-                        placeholder="Email Address"
+                        placeholder={t('contact.form.email')}
                         value={formData.email}
                         onChange={handleChange}
                         required
@@ -65,7 +67,7 @@ const MyForm = () => {
                         id="phone"
                         className="fild"
                         type="text"
-                        placeholder="Your Number"
+                        placeholder={t('contact.form.phone')}
                         value={formData.phone}
                         onChange={handleChange}
                         required
@@ -77,7 +79,7 @@ const MyForm = () => {
                         id="trackingId"
                         className="fild"
                         type="text"
-                        placeholder="Enter your tracking id"
+                        placeholder={t('contact.form.trackingId')}
                         value={formData.trackingId}
                         onChange={handleChange}
                         required
@@ -88,7 +90,7 @@ const MyForm = () => {
                     <textarea
                         id="message"
                         className="fild fild-textarea"
-                        placeholder="Write Message"
+                        placeholder={t('contact.form.message')}
                         value={formData.message}
                         onChange={handleChange}
                         required
@@ -96,7 +98,7 @@ const MyForm = () => {
                     {validator.message('message', formData.message, 'required')}
                 </div>
                 <div className="col-12">
-                    <button type="submit" className="theme-btn">Send Us Messages <i className="ti-angle-right"></i></button>
+                    <button type="submit" className="theme-btn">{t('common.sendUsMessages')} <i className="ti-angle-right"></i></button>
                 </div>
             </div>
         </form>

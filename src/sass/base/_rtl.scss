@@ -1,0 +1,381 @@
+/*--------------------------------------------------------------
+RTL overrides
+Scoped to html[dir="rtl"] so they only apply for Arabic.
+Imported LAST in style.scss so these rules win the cascade.
+--------------------------------------------------------------*/
+
+html[dir="rtl"] {
+
+	body {
+		text-align: right;
+	}
+
+	/* ---------- header / navigation ---------- */
+	.wpo-site-header .header-right {
+		margin-left: 0;
+		margin-right: -80px;
+
+		@media (max-width:1499px) {
+			margin-right: 0;
+		}
+
+		.call {
+			margin-right: 0;
+			margin-left: 95px;
+
+			@media (max-width:1699px) {
+				margin-left: 10px;
+			}
+
+			.text {
+				margin-left: 0;
+				margin-right: 15px;
+			}
+		}
+	}
+
+	.wpo-site-header .header-right>div {
+		float: right;
+	}
+
+	.wpo-site-header .header-right .close-form {
+		right: auto;
+		left: -280px;
+
+		@media (max-width:1699px) {
+			left: -150px;
+			right: auto;
+		}
+
+		@media (max-width:1499px) {
+			left: auto;
+			right: auto;
+		}
+	}
+
+	.lang-toggle {
+		margin-right: 0;
+		margin-left: 20px;
+
+		@media (max-width:575px) {
+			margin-left: 10px;
+		}
+	}
+
+	.wpo-site-header-s2 .wpo-site-header .header-right {
+		margin-left: 0;
+		margin-right: auto;
+		left: -10px;
+		right: auto;
+	}
+
+	.wpo-site-header #navbar>ul>li>a:before {
+		left: auto;
+		right: 20px;
+
+		@media (max-width: 1499px) {
+			right: 0;
+		}
+	}
+
+	.wpo-site-header #navbar>ul>li>.sub-menu {
+		left: auto;
+		right: 0;
+	}
+
+	.wpo-site-header #navbar>ul>li>.sub-menu>.menu-item-has-children>a:before {
+		right: auto;
+		left: 15px;
+	}
+
+	.wpo-site-header #navbar>ul>li:hover>.sub-menu {
+		text-align: right;
+	}
+
+	.wpo-site-header .navbar-header .navbar-brand img {
+		margin-left: 0;
+	}
+
+	/* theme-btn icon (Get Started) should visually lead the text in RTL */
+	.header-right .close-form .theme-btn,
+	.wpo-site-header-s2 .wpo-site-header .header-right .close-form .theme-btn {
+		flex-direction: row-reverse;
+
+		i {
+			margin-left: 0;
+			margin-right: 20px;
+			transform: scaleX(-1);
+
+			@media (max-width:1399px) {
+				margin-right: 5px;
+			}
+		}
+	}
+
+	/* mobile nav drawer opens from the right in RTL */
+	@media (max-width: 991px) {
+		.wpo-site-header #navbar {
+			left: auto;
+			right: -320px;
+		}
+
+		.wpo-site-header #navbar.slideInn {
+			right: 0 !important;
+			left: auto !important;
+		}
+
+		.wpo-site-header #navbar .close-navbar {
+			left: auto;
+			right: -41px;
+		}
+
+		.menu-close {
+			margin-left: 0;
+			margin-right: auto;
+		}
+	}
+
+	/* ---------- footer ---------- */
+	.wpo-site-footer,
+	.wpo-site-footer-s2 {
+		text-align: right;
+
+		.about-widget ul li .icon {
+			padding-right: 0;
+			padding-left: 10px;
+
+			@media (max-width: 1199px) {
+				padding-left: 5px;
+			}
+		}
+
+		.wpo-service-link-widget {
+			padding-left: 0;
+			padding-right: 70px;
+		}
+
+		.link-widget {
+			@media screen and (min-width: 1200px) {
+				padding-left: 0;
+				padding-right: 75px;
+			}
+
+			@media (max-width: 1399px) {
+				padding-left: 0;
+				padding-right: 20px;
+			}
+
+			ul li a::before {
+				left: auto;
+				right: -20px;
+			}
+		}
+
+		.newsletter-widget {
+			margin-left: 0;
+			margin-right: -20px;
+
+			@media (max-width: 991px) {
+				margin-right: 0;
+			}
+
+			.form-fild button {
+				right: auto;
+				left: 0;
+			}
+		}
+	}
+
+	/* ---------- buttons ---------- */
+	.theme-btn {
+		&::before {
+			left: auto;
+			right: 0;
+		}
+
+		&::after {
+			right: auto;
+			left: 0;
+		}
+	}
+
+	.theme-btn-s2::after {
+		left: auto;
+		right: 0;
+	}
+
+	/* icon-bearing buttons: icon leads text in RTL */
+	.theme-btn,
+	a.theme-btn {
+		&:has(i) {
+			display: inline-flex;
+			flex-direction: row-reverse;
+			align-items: center;
+		}
+	}
+
+	/* ---------- section titles / text blocks ---------- */
+	.wpo-section-title {
+		h2 {
+			padding-left: 0;
+			padding-right: 20px;
+
+			&::before {
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+
+	.wpo-about-sleet-section .wpo-section-title,
+	.contact-left,
+	.contact-right .title {
+		text-align: right;
+	}
+
+	.contact-right {
+		padding-left: 0;
+		padding-right: 40px;
+
+		@media (max-width:1199px) {
+			padding-right: 0;
+		}
+	}
+
+	/* ---------- contact form ---------- */
+	.contact-form {
+		.input-item {
+			.fild {
+				padding-left: 0;
+				padding-right: 30px;
+				text-align: right;
+			}
+
+			label {
+				left: auto;
+				right: 0;
+			}
+		}
+
+		.submitbtn {
+			.fild {
+				padding-left: 0;
+				padding-right: 20px;
+			}
+
+			label {
+				left: auto;
+				right: 30px;
+			}
+		}
+	}
+
+	.form select {
+		background-position: left center;
+	}
+
+	/* ---------- service single page ---------- */
+	.service-single-wrap {
+		.feature-grid li,
+		.video-content ul li {
+			padding-left: 0;
+			padding-right: 40px;
+
+			&::before {
+				left: auto;
+				right: 0;
+			}
+		}
+
+		.video-content {
+			margin-left: 0;
+			margin-right: 40px;
+
+			@media (max-width:1199px) {
+				margin-right: 0;
+			}
+		}
+
+		.sample-questions li {
+			border-left: none;
+			border-right: 3px solid $theme-primary-color-s2;
+		}
+
+		.quate {
+			border-left: none;
+			border-right: 4px solid $theme-primary-color-s2;
+			padding: 15px 25px 15px 70px;
+		}
+
+		.accordion-header {
+			text-align: right;
+
+			&::before {
+				right: auto;
+				left: 30px;
+
+				@media (max-width:1199px) {
+					left: 15px;
+				}
+			}
+		}
+	}
+
+	/* ---------- FAQ accordion (Accordion.jsx) ---------- */
+	.accordion {
+		.accordion-header {
+			text-align: right;
+		}
+	}
+
+	/* ---------- FAQ section accordion icon (home + FAQ page, .wpo-faq-section / .wpo-faq-section-s2 in _home-style2.scss) ---------- */
+	.wpo-faq-section,
+	.wpo-faq-section-s2 {
+		.accordion-item .accordion-header {
+			text-align: right;
+			padding: 20px 35px 20px 70px;
+
+			&::before {
+				right: auto;
+				left: 30px;
+			}
+
+			@media (max-width:1199px) {
+				padding: 15px 15px 15px 50px;
+
+				&::before {
+					left: 15px;
+				}
+			}
+		}
+	}
+
+	/* ---------- generic list bullets / icons that lead text ---------- */
+	.contact-info li i,
+	.social-media li a {
+		padding-right: 0;
+		padding-left: 7px;
+	}
+
+	/* ---------- CTA section contact-info items (CtaSection.jsx, .wpo-cta-section-s2/-s3 in _home-default.scss) ---------- */
+	.wpo-cta-section-s2,
+	.wpo-cta-section-s3,
+	.wpo-cta-section {
+		.contact-info .item {
+			padding: 15px 30px 15px 40px;
+
+			@media (max-width:575px) {
+				padding: 15px 20px;
+			}
+
+			.text {
+				padding-left: 0;
+				padding-right: 20px;
+
+				@media (max-width:575px) {
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+}

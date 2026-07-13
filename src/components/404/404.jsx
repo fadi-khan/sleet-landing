@@ -1,9 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 
 
 const Error = (props) => {
+    const { t } = useTranslation();
     const ClickHandler = () =>{
         window.scrollTo(10, 0);
      }
@@ -15,9 +17,9 @@ const Error = (props) => {
                     <div className="col col-xs-12">
                         <div className="content clearfix">
                             <div className="error-message">
-                                <h3>404</h3>
-                                <h4>we’re sorry page not found</h4>
-                                <Link onClick={ClickHandler} to="/" className="theme-btn">Back To Home</Link>
+                                <h3>{t('errorPage.code')}</h3>
+                                <h4>{t('errorPage.message')}</h4>
+                                <Link onClick={ClickHandler} to="/" className="theme-btn">{t('common.backToHome')}</Link>
                             </div>
                         </div>
                     </div>

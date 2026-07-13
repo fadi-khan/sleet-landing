@@ -1,39 +1,37 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import {
     FaTruckMoving, FaShippingFast, FaIndustry, FaStore, FaHardHat,
     FaOilCan, FaWarehouse, FaBoxes, FaShoppingCart, FaLandmark
 } from 'react-icons/fa';
 
-const industries = [
-    { icon: FaTruckMoving, title: 'Logistics Companies' },
-    { icon: FaShippingFast, title: 'Transportation Providers' },
-    { icon: FaIndustry, title: 'Manufacturing' },
-    { icon: FaStore, title: 'Retail' },
-    { icon: FaHardHat, title: 'Construction' },
-    { icon: FaOilCan, title: 'Oil & Gas' },
-    { icon: FaWarehouse, title: 'Distribution Companies' },
-    { icon: FaBoxes, title: 'Freight Forwarders' },
-    { icon: FaShoppingCart, title: 'E-commerce' },
-    { icon: FaLandmark, title: 'Government & Enterprise Fleets' },
+const icons = [
+    FaTruckMoving, FaShippingFast, FaIndustry, FaStore, FaHardHat,
+    FaOilCan, FaWarehouse, FaBoxes, FaShoppingCart, FaLandmark
 ];
 
 const IndustriesSection = (props) => {
+    const { t } = useTranslation();
+    const items = t('home.industries.items', { returnObjects: true });
     return (
         <section className={"wpo-industries-section section-padding" + (props.hclass ? ' ' + props.hclass : '')}>
             <div className="container">
                 <div className="wpo-section-title">
-                    <h2>Industries We Serve</h2>
-                    <h3>Built for every kind of fleet</h3>
+                    <h2>{t('home.industries.title')}</h2>
+                    <h3>{t('home.industries.subtitle')}</h3>
                 </div>
                 <div className="industries-grid">
-                    {industries.map((industry, index) => (
-                        <div className="industries-item" key={index}>
-                            <div className="icon">
-                                <industry.icon />
+                    {items.map((title, index) => {
+                        const Icon = icons[index];
+                        return (
+                            <div className="industries-item" key={index}>
+                                <div className="icon">
+                                    <Icon />
+                                </div>
+                                <span>{title}</span>
                             </div>
-                            <span>{industry.title}</span>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>

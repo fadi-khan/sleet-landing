@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import CountUp from 'react-countup';
 import Shape1 from '../../images/left-shape-fun.svg'
 import Shape2 from '../../images/right-shape-fun.svg'
@@ -7,6 +8,7 @@ import { FaSmile } from "react-icons/fa";
 
 
 const FunFactS2 = (props) => {
+    const { t } = useTranslation();
     return (
         <section className={"" +props.hclass}>
             <h3 className="d-none"> section title</h3>
@@ -18,28 +20,28 @@ const FunFactS2 = (props) => {
                                 <IoIosPeople size={60} />
 
                                 <h2><CountUp end={5000} enableScrollSpy />+</h2>
-                                <p>Happy Customers</p>
+                                <p>{t('home.funfact.happyCustomers')}</p>
                             </div>
                         </div>
                         <div className="col col-lg-3 col-md-6 col-12">
                             <div className="item">
                                 <FaSmile size={42} className='mb-3' />
                                 <h2><CountUp end={100} enableScrollSpy />%</h2>
-                                <p>Customer Satisfaction</p>
+                                <p>{t('home.funfact.customerSatisfaction')}</p>
                             </div>
                         </div>
                         <div className="col col-lg-3 col-md-6 col-12">
                             <div className="item">
                                 <i className="flaticon-globe"></i>
                                 <h2><CountUp end={10} enableScrollSpy />+</h2>
-                                <p>Cities Covered</p>
+                                <p>{t('home.funfact.citiesCovered')}</p>
                             </div>
                         </div>
                         <div className="col col-lg-3 col-md-6 col-12">
                             <div className="item">
                                 <i className="flaticon-order"></i>
                                 <h2><CountUp end={30} enableScrollSpy />+</h2>
-                                <p>Total Services</p>
+                                <p>{t('home.funfact.totalServices')}</p>
                             </div>
                         </div>
                     </div>

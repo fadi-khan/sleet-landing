@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
+import { useTranslation } from 'react-i18next';
 
 // image
 import Ab from '../../images/about/ab5.png'
@@ -12,7 +13,8 @@ import Abd5 from '../../images/about/shape.png'
 import Abd6 from '../../images/about/profile.jpg'
 import Abd7 from '../../images/about/signature.png'
 
-const about = (props) => {
+const About = (props) => {
+    const { t } = useTranslation();
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
@@ -44,7 +46,7 @@ const about = (props) => {
                             <div className="since">
                                 <div>
                                     <h2> <CountUp end={1999} enableScrollSpy>00</CountUp></h2>
-                                    <p>Since</p>
+                                    <p>{t('about.since')}</p>
                                 </div>
                             </div>
                         </div>
@@ -52,20 +54,17 @@ const about = (props) => {
                     <div className="col-lg-6 col-12">
                         <div className="about-content">
                             <div className="title">
-                                <h2>Trusted transport service </h2>
-                                <h3>Transport & Logistics
-                                    Services We are the best</h3>
+                                <h2>{t('about.trustedTransport')} </h2>
+                                <h3>{t('about.heading')}</h3>
                             </div>
                             <div className="sub-content">
-                                <span>Logistika is the world's leading global logistics provider — we expertly
-                                    facilitate industry and commerce in the international exchange of goods through land
-                                    transport.</span>
+                                <span>{t('about.subContent')}</span>
                             </div>
-                            <h4>operations around the world and across various transporation sectors.</h4>
+                            <h4>{t('about.operations')}</h4>
                             <ul>
-                                <li>Domestic and International Service emergency support</li>
-                                <li>Compliance and Enforcement actions</li>
-                                <li>Becoming a registered provider Today</li>
+                                <li>{t('about.list.0')}</li>
+                                <li>{t('about.list.1')}</li>
+                                <li>{t('about.list.2')}</li>
                             </ul>
 
                             <div className="author-btn">
@@ -75,12 +74,12 @@ const about = (props) => {
                                     </div>
                                     <div className="text">
                                         <img src={Abd7} alt="" />
-                                        <span>Ceo & Founder</span>
+                                        <span>{t('about.ceoFounder')}</span>
                                     </div>
                                 </div>
                                 <div className="about-btn">
                                     <Link onClick={ClickHandler} to="/about" className="theme-btn">
-                                        more about us
+                                        {t('common.moreAboutUs')}
                                     </Link>
                                 </div>
                             </div>
@@ -92,5 +91,5 @@ const about = (props) => {
     );
 };
 
-export default about;
+export default About;
 

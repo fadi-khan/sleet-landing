@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 import HeaderTop from '../../components/HeaderTop/HeaderTop';
 import Navbar from '../../components/Navbar/Navbar'
 import PageTitle from '../../components/pagetitle/PageTitle'
@@ -11,11 +12,12 @@ import Logo from '../../images/logo.png'
 import MyForm from '../../components/GetTouchSection/MyForm';
 
 const FaqPage = () => {
+    const { t } = useTranslation();
     return (
         <Fragment>
             {/* <HeaderTop /> */}
             <Navbar hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Internation Logistics'} pagesub={'Faq'} />
+            <PageTitle pageTitle={t('faqPage.pageTitle')} pagesub={t('faqPage.pageSub')} />
             <FaqSection hclass={'wpo-faq-section section-padding'} />
             <section className="wpo-get-touch-section-s2 section-padding pt-0">
                 <div className="container">

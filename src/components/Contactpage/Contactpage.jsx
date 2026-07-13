@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import ContactForm from '../ContactFrom/ContactForm'
 import Img01 from '../../images/homepage/get-in-touch.jpeg'
 
 
 
 const Contactpage = () => {
+    const { t } = useTranslation();
 
     return (
         <div>
@@ -21,8 +23,8 @@ const Contactpage = () => {
                                         </div>
                                     </div>
                                     <div className="office-info-text">
-                                        <h2>address line</h2>
-                                        <p>Street 1b, Al Khaleej road, Al Muhammadiyah, Dammam</p>
+                                        <h2>{t('contact.addressLine')}</h2>
+                                        <p>{t('contact.addressText')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -34,7 +36,7 @@ const Contactpage = () => {
                                         </div>
                                     </div>
                                     <div className="office-info-text">
-                                        <h2>Phone Number</h2>
+                                        <h2>{t('contact.phoneNumber')}</h2>
                                         <p>+966 53 775 0600</p>
                                     </div>
                                 </div>
@@ -47,7 +49,7 @@ const Contactpage = () => {
                                         </div>
                                     </div>
                                     <div className="office-info-text">
-                                        <h2>Address</h2>
+                                        <h2>{t('contact.addressLabel')}</h2>
                                         <p><a href="mailto:mohammad@sleet.sa" target="_blank" rel="noopener noreferrer">mohammad@sleet.sa</a></p>
                                     </div>
                                 </div>
@@ -59,16 +61,16 @@ const Contactpage = () => {
                         <div className="row">
                             <div className="col-lg-6 col-12">
                                 <div className="contact-left">
-                                    <h2>Get in touch</h2>
-                                    <p>Have questions about our logistics services? Need a customized shipping solution? Our team is here to help you optimize your supply chain and streamline your operations. Reach out to us today and let's discuss how we can support your business needs.</p>
+                                    <h2>{t('contact.getInTouch')}</h2>
+                                    <p>{t('contact.getInTouchDesc')}</p>
                                     <img className="image" src={Img01} alt="" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-12">
                                 <div className="contact-right">
                                     <div className="title">
-                                        <h2>Fill Up The Form</h2>
-                                        <p>Your email address will not be published. Required fields are marked *</p>
+                                        <h2>{t('contact.fillForm')}</h2>
+                                        <p>{t('contact.fillFormDesc')}</p>
                                     </div>
                                     <ContactForm />
                                 </div>

@@ -1,69 +1,49 @@
-import React, { useState, useEffect, useRef } from 'react';
-import l1 from '../../images/language/1.svg';
-import l2 from '../../images/language/2.svg';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setLanguage } from '../../store/slices/languageSlice';
+
+const languages = {
+    en: {
+        value: 'en',
+        label: 'English',
+        flag: (
+            <svg viewBox="0 0 24 16" width="18" height="13" aria-hidden="true">
+                <rect width="24" height="16" fill="#012169" />
+                <path d="M0 0 24 16M24 0 0 16" stroke="#fff" strokeWidth="3.2" />
+                <path d="M0 0 24 16M24 0 0 16" stroke="#C8102E" strokeWidth="1.4" />
+                <path d="M12 0V16M0 8H24" stroke="#fff" strokeWidth="5.4" />
+                <path d="M12 0V16M0 8H24" stroke="#C8102E" strokeWidth="3.2" />
+            </svg>
+        )
+    },
+    ar: {
+        value: 'ar',
+        label: 'العربية',
+        flag: (
+            <svg viewBox="0 0 24 16" width="18" height="13" aria-hidden="true">
+                <rect width="24" height="16" fill="#006C35" />
+                <text x="12" y="8.6" textAnchor="middle" fontSize="4.6" fill="#fff" fontFamily="'Traditional Arabic','Arial',sans-serif">لا إله إلا الله</text>
+                <rect x="4" y="11.4" width="15" height="1.3" fill="#fff" />
+                <polygon points="3.2,10.9 4.4,12.05 3.2,13.2" fill="#fff" />
+            </svg>
+        )
+    }
+};
 
 const LanguageSelector = () => {
-    const [selectedLanguage, setSelectedLanguage] = useState({
-        value: 'en',
-        icon: l1,
-        text: 'English'
-    });
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const customSelectWrapperRef = useRef(null);
+    const dispatch = useDispatch();
+    const language = useSelector((state) => state.language.language);
+    const current = languages[language] || languages.en;
 
-    const languages = [
-        { value: 'en', icon: l1, text: 'English' },
-        { value: 'sp', icon: l2, text: 'Spanish' }
-    ];
-
-    const handleLanguageChange = (language) => {
-        setSelectedLanguage(language);
-        setIsDropdownOpen(false);
+    const handleToggle = () => {
+        dispatch(setLanguage(current.value === 'en' ? 'ar' : 'en'));
     };
 
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (customSelectWrapperRef.current && !customSelectWrapperRef.current.contains(event.target)) {
-                setIsDropdownOpen(false);
-            }
-        };
-
-        document.addEventListener('click', handleClickOutside);
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-        };
-    }, []);
-
     return (
-        <div className="language-selector">
-            <select id="languageSelect" style={{ display: 'none' }} value={selectedLanguage.value} readOnly>
-                {languages.map((language) => (
-                    <option key={language.value} value={language.value} data-icon={language.icon}>
-                        {language.text}
-                    </option>
-                ))}
-            </select>
-
-            <div className="custom-select-wrapper" ref={customSelectWrapperRef} onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-                <div className="custom-select">
-                    <img src={selectedLanguage.icon} alt={selectedLanguage.text} /> {selectedLanguage.text}
-                </div>
-                <div className="custom-arrow"><i className="flaticon-down"></i></div>
-                {isDropdownOpen && (
-                    <div className="custom-options">
-                        {languages.map((language) => (
-                            <div
-                                key={language.value}
-                                className="custom-option"
-                                onClick={() => handleLanguageChange(language)}
-                            >
-                                <img src={language.icon} alt={language.text} /> {language.text}
-                            </div>
-                        ))}
-                    </div>
-                )}
-            </div>
-        </div>
+        <button type="button" className="lang-toggle fs-5 px-4" onClick={handleToggle} aria-label="Toggle language">
+            <span className="lang-toggle-flag ">{current.flag}</span>
+            <span className="lang-toggle-label">{current.label}</span>
+        </button>
     );
 };
 

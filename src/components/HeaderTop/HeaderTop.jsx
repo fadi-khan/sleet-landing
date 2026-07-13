@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
 const HeaderTop = () => {
     return (
@@ -21,7 +20,6 @@ const HeaderTop = () => {
                     </div>
                     <div className="col-lg-7 col-12">
                         <div className="contact-into">
-                            <LanguageSelector/>
                             <div className="pryment-selector">
                                 <select>
                                     <option value="usd">USD</option>

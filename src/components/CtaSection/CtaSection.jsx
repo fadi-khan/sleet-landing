@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 
 const ClickHandler = () => {
@@ -7,15 +8,15 @@ const ClickHandler = () => {
 }
 
 const CtaSection = (props) => {
+    const { t } = useTranslation();
     return (
         <div className={"" +props.hclass}>
             <div className="container">
                 <div className="cta-wrapr">
                     <div className="wpo-section-title">
-                        <h2>Ready to transform your logistics operations?</h2>
-                        <h3>Join businesses embracing
-                            smarter logistics with Sleet</h3>
-                        <Link onClick={ClickHandler} to="/contact" className="theme-btn">Request a Demo</Link>
+                        <h2>{t('cta.title')}</h2>
+                        <h3>{t('cta.subtitle')}</h3>
+                        <Link onClick={ClickHandler} to="/contact" className="theme-btn">{t('cta.requestDemo')}</Link>
                     </div>
                     <div className="contact-info">
                         <div className="item">
@@ -23,8 +24,8 @@ const CtaSection = (props) => {
                                 <i className="flaticon-phone-call"></i>
                             </div>
                             <div className="text">
-                                <span>Call For Inquiry</span>
-                                <p>+966 53 775 0600</p>
+                                <span>{t('cta.callForInquiry')}</span>
+                                <p dir="ltr">+966 53 775 0600</p>
                             </div>
                         </div>
                         <div className="item">
@@ -32,8 +33,8 @@ const CtaSection = (props) => {
                                 <i className="flaticon-email"></i>
                             </div>
                             <div className="text">
-                                <span>Send Us Email</span>
-                                <p><a href="mailto:mohammad@sleet.sa" target="_blank" rel="noopener noreferrer">mohammad@sleet.sa</a></p>
+                                <span>{t('cta.sendUsEmail')}</span>
+                                <p dir="ltr"><a href="mailto:mohammad@sleet.sa" target="_blank" rel="noopener noreferrer">mohammad@sleet.sa</a></p>
                             </div>
                         </div>
                     </div>

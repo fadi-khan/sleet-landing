@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Services from '../../api/Services';
 
 const ClickHandler = () => {
@@ -7,6 +8,7 @@ const ClickHandler = () => {
 }
 
 const AboutSleetSection = (props) => {
+    const { t } = useTranslation();
     const scrollToServices = (e) => {
         e.preventDefault();
         const scroll = () => {
@@ -26,23 +28,18 @@ const AboutSleetSection = (props) => {
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-12">
                         <div className="wpo-section-title">
-                            <h2>About Sleet</h2>
-                            <h3>Driving the future of logistics</h3>
+                            <h2>{t('home.aboutSleet.title')}</h2>
+                            <h3>{t('home.aboutSleet.subtitle')}</h3>
                         </div>
-                        <p>Sleet Automation Logistics is transforming the logistics industry through
-                            technology. Our integrated ecosystem brings together transportation, fleet
-                            management, artificial intelligence, and digital logistics services into one
-                            powerful platform.</p>
-                        <p>Whether you manage a single fleet or thousands of vehicles, Sleet gives you
-                            complete visibility, automation, and control through intelligent software
-                            built for modern logistics.</p>
-                        <Link onClick={scrollToServices} to="#services" className="theme-btn">Explore more about <i className="ti-angle-right"></i></Link>
+                        <p>{t('home.aboutSleet.p1')}</p>
+                        <p>{t('home.aboutSleet.p2')}</p>
+                        <Link onClick={scrollToServices} to="#services" className="theme-btn">{t('common.exploreMore')} <i className="ti-angle-right"></i></Link>
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="about-sleet-grid">
                             {Services.map((service, index) => (
                                 <Link to={`/service-single/${service.slug}`} onClick={ClickHandler} className="about-sleet-card" key={index}>
-                                    {service.isCommingSoon && <span className="soon-tag">Soon</span>}
+                                    {service.isCommingSoon && <span className="soon-tag">{t('serviceSingle.comingSoon')}</span>}
                                     <service.Icon />
                                     <h3>{service.title}</h3>
                                     <p>{service.subtitle}</p>

@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import HeaderTopS2 from '../HeaderTopS2/HeaderTopS2'
+import LanguageSelector from '../LanguageSelector/LanguageSelector'
 import { useDispatch, useSelector } from "react-redux";
 import { totalPrice } from "../../utils";
 
@@ -10,6 +12,7 @@ import { removeFromCart } from "../../store/slices/cartSlice";
 import LogoLight from '../../images/logo-light.png'
 
 const Header = (props) => {
+    const { t } = useTranslation();
     const ClickHandler = () => window.scrollTo(10, 0);
     const navigate = useNavigate();
     const location = useLocation();
@@ -51,30 +54,30 @@ const Header = (props) => {
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
                                         <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} to="/home">Home</Link>
-                                        
+                                            <Link onClick={ClickHandler} to="/home">{t('nav.home')}</Link>
+
                                         </li>
-                                        
+
                                         <li className="menu-item-has-children">
-                                            <Link onClick={scrollToServices} to="/home#services">services </Link>
+                                            <Link onClick={scrollToServices} to="/home#services">{t('nav.services')}</Link>
 
                                         </li>
                                         <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} to="/faq">FAQ</Link>
-                                          
+                                            <Link onClick={ClickHandler} to="/faq">{t('nav.faq')}</Link>
+
                                         </li>
-                                        
-                                        <li><Link onClick={ClickHandler} to="/contact">Contact</Link></li>
+
+                                        <li><Link onClick={ClickHandler} to="/contact">{t('nav.contact')}</Link></li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-2 col-2">
                                 <div className="header-right">
-                                    
+
                                     {/* CART */}
-                                    
+                                    <LanguageSelector />
                                     <div className="close-form">
-                                        <Link className="theme-btn" to="https://app.sleet.sa/login" target="_blank">Get Started</Link>
+                                        <Link className="theme-btn" to="https://app.sleet.sa/login" target="_blank">{t('common.getStarted')}</Link>
                                     </div>
                                 </div>
                             </div>

@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import MyForm from './MyForm';
 
 const GetTouchSection = (props) => {
+    const { t } = useTranslation();
 
     return (
         <section className="wpo-get-touch-section section-padding">
@@ -9,8 +11,8 @@ const GetTouchSection = (props) => {
                 <div className="row justify-content-end">
                     <div className="col-lg-7 col-12">
                         <div className="wpo-section-title">
-                            <h2>Trusted transport service</h2>
-                            <h3>Let’s Work Together</h3>
+                            <h2>{t('home.getTouch.subtitle')}</h2>
+                            <h3>{t('home.getTouch.title')}</h3>
                         </div>
                         <MyForm />
                     </div>

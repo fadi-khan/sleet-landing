@@ -8,6 +8,29 @@
 	position: relative;
 	z-index: 1;
 
+	.hero-social-list {
+		list-style: none;
+		padding: 0;
+
+		li a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 42px;
+			height: 42px;
+			border-radius: 50%;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			color: $white;
+			font-size: 18px;
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				background: $theme-primary-color;
+				border-color: $theme-primary-color;
+			}
+		}
+	}
+
 	.slider-item {
 		height: 834px;
 		position: relative;

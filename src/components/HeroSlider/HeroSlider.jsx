@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -13,6 +15,7 @@ const ClickHandler = () => {
 }
 
 const HeroSlider = () => {
+    const { t } = useTranslation();
 
     const settings = {
         autoplay: true,
@@ -30,6 +33,7 @@ const HeroSlider = () => {
             }
         ]
     };
+    const language = useSelector((state) => state.language.language); // 'en' | 'ar'
 
     return (
         <section className="hero-section">
@@ -41,18 +45,23 @@ const HeroSlider = () => {
                                 data-animation-in="zoomInImage" />
                         </div>
                         <div className="container">
-                            <div className="content">
-                                <h2 className="animated" data-animation-in="fadeInUp">Sleet</h2>
-                                <h3 className="animated" data-animation-in="fadeInUp">The Future of Smart Logistics Starts with Sleet</h3>
-                                <p className="animated" data-animation-in="fadeInUp">Sleet Automation Logistics is an all-in-one logistics technology platform that combines intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace to help businesses move faster, operate smarter, and scale with confidence.</p>
+                            <div className="content mt-5 pt-lg-5">
+                                <h2 className="animated" data-animation-in="fadeInUp">{t('home.hero.title')}</h2>
+                                <h3 className="animated" data-animation-in="fadeInUp">{t('home.hero.subtitle')}</h3>
+                                <p className="animated" data-animation-in="fadeInUp">{t('home.hero.description')}</p>
                                 <div className="hero-btn animated d-flex gap-4" data-animation-in="fadeInUp">
                                     <div className="btn-1">
-                                        <Link onClick={ClickHandler} to="/contact" className="theme-btn">Get Started</Link>
+                                        <Link onClick={ClickHandler} to="/contact" className="theme-btn">{t('common.getStarted')}</Link>
                                     </div>
                                     <Link onClick={ClickHandler} to="/contact" className="hero-btn text-info fs-5 fw-bold ">
-                                        <span className='text-decoration-underline'>Book a Demo</span> <i className="ti-angle-right"></i>
+                                        <span className=''>{t('common.bookADemo')}</span> <i className={` ${language === 'ar' ? 'ti-angle-left ms-2' : 'ti-angle-right '} `}></i>
                                     </Link>
                                 </div>
+                                <ul className="hero-social-list animated d-flex gap-3 mt-4" data-animation-in="fadeInUp">
+                                    <li><a href="https://www.linkedin.com/company/sleet-sa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://www.instagram.com/sleet.sa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://x.com/sleet_sa?s=21&t=Pp3MNfVjHFWqTcUrnmTAmw" target="_blank" rel="noopener noreferrer" aria-label="X"><i className="fa fa-twitter"></i></a></li>
+                                </ul>
                             </div>
                         </div>
                         <div className="down-shape">
@@ -76,9 +85,9 @@ const HeroSlider = () => {
                         </div>
                     </div>
                 </div>
-              
+
             </Slider>
-          
+
         </section>
     );
 };

@@ -1,38 +1,39 @@
 import React, { useState } from 'react';
 import ListItem from "@mui/material/List";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 import './style.css';
-
-const menus = [
-    {
-        id: 1,
-        title: 'Home',
-        link: '/home',
-    },
-    {
-        id: 2,
-        title: 'Services',
-        link: '/home#services',
-        isServicesLink: true,
-    },
-    {
-        id: 3,
-        title: 'FAQ',
-        link: '/faq',
-    },
-    {
-        id: 4,
-        title: 'Contact',
-        link: '/contact',
-    }
-]
-
 
 const MobileMenu = () => {
 
+    const { t } = useTranslation();
     const [menuActive, setMenuState] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
+
+    const menus = [
+        {
+            id: 1,
+            title: t('nav.home'),
+            link: '/home',
+        },
+        {
+            id: 2,
+            title: t('nav.services'),
+            link: '/home#services',
+            isServicesLink: true,
+        },
+        {
+            id: 3,
+            title: t('nav.faq'),
+            link: '/faq',
+        },
+        {
+            id: 4,
+            title: t('nav.contact'),
+            link: '/contact',
+        }
+    ];
 
     const ClickHandler = () => {
         window.scrollTo(10, 0);

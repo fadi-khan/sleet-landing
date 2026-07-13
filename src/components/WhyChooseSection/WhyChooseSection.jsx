@@ -1,42 +1,38 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import {
     FaProjectDiagram, FaBrain, FaSatelliteDish, FaCloud, FaExpandArrowsAlt,
     FaShieldAlt, FaPlug, FaLaptopCode, FaChartLine, FaRocket
 } from 'react-icons/fa';
 
-const benefits = [
-    { icon: FaProjectDiagram, title: 'End-to-End Logistics Platform' },
-    { icon: FaBrain, title: 'AI-Powered Decision Making' },
-    { icon: FaSatelliteDish, title: 'Real-Time Fleet Visibility' },
-    { icon: FaCloud, title: 'Cloud-Based Infrastructure' },
-    { icon: FaExpandArrowsAlt, title: 'Scalable for Any Business Size' },
-    { icon: FaShieldAlt, title: 'Enterprise-Level Security' },
-    { icon: FaPlug, title: 'Easy Integration' },
-    { icon: FaLaptopCode, title: 'Modern User Experience' },
-    { icon: FaChartLine, title: 'Actionable Analytics' },
-    { icon: FaRocket, title: 'Built for the Future of Logistics' },
+const icons = [
+    FaProjectDiagram, FaBrain, FaSatelliteDish, FaCloud, FaExpandArrowsAlt,
+    FaShieldAlt, FaPlug, FaLaptopCode, FaChartLine, FaRocket
 ];
 
 const WhyChooseSection = (props) => {
+    const { t } = useTranslation();
+    const items = t('home.whyChoose.items', { returnObjects: true });
     return (
         <section className={"wpo-why-choose-section section-padding" + (props.hclass ? ' ' + props.hclass : '')}>
             <div className="container">
                 <div className="wpo-section-title">
-                    <h2>Why Choose Sleet?</h2>
-                    <h3>One platform. Endless possibilities.</h3>
-                    <p>Instead of using separate software for fleet management, reporting, AI, and
-                        transportation services, Sleet combines everything into one intelligent
-                        ecosystem.</p>
+                    <h2>{t('home.whyChoose.title')}</h2>
+                    <h3>{t('home.whyChoose.subtitle')}</h3>
+                    <p>{t('home.whyChoose.description')}</p>
                 </div>
                 <div className="why-choose-grid">
-                    {benefits.map((benefit, index) => (
-                        <div className="why-choose-item" key={index}>
-                            <div className="icon">
-                                <benefit.icon />
+                    {items.map((title, index) => {
+                        const Icon = icons[index];
+                        return (
+                            <div className="why-choose-item" key={index}>
+                                <div className="icon">
+                                    <Icon />
+                                </div>
+                                <h3>{title}</h3>
                             </div>
-                            <h3>{benefit.title}</h3>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>

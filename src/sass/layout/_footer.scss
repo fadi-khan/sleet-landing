@@ -126,6 +126,29 @@
         text-transform: capitalize;
     }
 
+    .social-list {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+
+        li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: $white;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background: $theme-primary-color;
+                border-color: $theme-primary-color;
+            }
+        }
+    }
+
     @media (max-width: 767px) {
 
         .widget-title {

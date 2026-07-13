@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 import HeaderTop from '../../components/HeaderTop/HeaderTop';
 import Navbar from '../../components/Navbar/Navbar'
 import PageTitle from '../../components/pagetitle/PageTitle'
@@ -19,11 +20,12 @@ import Scrollbar from '../../components/scrollbar/scrollbar';
 import Logo from '../../images/logo.png'
 
 const AboutPage = () => {
+    const { t } = useTranslation();
     return (
         <Fragment>
             {/* <HeaderTop /> */}
             <Navbar hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Internation Logistics'} pagesub={'About us'} />
+            <PageTitle pageTitle={t('about.pageTitle')} pagesub={t('about.pageSub')} />
             <About hclass={'wpo-about-section section-padding'} />
             <FunFactS2 hclass={'wpo-funfact-section-s3'} />
             <ServiceSectionS3 hclass={'wpo-service-section-s3 section-padding'}/>
