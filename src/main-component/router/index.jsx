@@ -37,20 +37,20 @@ const AllRoute = () => {
         <Routes>
           <Route path="/" element={<HomePage2 />} />
           <Route path="home" element={<HomePage2 />} />
-          <Route path="home-2" element={<HomePage2 />} />
-          <Route path="home-3" element={<HomePage3 />} />
+          {/* <Route path="home-2" element={<HomePage2 />} />
+          <Route path="home-3" element={<HomePage3 />} /> */}
           <Route path="about" element={<AboutPage />} />
-          <Route path="pricing" element={<PricingPage />} />
-          <Route path="tracking" element={<TrackingPage />} />
-          <Route path="team" element={<TeamPage />} />
+          {/* <Route path="pricing" element={<PricingPage />} /> */}
+          {/* <Route path="tracking" element={<TrackingPage />} /> */}
+          {/* <Route path="team" element={<TeamPage />} /> */}
           <Route path="Faq" element={<FaqPage />} />
-          <Route path="project" element={<ProjectPage />} />
-          <Route path="project-2" element={<ProjectPageS2 />} />
-          <Route path="project-3" element={<ProjectPageS3 />} />
-          <Route path="project-single/:slug" element={<ProjectSinglePage />} />
-          <Route path="services" element={<ServicePages />} />
+          {/* <Route path="project" element={<ProjectPage />} /> */}
+          {/* <Route path="project-2" element={<ProjectPageS2 />} /> */}
+          {/* <Route path="project-3" element={<ProjectPageS3 />} /> */}
+          {/* <Route path="project-single/:slug" element={<ProjectSinglePage />} /> */}
+          {/* <Route path="services" element={<ServicePages />} /> */}
           <Route path="service-single/:slug" element={<ServiceSinglePage />} />
-          <Route path="shop" element={<ShopPage />} />
+          {/* <Route path="shop" element={<ShopPage />} />
           <Route path='shop-single/:slug' element={<ProductSinglePage />} />
           <Route path='cart' element={<CartPage />} />
           <Route path='checkout' element={<CheckoutPage />} />
@@ -60,7 +60,7 @@ const AllRoute = () => {
           <Route path='blog-fullwidth' element={<BlogPageFullwidth />} />
           <Route path='blog-single/:slug' element={<BlogDetails />} />
           <Route path='blog-single-left-sidebar/:slug' element={<BlogDetailsLeftSiide />} />
-          <Route path='blog-single-fullwidth/:slug' element={<BlogDetailsFull />} />
+          <Route path='blog-single-fullwidth/:slug' element={<BlogDetailsFull />} /> */}
           <Route path='contact' element={<ContactPage />} />
           <Route path='404' element={<ErrorPage />} /> 
         </Routes>
