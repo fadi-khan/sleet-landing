@@ -17,33 +17,34 @@ const ServiceSinglePage = (props) => {
     const { t } = useTranslation();
     const { slug } = useParams()
     const serviceDetails = Services.find(item => item.slug === slug)
+    const dataKey = `servicesData.${serviceDetails.key}`
+    const title = t(`${dataKey}.title`)
+    const subtitle = t(`${dataKey}.subtitle`)
+    const description = t(`${dataKey}.description`)
+    const features = t(`${dataKey}.features`, { returnObjects: true, defaultValue: [] })
+    const note = t(`${dataKey}.note`, { defaultValue: '' })
+    const sampleQuestions = t(`${dataKey}.sampleQuestions`, { returnObjects: true, defaultValue: [] })
+    const outputFormats = t(`${dataKey}.outputFormats`, { returnObjects: true, defaultValue: [] })
 
     return (
         <Fragment>
             {/* <HeaderTop /> */}
             <Navbar hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={t('serviceSingle.pageTitle')} pagesub={serviceDetails.title} bgimg={serviceDetails.banner} />
+            <PageTitle pageTitle={t('serviceSingle.pageTitle')} pagesub={title} bgimg={serviceDetails.banner} />
             <section className="wpo-service-single-page section-padding">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8 col-12 order-lg-2">
+                        <div className="col-lg-8 col-12 order-lg-2 px-5">
                             <div className="service-single-wrap">
-                                <div className="title-image">
-                                    {serviceDetails.isCommingSoon && (
-                                        <span className="coming-soon-badge">{t('serviceSingle.comingSoon')}</span>
-                                    )}
-                                    <img src={serviceDetails.simag} alt={serviceDetails.title} />
-                                </div>
+                                <span className="s-subtitle">{subtitle}</span>
+                                <h2>{title}</h2>
+                                <p>{description}</p>
 
-                                <span className="s-subtitle">{serviceDetails.subtitle}</span>
-                                <h2>{serviceDetails.title}</h2>
-                                <p>{serviceDetails.description}</p>
-
-                                {serviceDetails.features && serviceDetails.features.length > 0 && (
+                                {features.length > 0 && (
                                     <div className="feature-block">
                                         <h3>{t('serviceSingle.features')}</h3>
                                         <ul className="feature-grid">
-                                            {serviceDetails.features.map((feature, index) => (
+                                            {features.map((feature, index) => (
                                                 <li key={index}>{feature}</li>
                                             ))}
                                         </ul>
@@ -55,23 +56,30 @@ const ServiceSinglePage = (props) => {
                                         <h3>{t('serviceSingle.generateReports')}</h3>
                                         <p>{t('serviceSingle.askQuestions')}</p>
                                         <ul className="sample-questions">
-                                            {serviceDetails.sampleQuestions.map((question, index) => (
+                                            {sampleQuestions.map((question, index) => (
                                                 <li key={index}>“{question}”</li>
                                             ))}
                                         </ul>
 
                                         <h3>{t('serviceSingle.outputFormats')}</h3>
                                         <ul className="feature-grid">
-                                            {serviceDetails.outputFormats.map((format, index) => (
+                                            {outputFormats.map((format, index) => (
                                                 <li key={index}>{format}</li>
                                             ))}
                                         </ul>
                                     </div>
                                 )}
 
-                                {serviceDetails.note && (
-                                    <h3 className="quate">{serviceDetails.note}</h3>
+                                {note && (
+                                    <h3 className="quate">{note}</h3>
                                 )}
+
+                                <div className="title-image">
+                                    {serviceDetails.isCommingSoon && (
+                                        <span className="coming-soon-badge">{t('serviceSingle.comingSoon')}</span>
+                                    )}
+                                    <img src={serviceDetails.simag} alt={title} />
+                                </div>
                             </div>
                         </div>
                         <div className="col-lg-4 col-12 order-lg-1">

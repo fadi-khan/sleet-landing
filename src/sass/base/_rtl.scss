@@ -4,7 +4,15 @@ Scoped to html[dir="rtl"] so they only apply for Arabic.
 Imported LAST in style.scss so these rules win the cascade.
 --------------------------------------------------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
 html[dir="rtl"] {
+
+	body,
+	h1, h2, h3, h4, h5, h6,
+	p, a, span, div, button, input, textarea, select {
+		font-family: "Tajawal", sans-serif;
+	}
 
 	body {
 		text-align: right;
@@ -172,16 +180,40 @@ html[dir="rtl"] {
 		}
 
 		.newsletter-widget {
-			margin-left: 0;
+			margin-left: auto;
 			margin-right: -20px;
 
 			@media (max-width: 991px) {
 				margin-right: 0;
+				margin-left: 0;
 			}
 
 			.form-fild button {
 				right: auto;
 				left: 0;
+			}
+
+			.terms label {
+				margin-left: 0;
+				margin-right: 10px;
+			}
+		}
+
+		.wpo-lower-footer {
+			.logo {
+				text-align: right;
+
+				@media (max-width: 991px) {
+					text-align: center;
+				}
+			}
+
+			ul {
+				text-align: left;
+
+				@media (max-width: 1199px) {
+					text-align: center;
+				}
 			}
 		}
 	}
@@ -228,9 +260,61 @@ html[dir="rtl"] {
 	}
 
 	.wpo-about-sleet-section .wpo-section-title,
+	.wpo-service-section .wpo-section-title,
+	.wpo-about-section-s2 .about-content .wpo-section-title,
 	.contact-left,
 	.contact-right .title {
 		text-align: right;
+	}
+
+	/* ---------- wpo-about-section-s2 ---------- */
+	.wpo-about-section-s2 .about-content {
+		p {
+			padding-left: 0;
+			padding-right: 14px;
+			border-left: none;
+			border-right: 2px solid $theme-primary-color-s2;
+		}
+
+		ul li {
+			margin-right: 0;
+			margin-left: 20px;
+
+			i {
+				margin-right: 0;
+				margin-left: 10px;
+			}
+		}
+
+		.logistics li {
+			margin-right: 0;
+			margin-left: 10px;
+			padding-left: 0;
+			padding-right: 25px;
+
+			&::before {
+				left: auto;
+				right: 0;
+			}
+		}
+
+		.about-btn .theme-btn {
+			margin-right: 0;
+			margin-left: 40px;
+
+			@include media-query(1199px) {
+				margin-left: 10px;
+			}
+
+			@include media-query(757px) {
+				margin-left: 0px;
+			}
+		}
+
+		.author .text {
+			margin-left: 0;
+			margin-right: 10px;
+		}
 	}
 
 	.contact-right {
@@ -319,6 +403,11 @@ html[dir="rtl"] {
 				}
 			}
 		}
+	}
+
+	/* ---------- service sidebar (sidebar.jsx) ---------- */
+	.service-catagory ul li a i {
+		transform: scaleX(-1);
 	}
 
 	/* ---------- FAQ accordion (Accordion.jsx) ---------- */

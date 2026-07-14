@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import Services from "../../api/Services";
 import Shape from '../../images/service/top-shape.svg'
@@ -9,6 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const ServiceSectionS3 = (props) => {
+    const { t } = useTranslation();
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
@@ -55,11 +57,11 @@ const ServiceSectionS3 = (props) => {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-12">
-                        <SectionTitle subtitle={'Trusted transport service'} title={'Transport & Logistics Services We are the best'} />
+                        <SectionTitle subtitle={t('home.service.subtitle')} title={t('home.service.title')} />
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="service-btn">
-                            <Link onClick={ClickHandler} to="/services" className="theme-btn">All Services</Link>
+                            <Link onClick={ClickHandler} to="/services" className="theme-btn">{t('common.allServices')}</Link>
                         </div>
                     </div>
                 </div>
@@ -69,16 +71,16 @@ const ServiceSectionS3 = (props) => {
                     {Services.map((service, item) => (
                         <div className="service-card-s2" key={item}>
                             {service.isCommingSoon && (
-                                <span className="coming-soon-badge">Coming Soon</span>
+                                <span className="coming-soon-badge">{t('serviceSingle.comingSoon')}</span>
                             )}
                             <div className="icon">
                                 <service.Icon />
                             </div>
                             <div className="content">
-                                <h2><Link to={`/service-single/${service.slug}`} onClick={ClickHandler}>{service.title}</Link></h2>
-                                <p>{service.description}</p>
+                                <h2><Link to={`/service-single/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
+                                <p>{t(`servicesData.${service.key}.description`)}</p>
                                 <div className="services-btn">
-                                    <Link to={`/service-single/${service.slug}`} onClick={ClickHandler}>See Details </Link>
+                                    <Link to={`/service-single/${service.slug}`} onClick={ClickHandler}>{t('common.seeDetails')} </Link>
                                 </div>
                             </div>
                             <div className="top-shape">

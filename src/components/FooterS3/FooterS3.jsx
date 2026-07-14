@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Services from '../../api/Services';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SimpleReactValidator from 'simple-react-validator';
 
 
@@ -10,6 +11,7 @@ import FooterBg from '../../images/footer-bg.jpg'
 import Shape from '../../images/shape-right.svg'
 
 const FooterS3 = () => {
+    const { t } = useTranslation();
 
     const ClickHandler = () => {
         window.scrollTo(10, 0);
@@ -79,7 +81,7 @@ const FooterS3 = () => {
                                 </div>
                                 <ul>
                                     {Services.slice(0, 5).map((service, item) => (
-                                        <li key={item}><Link onClick={ClickHandler} to={`/service-single/${service.slug}`}>{service.title}</Link></li>
+                                        <li key={item}><Link onClick={ClickHandler} to={`/service-single/${service.slug}`}>{t(`servicesData.${service.key}.title`)}</Link></li>
                                     ))}
                                 </ul>
                             </div>

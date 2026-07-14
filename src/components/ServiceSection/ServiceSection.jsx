@@ -77,8 +77,8 @@ const ServiceSection = (props) => {
                                 <div className="content">
                                     <service.Icon />
                                     <div className="text">
-                                        <h2><Link to={`/service-single/${service.slug}`} onClick={ClickHandler}>{service.title}</Link></h2>
-                                        <p className="">{service.subtitle}</p>
+                                        <h2><Link to={`/service-single/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
+                                        <p className="">{t(`servicesData.${service.key}.subtitle`)}</p>
                                         <Link to={`/service-single/${service.slug}`} onClick={ClickHandler} className="service-single-link">
                                             <i className="flaticon-right-arrow"></i>
                                         </Link>

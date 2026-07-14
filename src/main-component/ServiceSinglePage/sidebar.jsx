@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 import Services from '../../api/Services';
 
 
 const ServiceSidebar = (props) => {
+    const { t } = useTranslation();
 
     const ClickHandler = () => {
         window.scrollTo(10, 0);
@@ -16,7 +18,7 @@ const ServiceSidebar = (props) => {
                     {Services.map((serves, index) => (
                         <li key={index}>
                             <Link to={`/service-single/${serves.slug}`}  onClick={ClickHandler}>
-                                <span>{serves.title}{serves.isCommingSoon && <span className="soon-tag">Soon</span>}</span>
+                                <span>{t(`servicesData.${serves.key}.title`)}{serves.isCommingSoon && <span className="soon-tag">{t('serviceSingle.soon')}</span>}</span>
                                 <i className="flaticon-right-arrow-1"></i>
                             </Link>
                         </li>
@@ -27,10 +29,8 @@ const ServiceSidebar = (props) => {
                 <div className="icon">
                     <i className="flaticon-phone-call"></i>
                 </div>
-                <h2>Looking for
-                    logistics service
-                    Provider?</h2>
-                <span>Call anytime</span>
+                <h2>{t('serviceSingle.sidebarCta.title')}</h2>
+                <span>{t('serviceSingle.sidebarCta.callAnytime')}</span>
                 <div className="num">
                     <span>+966 53 775 0600</span>
                 </div>

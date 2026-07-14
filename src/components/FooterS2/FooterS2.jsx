@@ -77,7 +77,7 @@ const FooterS2 = () => {
                                 </div>
                                 <ul>
                                     {Services.slice(0, 5).map((service, item) => (
-                                        <li key={item}><Link onClick={ClickHandler} to={`/service-single/${service.slug}`}>{service.title}</Link></li>
+                                        <li key={item}><Link onClick={ClickHandler} to={`/service-single/${service.slug}`}>{t(`servicesData.${service.key}.title`)}</Link></li>
                                     ))}
                                 </ul>
                             </div>

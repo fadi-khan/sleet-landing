@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -12,7 +13,7 @@ const ClickHandler = () => {
     window.scrollTo(10, 0);
 }
 const Footer = (props) => {
-
+    const { t } = useTranslation();
 
     const [email, setEmail] = useState('');
 
@@ -109,7 +110,7 @@ const Footer = (props) => {
                                 </div>
                                 <ul>
                                     {Services.slice(0,6).map((service,item) => (
-                                        <li key={item}><Link onClick={ClickHandler} to={`/service-single/${service.slug}`}>{service.title}</Link></li>
+                                        <li key={item}><Link onClick={ClickHandler} to={`/service-single/${service.slug}`}>{t(`servicesData.${service.key}.title`)}</Link></li>
                                     ))}
                                 </ul>
                             </div>

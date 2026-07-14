@@ -41,8 +41,8 @@ const AboutSleetSection = (props) => {
                                 <Link to={`/service-single/${service.slug}`} onClick={ClickHandler} className="about-sleet-card" key={index}>
                                     {service.isCommingSoon && <span className="soon-tag">{t('serviceSingle.comingSoon')}</span>}
                                     <service.Icon />
-                                    <h3>{service.title}</h3>
-                                    <p>{service.subtitle}</p>
+                                    <h3>{t(`servicesData.${service.key}.title`)}</h3>
+                                    <p>{t(`servicesData.${service.key}.subtitle`)}</p>
                                 </Link>
                             ))}
                         </div>
