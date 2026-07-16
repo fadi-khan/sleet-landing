@@ -93,6 +93,11 @@
 	.content {
 		max-width: 640px;
 		position: relative;
+		margin-top: 80px;
+
+		@media (max-width:991px) {
+			margin-top: 0;
+		}
 
 		.bg-text {
 			position: absolute;

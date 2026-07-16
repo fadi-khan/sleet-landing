@@ -46,8 +46,12 @@ const HeroSlider = () => {
                         </div>
                         <div className="container">
                             <div className="content mt-5 pt-lg-5">
-                                <h2 className="animated pt-5 " data-animation-in="fadeInUp">{t('home.hero.title')}</h2>
-                                <h3 className="animated" data-animation-in="fadeInUp">{t('home.hero.subtitle')}</h3>
+                                <h2 className="animated pt-5 fs-1  " data-animation-in="fadeInUp">{t('home.hero.title')}</h2>
+                                <h3 className="animated d-lg-none " data-animation-in="fadeInUp">{t('home.hero.subtitle')}</h3>
+                                <h3 
+                                style={{fontSize:'60px'}}
+                                className="animated d-none d-lg-block " data-animation-in="fadeInUp">{t('home.hero.subtitle')}</h3>
+
                                 <p className="animated" data-animation-in="fadeInUp">{t('home.hero.description')}</p>
                                 <div className="hero-btn animated d-flex gap-4" data-animation-in="fadeInUp">
                                     <div className="btn-1">
