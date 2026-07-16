@@ -51,7 +51,7 @@ const HeroSlider = () => {
                                 <p className="animated" data-animation-in="fadeInUp">{t('home.hero.description')}</p>
                                 <div className="hero-btn animated d-flex gap-4" data-animation-in="fadeInUp">
                                     <div className="btn-1">
-                                        <Link onClick={ClickHandler} to="/contact" className="theme-btn">{t('common.getStarted')}</Link>
+                                        <Link onClick={ClickHandler} to="https://app.sleet.sa" target="_blank" rel="noopener noreferrer" className="theme-btn">{t('common.getStarted')}</Link>
                                     </div>
                                     <Link onClick={ClickHandler} to="/contact" className="hero-btn text-info fs-5 fw-bold ">
                                         <span className=''>{t('common.bookADemo')}</span> <i className={` ${language === 'ar' ? 'ti-angle-left ms-2' : 'ti-angle-right '} `}></i>
