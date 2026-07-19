@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
 import VideoModal from '../ModalVideo/VideoModal';
@@ -341,7 +343,7 @@ const RequestQuateSection = (props) => {
                                 </form>
                             </div>
                             <div className="video-content">
-                                <img src={Timg} alt="" />
+                                <img src={Timg.src} alt="" />
                                 <div className="video-holder">
                                     <VideoModal/>
                                 </div>
@@ -604,7 +606,7 @@ const RequestQuateSection = (props) => {
                                 </form>
                             </div>
                             <div className="video-content">
-                                <img src={Timg1} alt="" />
+                                <img src={Timg1.src} alt="" />
                                 <div className="video-holder">
                                     <VideoModal />
                                 </div>

@@ -4,14 +4,12 @@ Scoped to html[dir="rtl"] so they only apply for Arabic.
 Imported LAST in style.scss so these rules win the cascade.
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
-
 html[dir="rtl"] {
 
 	body,
 	h1, h2, h3, h4, h5, h6,
 	p, a, span, div, button, input, textarea, select {
-		font-family: "Tajawal", sans-serif;
+		font-family: var(--font-tajawal), sans-serif;
 	}
 
 	body {

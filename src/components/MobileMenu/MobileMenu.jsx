@@ -1,15 +1,16 @@
+"use client";
+
 import React, { useState } from 'react';
 import ListItem from "@mui/material/List";
-import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
-import './style.css';
+import { Link, useRouter, usePathname } from '../../i18n/navigation';
+import { useTranslations } from 'next-intl';
 
 const MobileMenu = () => {
 
-    const { t } = useTranslation();
+    const t = useTranslations();
     const [menuActive, setMenuState] = useState(false);
-    const navigate = useNavigate();
-    const location = useLocation();
+    const router = useRouter();
+    const pathname = usePathname();
 
     const menus = [
         {
@@ -47,10 +48,10 @@ const MobileMenu = () => {
             const el = document.getElementById('services');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
         };
-        if (location.pathname === '/' || location.pathname === '/home' || location.pathname === '/home-2') {
+        if (pathname === '/' || pathname === '/home' || pathname === '/home-2') {
             scroll();
         } else {
-            navigate('/home');
+            router.push('/home');
             setTimeout(scroll, 300);
         }
     };
@@ -66,10 +67,10 @@ const MobileMenu = () => {
                     {menus.map((item, mn) => {
                         return (
                             <ListItem key={mn}>
-                                <NavLink
+                                <Link
                                     onClick={item.isServicesLink ? scrollToServices : ClickHandler}
-                                    to={item.link}
-                                >{item.title}</NavLink>
+                                    href={item.link}
+                                >{item.title}</Link>
                             </ListItem>
                         )
                     })}

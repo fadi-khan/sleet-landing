@@ -5,7 +5,18 @@
       "Read(//tmp/**)",
       "Skill(run)",
       "Skill(run:*)",
-      "Bash(npx eslint *)"
+      "Bash(npx eslint *)",
+      "Bash(curl -s -o /dev/null -w \"STATUS:%{http_code}\\\\n\" http://localhost:3000/en)",
+      "Bash(rm -rf .next)",
+      "Bash(curl -sI \"http://localhost:3000/en/service-single/does-not-exist\")",
+      "Bash(curl -s \"http://localhost:3000/en/service-single/does-not-exist\")",
+      "Bash(curl -s \"http://localhost:3000/ar\")",
+      "Bash(curl -s \"http://localhost:3000/en/about\")",
+      "Bash(curl -s \"http://localhost:3000/ar/about\")",
+      "Bash(curl -s \"http://localhost:3000/en/service-single/sleet-ai\")",
+      "Bash(curl -s \"http://localhost:3000/en/faq\")",
+      "Bash(echo \"--- count of <h1, <h2, <h3 tags ---\" *)",
+      "Bash(dd if=/tmp/about-en.html bs=1 skip=8000 count=2000)"
     ]
   }
 }

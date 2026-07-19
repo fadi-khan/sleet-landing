@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Fragment } from 'react';
 import NavbarS2 from '../../components/NavbarS2/NavbarS2';
 import Hero2 from '../../components/hero2/Hero2';

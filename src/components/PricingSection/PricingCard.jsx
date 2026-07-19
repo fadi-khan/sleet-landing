@@ -1,5 +1,7 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../../i18n/navigation';
 
 
 const PricingCard = ({ title, price, plan, features, Rtitle }) => {
@@ -20,7 +22,7 @@ const PricingCard = ({ title, price, plan, features, Rtitle }) => {
                     ))}
                 </ul>
                 <div className="pric-btn">
-                    <Link onClick={ClickHandler} to="#">choose pricing plan <i className="ti-angle-right"></i></Link>
+                    <Link onClick={ClickHandler} href="#">choose pricing plan <i className="ti-angle-right"></i></Link>
                 </div>
             </div>
         </div>

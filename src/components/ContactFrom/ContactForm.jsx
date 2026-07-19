@@ -1,9 +1,11 @@
+"use client";
+
 import React, { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 const ContactForm = () => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     const [formData, setFormData] = useState({
         name: '',
         email: '',

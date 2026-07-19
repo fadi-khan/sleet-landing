@@ -1,7 +1,9 @@
+"use client";
+
 import React, { useState } from 'react';
 import Services from '../../api/Services';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { Link } from '../../i18n/navigation';
+import { useTranslations } from 'next-intl';
 import SimpleReactValidator from 'simple-react-validator';
 
 import logo from '../../images/logo-light.png'
@@ -18,7 +20,7 @@ const ClickHandler = () => {
 }
 
 const FooterS2 = () => {
-    const { t } = useTranslation();
+    const t = useTranslations();
 
     const [formData, setFormData] = useState({
         email: '',
@@ -77,7 +79,7 @@ const FooterS2 = () => {
                                 </div>
                                 <ul>
                                     {Services.slice(0, 5).map((service, item) => (
-                                        <li key={item}><Link onClick={ClickHandler} to={`/service-single/${service.slug}`}>{t(`servicesData.${service.key}.title`)}</Link></li>
+                                        <li key={item}><Link onClick={ClickHandler} href={`/service-single/${service.slug}`}>{t(`servicesData.${service.key}.title`)}</Link></li>
                                     ))}
                                 </ul>
                             </div>
@@ -88,9 +90,9 @@ const FooterS2 = () => {
                                     <h3>{t('footer.usefulLinks')}</h3>
                                 </div>
                                 <ul>
-                                    <li><Link onClick={ClickHandler} to="/contact">{t('footer.termsConditions')}</Link></li>
-                                    <li><Link onClick={ClickHandler} to="/contact">{t('footer.contactUs')}</Link></li>
-                                    <li><Link onClick={ClickHandler} to="/contact">{t('footer.privacyPolicy')}</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/contact">{t('footer.termsConditions')}</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/contact">{t('footer.contactUs')}</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/contact">{t('footer.privacyPolicy')}</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -121,7 +123,7 @@ const FooterS2 = () => {
                                                 onChange={handleChange}
                                             />
                                             <label htmlFor="Insurance">
-                                                {t('footer.agreeText')} <Link onClick={handleChange} to="/">{t('footer.terms')}</Link> {t('footer.andPolicies')}
+                                                {t('footer.agreeText')} <Link onClick={handleChange} href="/">{t('footer.terms')}</Link> {t('footer.andPolicies')}
                                             </label>
                                             {validator.message('agree', formData.agree, 'accepted')}
                                         </div>
@@ -137,20 +139,20 @@ const FooterS2 = () => {
                     <div className="row g-0 align-items-center">
                         <div className="col col-lg-2 col-12">
                             <div className="logo">
-                                <img src={logo} alt="blog" />
+                                <img src={logo.src} alt="blog" />
                             </div>
                         </div>
                         <div className="col col-lg-6 col-12">
-                            <p className="copyright"> &copy; 2026 <Link onClick={ClickHandler} to="/home">Sleet Logistics</Link> - {t('footer.copyrightSuffix')}</p>
+                            <p className="copyright"> &copy; 2026 <Link onClick={ClickHandler} href="/home">Sleet Logistics</Link> - {t('footer.copyrightSuffix')}</p>
                         </div>
                         <div className="col col-lg-4 col-12">
                             <ul>
-                                <li><Link onClick={ClickHandler} to="/"><img src={Img1} alt="" /></Link></li>
-                                <li><Link onClick={ClickHandler} to="/"><img src={Img2} alt="" /></Link></li>
-                                <li><Link onClick={ClickHandler} to="/"><img src={Img3} alt="" /></Link></li>
-                                <li><Link onClick={ClickHandler} to="/"><img src={Img4} alt="" /></Link></li>
-                                <li><Link onClick={ClickHandler} to="/"><img src={Img5} alt="" /></Link></li>
-                                <li><Link onClick={ClickHandler} to="/"><img src={Img6} alt="" /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img1.src} alt="" /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img2.src} alt="" /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img3.src} alt="" /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img4.src} alt="" /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img5.src} alt="" /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img6.src} alt="" /></Link></li>
                             </ul>
                         </div>
                     </div>

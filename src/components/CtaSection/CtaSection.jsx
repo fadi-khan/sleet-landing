@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { Link } from "../../i18n/navigation";
+import { useTranslations } from "next-intl";
 
 
 const ClickHandler = () => {
@@ -8,7 +10,7 @@ const ClickHandler = () => {
 }
 
 const CtaSection = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     return (
         <div className={"" +props.hclass}>
             <div className="container">
@@ -16,7 +18,7 @@ const CtaSection = (props) => {
                     <div className="wpo-section-title">
                         <h2>{t('cta.title')}</h2>
                         <h3>{t('cta.subtitle')}</h3>
-                        <Link onClick={ClickHandler} to="/contact" className="theme-btn">{t('cta.requestDemo')}</Link>
+                        <Link onClick={ClickHandler} href="/contact" className="theme-btn">{t('cta.requestDemo')}</Link>
                     </div>
                     <div className="contact-info">
                         <div className="item">

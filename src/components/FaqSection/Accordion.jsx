@@ -1,16 +1,17 @@
+"use client";
+
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import './Accordion.css';
+import { useTranslations } from 'next-intl';
 
 const Accordion = () => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     const [activeIndex, setActiveIndex] = useState(null);
 
     const handleToggle = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
-    const accordionData = t('faqPage.accordion', { returnObjects: true });
+    const accordionData = t.raw('faqPage.accordion');
 
     return (
         <div className="accordion">

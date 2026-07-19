@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import ProjectSectionS2 from '../ProjectSectionS2/ProjectSectionS2'
 import TestimonialS2 from '../TestimonialS2/TestimonialS2'

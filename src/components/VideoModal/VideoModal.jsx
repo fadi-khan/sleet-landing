@@ -1,5 +1,6 @@
+"use client";
+
 import { useEffect } from "react";
-import "./VideoModal.scss";
 
 const VideoModal = ({ isOpen, videoId, onClose }) => {
   // Close on ESC key

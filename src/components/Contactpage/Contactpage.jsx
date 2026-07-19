@@ -1,12 +1,14 @@
+"use client";
+
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import ContactForm from '../ContactFrom/ContactForm'
 import Img01 from '../../images/homepage/get-in-touch.jpeg'
 
 
 
 const Contactpage = () => {
-    const { t } = useTranslation();
+    const t = useTranslations();
 
     return (
         <div>
@@ -63,7 +65,7 @@ const Contactpage = () => {
                                 <div className="contact-left">
                                     <h2>{t('contact.getInTouch')}</h2>
                                     <p>{t('contact.getInTouchDesc')}</p>
-                                    <img className="image" src={Img01} alt="" />
+                                    <img className="image" src={Img01.src} alt="" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-12">

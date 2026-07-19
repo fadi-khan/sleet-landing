@@ -12,27 +12,27 @@ const Services = [
     {
         id: 1,
         key: 'sleetLogistics',
-        image: Simg1,
-        simag: Simg1,
-        banner: Simg1,
+        image: Simg1.src,
+        simag: Simg1.src,
+        banner: Simg1.src,
         Icon: FaTruck,
         slug: 'sleet-logistics'
     },
     {
         id: 2,
         key: 'sleetSaas',
-        image: Simg2,
-        simag: Simg2,
-        banner: Simg2,
+        image: Simg2.src,
+        simag: Simg2.src,
+        banner: Simg2.src,
         Icon: FaCloud,
         slug: 'sleet-saas'
     },
     {
         id: 3,
         key: 'sleetTnc',
-        image: Simg3,
-        simag: Simg3,
-        banner: Simg3,
+        image: Simg3.src,
+        simag: Simg3.src,
+        banner: Simg3.src,
         Icon: FaTaxi,
         isCommingSoon: true,
         slug: 'sleet-tnc'
@@ -40,9 +40,9 @@ const Services = [
     {
         id: 4,
         key: 'sleetAi',
-        image: Simg4,
-        simag: Simg4,
-        banner: Simg4,
+        image: Simg4.src,
+        simag: Simg4.src,
+        banner: Simg4.src,
         Icon: FaRobot,
         isCommingSoon: true,
         slug: 'sleet-ai'

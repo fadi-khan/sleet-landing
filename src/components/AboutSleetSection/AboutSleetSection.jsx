@@ -1,6 +1,8 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { Link } from '../../i18n/navigation';
+import { useTranslations } from 'next-intl';
 import Services from '../../api/Services';
 
 const ClickHandler = () => {
@@ -8,7 +10,7 @@ const ClickHandler = () => {
 }
 
 const AboutSleetSection = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     const scrollToServices = (e) => {
         e.preventDefault();
         const scroll = () => {
@@ -33,12 +35,12 @@ const AboutSleetSection = (props) => {
                         </div>
                         <p>{t('home.aboutSleet.p1')}</p>
                         <p>{t('home.aboutSleet.p2')}</p>
-                        <Link onClick={scrollToServices} to="#services" className="theme-btn">{t('common.exploreMore')} <i className="ti-angle-right"></i></Link>
+                        <Link onClick={scrollToServices} href="#services" className="theme-btn">{t('common.exploreMore')} <i className="ti-angle-right"></i></Link>
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="about-sleet-grid">
                             {Services.map((service, index) => (
-                                <Link to={`/service-single/${service.slug}`} onClick={ClickHandler} className="about-sleet-card" key={index}>
+                                <Link href={`/service-single/${service.slug}`} onClick={ClickHandler} className="about-sleet-card" key={index}>
                                     {service.isCommingSoon && <span className="soon-tag">{t('serviceSingle.comingSoon')}</span>}
                                     <service.Icon />
                                     <h3>{t(`servicesData.${service.key}.title`)}</h3>

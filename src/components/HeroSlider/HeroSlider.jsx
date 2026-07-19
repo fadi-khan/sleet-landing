@@ -1,10 +1,10 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
+import { Link } from '../../i18n/navigation';
+import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 import Slider1 from '../../images/slider/sleet-hero-bg.jpg'
 import Slider2 from '../../images/slider/slide-1.jpg'
@@ -15,7 +15,7 @@ const ClickHandler = () => {
 }
 
 const HeroSlider = () => {
-    const { t } = useTranslation();
+    const t = useTranslations();
 
     const settings = {
         autoplay: true,
@@ -33,7 +33,7 @@ const HeroSlider = () => {
             }
         ]
     };
-    const language = useSelector((state) => state.language.language); // 'en' | 'ar'
+    const language = useLocale(); // 'en' | 'ar'
 
     return (
         <section className="hero-section ">
@@ -41,7 +41,7 @@ const HeroSlider = () => {
                 <div>
                     <div className="slider-item">
                         <div className="bg-image">
-                            <img className="animated" src={Slider1} alt=""
+                            <img className="animated" src={Slider1.src} alt=""
                                 data-animation-in="zoomInImage" />
                         </div>
                         <div className="container">
@@ -55,9 +55,9 @@ const HeroSlider = () => {
                                 <p className="animated" data-animation-in="fadeInUp">{t('home.hero.description')}</p>
                                 <div className="hero-btn animated d-flex gap-4" data-animation-in="fadeInUp">
                                     <div className="btn-1">
-                                        <Link onClick={ClickHandler} to="https://app.sleet.sa" target="_blank" rel="noopener noreferrer" className="theme-btn">{t('common.getStarted')}</Link>
+                                        <a onClick={ClickHandler} href="https://app.sleet.sa" target="_blank" rel="noopener noreferrer" className="theme-btn">{t('common.getStarted')}</a>
                                     </div>
-                                    <Link onClick={ClickHandler} to="/contact" className="hero-btn text-info fs-5 fw-bold ">
+                                    <Link onClick={ClickHandler} href="/contact" className="hero-btn text-info fs-5 fw-bold ">
                                         <span className=''>{t('common.bookADemo')}</span> <i className={` ${language === 'ar' ? 'ti-angle-left ms-2' : 'ti-angle-right '} `}></i>
                                     </Link>
                                 </div>

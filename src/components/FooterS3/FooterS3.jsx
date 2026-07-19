@@ -1,7 +1,9 @@
+"use client";
+
 import React, { useState } from 'react';
 import Services from '../../api/Services';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import SimpleReactValidator from 'simple-react-validator';
 
 
@@ -11,7 +13,7 @@ import FooterBg from '../../images/footer-bg.jpg'
 import Shape from '../../images/shape-right.svg'
 
 const FooterS3 = () => {
-    const { t } = useTranslation();
+    const t = useTranslations();
 
     const ClickHandler = () => {
         window.scrollTo(10, 0);

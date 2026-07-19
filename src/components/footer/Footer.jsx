@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 
 
@@ -13,7 +15,7 @@ const ClickHandler = () => {
     window.scrollTo(10, 0);
 }
 const Footer = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
 
     const [email, setEmail] = useState('');
 

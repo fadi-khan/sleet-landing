@@ -1,9 +1,11 @@
+"use client";
+
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import MyForm from './MyForm';
 
 const GetTouchSection = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
 
     return (
         <section className="wpo-get-touch-section section-padding">

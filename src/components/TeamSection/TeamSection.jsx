@@ -1,8 +1,8 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../../i18n/navigation';
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import SectionTitle from '../SectionTitle/SectionTitle';
 import TeamData from '../../api/TeamData';
 
@@ -71,10 +71,10 @@ const TeamSection = (props) => {
                                     <img src={team.Imga} alt="" />
                                     <div className="icon">
                                         <ul>
-                                            <li><Link onClick={ClickHandler} to="#"><i className="flaticon-facebook-app-symbol"></i></Link></li>
-                                            <li><Link onClick={ClickHandler} to="#"><i className="flaticon-vimeo"></i></Link></li>
-                                            <li><Link onClick={ClickHandler} to="#"><i className="flaticon-linkedin-big-logo"></i></Link></li>
-                                            <li><Link onClick={ClickHandler} to="#"><i className="flaticon-twitter"></i></Link></li>
+                                            <li><Link onClick={ClickHandler} href="#"><i className="flaticon-facebook-app-symbol"></i></Link></li>
+                                            <li><Link onClick={ClickHandler} href="#"><i className="flaticon-vimeo"></i></Link></li>
+                                            <li><Link onClick={ClickHandler} href="#"><i className="flaticon-linkedin-big-logo"></i></Link></li>
+                                            <li><Link onClick={ClickHandler} href="#"><i className="flaticon-twitter"></i></Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@ const TeamSection = (props) => {
                 </div>
                 {TeamAllBtn && (
                     <div className="all-team-btn">
-                        <Link onClick={ClickHandler} to="/team" className="theme-btn">All Member</Link>
+                        <Link onClick={ClickHandler} href="/team" className="theme-btn">All Member</Link>
                     </div>
                 )}
             </div>

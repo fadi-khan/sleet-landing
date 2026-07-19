@@ -1,6 +1,8 @@
+"use client";
+
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setLanguage } from '../../store/slices/languageSlice';
+import { useLocale } from 'next-intl';
+import { usePathname, useRouter } from '../../i18n/navigation';
 
 const languages = {
     en: {
@@ -31,12 +33,14 @@ const languages = {
 };
 
 const LanguageSelector = () => {
-    const dispatch = useDispatch();
-    const language = useSelector((state) => state.language.language);
-    const current = languages[language] || languages.en;
+    const locale = useLocale();
+    const pathname = usePathname();
+    const router = useRouter();
+    const current = languages[locale] || languages.en;
 
     const handleToggle = () => {
-        dispatch(setLanguage(current.value === 'en' ? 'ar' : 'en'));
+        const nextLocale = current.value === 'en' ? 'ar' : 'en';
+        router.replace(pathname, { locale: nextLocale });
     };
 
     return (

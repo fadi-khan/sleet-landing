@@ -1,8 +1,10 @@
+"use client";
+
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 const VisionSection = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     return (
         <section className={"wpo-vision-section" + (props.hclass ? ' ' + props.hclass : '')}>
             <div className="container">

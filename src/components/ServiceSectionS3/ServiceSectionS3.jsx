@@ -1,16 +1,16 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { Link } from '../../i18n/navigation';
+import { useTranslations } from 'next-intl';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import Services from "../../api/Services";
 import Shape from '../../images/service/top-shape.svg'
 import Shape2 from '../../images/service/bottom-shape.svg'
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const ServiceSectionS3 = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
@@ -61,7 +61,7 @@ const ServiceSectionS3 = (props) => {
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="service-btn">
-                            <Link onClick={ClickHandler} to="/services" className="theme-btn">{t('common.allServices')}</Link>
+                            <Link onClick={ClickHandler} href="/services" className="theme-btn">{t('common.allServices')}</Link>
                         </div>
                     </div>
                 </div>
@@ -77,17 +77,17 @@ const ServiceSectionS3 = (props) => {
                                 <service.Icon />
                             </div>
                             <div className="content">
-                                <h2><Link to={`/service-single/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
+                                <h2><Link href={`/service-single/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
                                 <p>{t(`servicesData.${service.key}.description`)}</p>
                                 <div className="services-btn">
-                                    <Link to={`/service-single/${service.slug}`} onClick={ClickHandler}>{t('common.seeDetails')} </Link>
+                                    <Link href={`/service-single/${service.slug}`} onClick={ClickHandler}>{t('common.seeDetails')} </Link>
                                 </div>
                             </div>
                             <div className="top-shape">
-                                <img src={Shape} alt="" />
+                                <img src={Shape.src} alt="" />
                             </div>
                             <div className="bottom-shape">
-                                <img src={Shape2} alt="" />
+                                <img src={Shape2.src} alt="" />
                             </div>
                         </div>
                     ))}

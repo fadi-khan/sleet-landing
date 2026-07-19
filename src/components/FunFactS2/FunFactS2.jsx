@@ -1,5 +1,7 @@
+"use client";
+
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import CountUp from 'react-countup';
 import Shape1 from '../../images/left-shape-fun.svg'
 import Shape2 from '../../images/right-shape-fun.svg'
@@ -8,7 +10,7 @@ import { FaSmile } from "react-icons/fa";
 
 
 const FunFactS2 = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     return (
         <section className={"" +props.hclass}>
             <h3 className="d-none"> section title</h3>
@@ -48,10 +50,10 @@ const FunFactS2 = (props) => {
                 </div>
             </div>
             <div className="left-shape">
-                <img src={Shape1} alt="" />
+                <img src={Shape1.src} alt="" />
             </div>
             <div className="right-shape">
-                <img src={Shape2} alt="" />
+                <img src={Shape2.src} alt="" />
             </div>
         </section>
     );

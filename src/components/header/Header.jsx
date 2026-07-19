@@ -1,18 +1,19 @@
+"use client";
+
 import React, { useState } from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
+import { Link, useRouter, usePathname } from '../../i18n/navigation'
+import { useTranslations, useLocale } from 'next-intl'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
 import Call from '../../images/call.svg'
-import { useSelector } from 'react-redux'
 
 const Header = (props) => {
-    const { t } = useTranslation();
-    const language = useSelector((state) => state.language.language); // 'en' | 'ar'
+    const t = useTranslations();
+    const language = useLocale(); // 'en' | 'ar'
 
     const [menuActive, setMenuState] = useState(false);
-    const navigate = useNavigate();
-    const location = useLocation();
+    const router = useRouter();
+    const pathname = usePathname();
 
     const SubmitHandler = (e) => {
         e.preventDefault()
@@ -28,10 +29,10 @@ const Header = (props) => {
             const el = document.getElementById('services');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
         };
-        if (location.pathname === '/' || location.pathname === '/home' || location.pathname === '/home-2') {
+        if (pathname === '/' || pathname === '/home' || pathname === '/home-2') {
             scroll();
         } else {
-            navigate('/home');
+            router.push('/home');
             setTimeout(scroll, 300);
         }
     };
@@ -48,7 +49,7 @@ const Header = (props) => {
                             </div>
                             <div className="col-lg-2 col-md-6 col-6">
                                 <div className="navbar-header">
-                                    <Link onClick={ClickHandler} className="navbar-brand" to="/home"><img src={props.Logo} style={{width: '95px'}} alt="" /></Link>
+                                    <Link onClick={ClickHandler} className="navbar-brand" href="/home"><img src={props.Logo.src} style={{width: '95px'}} alt="" /></Link>
                                 </div>
                             </div>
                             <div className="col-lg-7 col-md-1 col-1">
@@ -56,19 +57,19 @@ const Header = (props) => {
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0 gap-3">
                                         <li className="menu-item">
-                                            <Link onClick={ClickHandler} to="/home">{t('nav.home')}</Link>
+                                            <Link onClick={ClickHandler} href="/home">{t('nav.home')}</Link>
                                         </li>
                                         <li className="menu-item">
-                                            <Link onClick={scrollToServices} to="/home#services">{t('nav.services')}</Link>
+                                            <Link onClick={scrollToServices} href="/home#services">{t('nav.services')}</Link>
                                         </li>
                                         {/* <li className="menu-item">
-                                            <Link onClick={ClickHandler} to="/about">About</Link>
+                                            <Link onClick={ClickHandler} href="/about">About</Link>
                                         </li> */}
                                         <li className="menu-item">
-                                            <Link onClick={ClickHandler} to="/faq">{t('nav.faq')}</Link>
+                                            <Link onClick={ClickHandler} href="/faq">{t('nav.faq')}</Link>
                                         </li>
 
-                                        <li><Link onClick={ClickHandler} to="/contact">{t('nav.contact')}</Link></li>
+                                        <li><Link onClick={ClickHandler} href="/contact">{t('nav.contact')}</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -76,13 +77,13 @@ const Header = (props) => {
                                 <div className="header-right d-flex align-items-center gap-3">
                                     <LanguageSelector />
                                     <div className="close-form">
-                                        
-                                        <Link onClick={ClickHandler}  className="theme-btn" to="https://app.sleet.sa/login" target="_blank">
+
+                                        <a onClick={ClickHandler}  className="theme-btn" href="https://app.sleet.sa/login" target="_blank" rel="noopener noreferrer">
                                            <i className={`flaticon-next ${language === 'ar' ? 'rotate-180' : 'd-none'}`}></i>
                                             {t('common.getStarted')}
                                             <i
                                                 className={`flaticon-next ${language === 'ar' ? 'd-none' : 'ms-2'}`}></i>
-                                        </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

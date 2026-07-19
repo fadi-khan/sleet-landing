@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
-import { Link } from 'react-router-dom'
-import { useTranslation } from 'react-i18next';
+import { Link } from '../../i18n/navigation'
+import { useTranslations } from 'next-intl';
 import SectionTitle from "../SectionTitle/SectionTitle";
 import Services from "../../api/Services";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,7 +13,7 @@ import 'swiper/css/pagination';
 
 
 const ServiceSection = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
 
     const ClickHandler = () => {
         window.scrollTo(10, 0);
@@ -59,7 +61,7 @@ const ServiceSection = (props) => {
                     <div className="col-lg-5 col-12">
                         {ServiceAllBtn && (
                             <div className="service-all-btn">
-                                <Link onClick={ClickHandler} to="/contact" className="theme-btn">{t('common.contactUs')}</Link>
+                                <Link onClick={ClickHandler} href="/contact" className="theme-btn">{t('common.contactUs')}</Link>
                             </div>
                         )}
                     </div>
@@ -77,9 +79,9 @@ const ServiceSection = (props) => {
                                 <div className="content">
                                     <service.Icon />
                                     <div className="text">
-                                        <h2><Link to={`/service-single/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
+                                        <h2><Link href={`/service-single/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
                                         <p className="">{t(`servicesData.${service.key}.subtitle`)}</p>
-                                        <Link to={`/service-single/${service.slug}`} onClick={ClickHandler} className="service-single-link">
+                                        <Link href={`/service-single/${service.slug}`} onClick={ClickHandler} className="service-single-link">
                                             <i className="flaticon-right-arrow"></i>
                                         </Link>
                                     </div>

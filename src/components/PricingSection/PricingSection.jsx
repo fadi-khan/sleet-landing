@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import PricingCard from './PricingCard';
@@ -32,10 +34,10 @@ const PricingSection = (props) => {
                 </div>
             </div>
             <div className="shape-left">
-                <img src={Shape} alt="" />
+                <img src={Shape.src} alt="" />
             </div>
             <div className="shape-rigth">
-                <img src={Shape2} alt="" />
+                <img src={Shape2.src} alt="" />
             </div>
         </section>
     );

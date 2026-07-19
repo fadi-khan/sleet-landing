@@ -1,9 +1,11 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { Link } from '../../i18n/navigation';
+import { useTranslations } from 'next-intl';
 
 const FeaturesSectionS2 = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
@@ -21,7 +23,7 @@ const FeaturesSectionS2 = (props) => {
                         </div>
                         <div className="col-lg-6 col-12">
                             <div className="f-btn">
-                                <Link onClick={ClickHandler} to="/services" className="theme-btn">{t('common.allServices')}</Link>
+                                <Link onClick={ClickHandler} href="/services" className="theme-btn">{t('common.allServices')}</Link>
                             </div>
                         </div>
                     </div>

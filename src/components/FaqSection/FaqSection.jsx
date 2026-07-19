@@ -1,9 +1,11 @@
+"use client";
+
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import Accordion from './Accordion';
 
 const FaqSection = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     return (
         <section className={"" +props.hclass}>
             <div className="container">

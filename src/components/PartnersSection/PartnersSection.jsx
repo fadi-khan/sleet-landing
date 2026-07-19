@@ -1,7 +1,7 @@
+"use client";
+
 import React from 'react';
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Pimg1 from '../../images/partners/img-1.png';
 import Pimg2 from '../../images/partners/img-2.png';
 import Pimg3 from '../../images/partners/img-3.png';
@@ -55,28 +55,28 @@ const PartnersSection = (props) => {
                     <div className="col col-xs-12">
                         <Slider {...settings} className='partner-grids partners-slider'>
                             <div className="grid">
-                                <img src={Pimg1} alt="" />
+                                <img src={Pimg1.src} alt="" />
                             </div>
                             <div className="grid">
-                                <img src={Pimg2} alt="" />
+                                <img src={Pimg2.src} alt="" />
                             </div>
                             <div className="grid">
-                                <img src={Pimg3} alt="" />
+                                <img src={Pimg3.src} alt="" />
                             </div>
                             <div className="grid">
-                                <img src={Pimg4} alt="" />
+                                <img src={Pimg4.src} alt="" />
                             </div>
                             <div className="grid">
-                                <img src={Pimg5} alt="" />
+                                <img src={Pimg5.src} alt="" />
                             </div>
                             <div className="grid">
-                                <img src={Pimg6} alt="" />
+                                <img src={Pimg6.src} alt="" />
                             </div>
                             <div className="grid">
-                                <img src={Pimg1} alt="" />
+                                <img src={Pimg1.src} alt="" />
                             </div>
                             <div className="grid">
-                                <img src={Pimg2} alt="" />
+                                <img src={Pimg2.src} alt="" />
                             </div>
                         </Slider>
                     </div>

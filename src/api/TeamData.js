@@ -11,37 +11,37 @@ const TeamData = [
         id: '01',
         title: 'Alextina Ditarson',
         subtitle: 'Transportation Planner',
-        Imga: img1,
+        Imga: img1.src,
     },
     {
         id: '02',
         title: 'Leslie Alexander',
         subtitle: 'Supply Chain Manager',
-        Imga: img2,
+        Imga: img2.src,
     },
     {
         id: '03',
         title: 'Brooklyn Simmons',
         subtitle: 'Logistics Coordinator',
-        Imga: img3,
+        Imga: img3.src,
     },
     {
         id: '04',
         title: 'Marvin McKinney',
         subtitle: 'Warehouse Manager',
-        Imga: img4,
+        Imga: img4.src,
     },
     {
         id: '05',
         title: 'Warehouse Manager',
         subtitle: 'Fleet Supervisor',
-        Imga: img5,
+        Imga: img5.src,
     },
     {
         id: '06',
         title: 'Warehouse Manager',
         subtitle: 'Fleet Supervisor',
-        Imga: img6,
+        Imga: img6.src,
     }
 ]
 
