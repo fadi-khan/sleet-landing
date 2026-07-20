@@ -105,7 +105,7 @@ const ContactForm = () => {
                     ></textarea>
                     <label><i className="flaticon-edit"></i></label>
                 </div>
-                <small className="field-hint">Briefly describe your logistics needs.</small>
+                <small className="field-hint">{t('contact.form.briefMessageHint')}</small>
                 {validator.message('message', formData.message, 'required')}
             </div>
             <div className="input-item submitbtn">

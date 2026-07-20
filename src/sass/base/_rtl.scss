@@ -444,6 +444,24 @@ html[dir="rtl"] {
 		padding-left: 7px;
 	}
 
+	/* ---------- get-touch section (GetTouchSection.jsx / MyForm.jsx) ---------- */
+	.wpo-get-touch-section,
+	.wpo-get-touch-section-s2 {
+		text-align: right;
+
+		@media (max-width:991px) {
+			text-align: center;
+		}
+
+		.row.justify-content-end {
+			justify-content: flex-start !important;
+		}
+
+		.wpo-section-title {
+			text-align: right;
+		}
+	}
+
 	/* ---------- CTA section contact-info items (CtaSection.jsx, .wpo-cta-section-s2/-s3 in _home-default.scss) ---------- */
 	.wpo-cta-section-s2,
 	.wpo-cta-section-s3,

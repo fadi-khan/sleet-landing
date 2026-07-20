@@ -290,7 +290,12 @@
       "email": "Email Address",
       "phone": "Your Number",
       "message": "Write Message",
-      "getInTouch": "Get In Touch"
+      "getInTouch": "Get In Touch",
+      "nameHint": "Enter your full name.",
+      "emailHint": "We'll reply to this email address.",
+      "phoneHint": "Include country code, e.g. +966 5X XXX XXXX.",
+      "messageHint": "Tell us how we can help.",
+      "briefMessageHint": "Briefly describe your logistics needs."
     }
   },
   "errorPage": {

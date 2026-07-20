@@ -60,7 +60,7 @@ const MyForm = () => {
         <form id="myForm" onSubmit={handleSubmit}>
             <div className="row">
                 <div className="col-lg-6 col-md-6 col-12">
-                    <small className="field-hint">Enter your full name.</small>
+                    <small className="field-hint">{t('contact.form.nameHint')}</small>
                     <input
                         id="name"
                         className="fild"
@@ -73,7 +73,7 @@ const MyForm = () => {
                     {validator.message('name', formData.name, 'required|alpha_space')}
                 </div>
                 <div className="col-lg-6 col-md-6 col-12">
-                    <small className="field-hint">We&apos;ll reply to this email address.</small>
+                    <small className="field-hint">{t('contact.form.emailHint')}</small>
                     <input
                         id="email"
                         className="fild"
@@ -86,7 +86,7 @@ const MyForm = () => {
                     {validator.message('email', formData.email, 'required|email')}
                 </div>
                 <div className="col-12">
-                    <small className="field-hint">Include country code, e.g. +966 5X XXX XXXX.</small>
+                    <small className="field-hint">{t('contact.form.phoneHint')}</small>
                     <input
                         id="phone"
                         className="fild"
@@ -99,7 +99,7 @@ const MyForm = () => {
                     {validator.message('phone', formData.phone, 'required|phone')}
                 </div>
                 <div className="col-12">
-                    <small className="field-hint">Tell us how we can help.</small>
+                    <small className="field-hint">{t('contact.form.messageHint')}</small>
                     <textarea
                         id="message"
                         className="fild fild-textarea"
