@@ -36,7 +36,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "../../components/FaqSection/Accordion.css";
 import "../../components/MobileMenu/style.css";
 import "../../components/scrollbar/style.css";
-import "../../components/VideoModal/VideoModal.scss";
 import "../globals.css";
 
 export async function generateMetadata({ params }) {
