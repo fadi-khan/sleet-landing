@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 
 import Logo from '../../images/logo-2.svg'
 import BgImage from '../../images/footer-bg.jpg'
-import Services from '../../api/Services';
+import Services from '../../lib/api/Services';
 
 
 const ClickHandler = () => {

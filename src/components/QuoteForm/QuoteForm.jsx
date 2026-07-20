@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
+import { toast } from 'react-toastify';
 
 const QuoteForm = () => {
     const [formData, setFormData] = useState({
@@ -15,8 +16,9 @@ const QuoteForm = () => {
         express: false,
         insurance: false,
     });
+    const [submitting, setSubmitting] = useState(false);
 
-    const [validator] = useState(new SimpleReactValidator());
+    const [validator, setValidator] = useState(new SimpleReactValidator());
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -28,9 +30,26 @@ const QuoteForm = () => {
         validator.showMessageFor(name);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (validator.allValid()) {
+        if (!validator.allValid()) {
+            validator.showMessages();
+            return;
+        }
+
+        setSubmitting(true);
+        try {
+            const res = await fetch('/api/quote', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (!res.ok) {
+                throw new Error('Request failed');
+            }
+
+            toast.success("Thanks! We'll send your quote shortly.");
             setFormData({
                 name: '',
                 email: '',
@@ -42,9 +61,11 @@ const QuoteForm = () => {
                 express: false,
                 insurance: false,
             });
-            validator.hideMessages();
-        } else {
-            validator.showMessages();
+            setValidator(new SimpleReactValidator());
+        } catch {
+            toast.error('Something went wrong requesting your quote. Please try again.');
+        } finally {
+            setSubmitting(false);
         }
     };
 
@@ -53,6 +74,7 @@ const QuoteForm = () => {
             <div className="row">
                 <div className="item col-lg-12">
                     <label>Personal information</label>
+                    <small className="field-hint">Enter your full name.</small>
                     <input
                         className="form-control"
                         type="text"
@@ -66,6 +88,7 @@ const QuoteForm = () => {
                     {validator.message('name', formData.name, 'required|alpha_space')}
                 </div>
                 <div className="item col-lg-6 col-12">
+                    <small className="field-hint">We&apos;ll send your quote to this address.</small>
                     <input
                         className="form-control"
                         type="email"
@@ -79,6 +102,7 @@ const QuoteForm = () => {
                     {validator.message('email', formData.email, 'required|email')}
                 </div>
                 <div className="item col-lg-6 col-12">
+                    <small className="field-hint">Include country code, e.g. +966 5X XXX XXXX.</small>
                     <input
                         className="form-control"
                         type="text"
@@ -93,6 +117,7 @@ const QuoteForm = () => {
                 </div>
                 <div className="item col-lg-12">
                     <label>Delivery information</label>
+                    <small className="field-hint">Choose the destination city for delivery.</small>
                     <select
                         name="city"
                         id="city"
@@ -109,6 +134,7 @@ const QuoteForm = () => {
                 </div>
                 <div className="item col-lg-6 col-12">
                     <label>Freight Type</label>
+                    <small className="field-hint">Select the freight type for your shipment.</small>
                     <select
                         name="type"
                         id="type"
@@ -125,6 +151,7 @@ const QuoteForm = () => {
                 </div>
                 <div className="item col-lg-6 col-12">
                     <label>Incoterms</label>
+                    <small className="field-hint">Choose the applicable Incoterm for this shipment.</small>
                     <select
                         name="incoter"
                         id="incoter"
@@ -174,7 +201,7 @@ const QuoteForm = () => {
                     </ul>
                 </div>
                 <div className="item col-12">
-                    <input className="theme-btn" type="submit" value="Get A Quote" />
+                    <input className="theme-btn" type="submit" value={submitting ? 'Sending...' : 'Get A Quote'} disabled={submitting} />
                 </div>
             </div>
         </form>

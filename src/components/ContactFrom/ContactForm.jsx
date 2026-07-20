@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
 import { useTranslations } from 'next-intl';
+import { toast } from 'react-toastify';
 
 const ContactForm = () => {
     const t = useTranslations();
@@ -11,8 +12,9 @@ const ContactForm = () => {
         email: '',
         message: '',
     });
+    const [submitting, setSubmitting] = useState(false);
 
-    const [validator] = useState(new SimpleReactValidator());
+    const [validator, setValidator] = useState(new SimpleReactValidator());
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -23,65 +25,91 @@ const ContactForm = () => {
         validator.showMessageFor(name);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (validator.allValid()) {
+        if (!validator.allValid()) {
+            validator.showMessages();
+            return;
+        }
+
+        setSubmitting(true);
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (!res.ok) {
+                throw new Error('Request failed');
+            }
+
+            toast.success("Thanks for reaching out! We'll get back to you shortly.");
             setFormData({
                 name: '',
                 email: '',
                 message: '',
             });
-            validator.hideMessages();
-        } else {
-            validator.showMessages();
+            setValidator(new SimpleReactValidator());
+        } catch {
+            toast.error('Something went wrong sending your message. Please try again.');
+        } finally {
+            setSubmitting(false);
         }
     };
 
     return (
         <form id="contactForm" className="contact-form" onSubmit={handleSubmit}>
             <div className="input-item">
-                <input
-                    id="name"
-                    name="name"
-                    className="fild"
-                    type="text"
-                    placeholder={`${t('contact.form.name')}*`}
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                />
+                <div className="fild-wrap">
+                    <input
+                        id="name"
+                        name="name"
+                        className="fild"
+                        type="text"
+                        placeholder={`${t('contact.form.name')}*`}
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                    />
+                    <label><i className="flaticon-user"></i></label>
+                </div>
                 {validator.message('name', formData.name, 'required|alpha_space')}
-                <label><i className="flaticon-user"></i></label>
             </div>
             <div className="input-item">
-                <input
-                    id="email"
-                    name="email"
-                    className="fild"
-                    type="email"
-                    placeholder={`${t('contact.form.email')}*`}
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                />
+                <div className="fild-wrap">
+                    <input
+                        id="email"
+                        name="email"
+                        className="fild"
+                        type="email"
+                        placeholder={`${t('contact.form.email')}*`}
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                    />
+                    <label><i className="flaticon-email"></i></label>
+                </div>
                 {validator.message('email', formData.email, 'required|email')}
-                <label><i className="flaticon-email"></i></label>
             </div>
             <div className="input-item">
-                <textarea
-                    id="message"
-                    name="message"
-                    className="fild textarea"
-                    placeholder={t('contact.form.message')}
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                ></textarea>
+                <div className="fild-wrap">
+                    <textarea
+                        id="message"
+                        name="message"
+                        className="fild textarea"
+                        placeholder={t('contact.form.message')}
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                    ></textarea>
+                    <label><i className="flaticon-edit"></i></label>
+                </div>
+                <small className="field-hint">Briefly describe your logistics needs.</small>
                 {validator.message('message', formData.message, 'required')}
-                <label><i className="flaticon-edit"></i></label>
             </div>
             <div className="input-item submitbtn">
-                <input className="fild" type="submit" value={t('contact.form.getInTouch')} />
+                <input className="fild" type="submit" value={submitting ? 'Sending...' : t('contact.form.getInTouch')} disabled={submitting} />
                 <label><i className="flaticon-send"></i></label>
             </div>
         </form>

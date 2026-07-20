@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from '../../i18n/navigation';
 import { useTranslations } from 'next-intl';
 import SectionTitle from '../SectionTitle/SectionTitle';
-import Services from "../../api/Services";
+import Services from "../../lib/api/Services";
 import Shape from '../../images/service/top-shape.svg'
 import Shape2 from '../../images/service/bottom-shape.svg'
 import Slider from "react-slick";

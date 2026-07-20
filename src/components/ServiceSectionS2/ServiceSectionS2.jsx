@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from '../../i18n/navigation';
 import { useTranslations } from 'next-intl';
 import SectionTitle from '../SectionTitle/SectionTitle';
-import Services from "../../api/Services";
+import Services from "../../lib/api/Services";
 
 const ServiceSectionS2 = (props) => {
     const t = useTranslations();

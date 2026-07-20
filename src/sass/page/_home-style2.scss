@@ -2700,8 +2700,18 @@
         }
     }
 
+    .field-hint {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 13px;
+        color: $body-color;
+    }
+
     .srv-validation-message {
-        display: none;
+        display: block;
+        margin-bottom: 20px;
+        font-size: 13px;
+        color: #e6494d;
     }
 
     .shape {

@@ -11,9 +11,7 @@ import ServiceSectionS3 from '../../components/ServiceSectionS3/ServiceSectionS3
 import ProcessSection from '../../components/ProcessSection/ProcessSection';
 import FunFact from '../../components/FunFact/FunFact';
 import FeaturesSectionS2 from '../../components/FeaturesSectionS2/FeaturesSectionS2';
-import Testimonial from '../../components/Testimonial/Testimonial';
 import PartnersSection from '../../components/PartnersSection/PartnersSection';
-import TeamSection from '../../components/TeamSection/TeamSection';
 import GetTouchSection from '../../components/GetTouchSection/GetTouchSection';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import MapSection from '../../components/MapSection/MapSection';
@@ -34,9 +32,7 @@ const AboutPage = () => {
             <ProcessSection hclass={'wpo-process-section section-padding'} />
             <FunFact hclass={'wpo-funfact-section section-padding'} />
             <FeaturesSectionS2 hclass={'wpo-features-section-s2'} />
-            <Testimonial hclass={'wpo-testimonial-section section-padding'} />
             <PartnersSection CollClass={'wpo-partner-section section-padding'} />
-            <TeamSection hclass={'wpo-team-section-s2 section-padding'} />
             <GetTouchSection/>
             <MapSection />
             <CtaSection hclass={'wpo-cta-section-s2'} />

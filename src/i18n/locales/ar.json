@@ -139,7 +139,7 @@
     }
   },
   "about": {
-    "pageTitle": "الخدمات اللوجستية الدولية",
+    "pageTitle": "Sleet Logistics",
     "pageSub": "من نحن",
     "trustedTransport": "خدمة نقل موثوقة",
     "heading": "خدمات النقل والخدمات اللوجستية - نحن الأفضل",
@@ -154,7 +154,7 @@
     "ceoFounder": "الرئيس التنفيذي والمؤسس"
   },
   "faqPage": {
-    "pageTitle": "الخدمات اللوجستية الدولية",
+    "pageTitle": "Sleet Logistics",
     "pageSub": "الأسئلة الشائعة",
     "accordion": [
       { "title": "ما هي Sleet Automation Logistics؟", "content": "Sleet Automation Logistics شركة تقنية لوجستية تقدم حلول نقل ذكية من خلال أربع خدمات متكاملة: Sleet Logistics وSleet SaaS وSleet TNC وSleet AI. تساعد منصتنا الشركات على إدارة الأساطيل وأتمتة العمليات واتخاذ قرارات مبنية على البيانات من لوحة تحكم واحدة." },
@@ -289,13 +289,12 @@
       "name": "اسمك",
       "email": "البريد الإلكتروني",
       "phone": "رقم هاتفك",
-      "trackingId": "أدخل رقم التتبع الخاص بك",
       "message": "اكتب رسالتك",
       "getInTouch": "تواصل معنا"
     }
   },
   "errorPage": {
-    "pageTitle": "الخدمات اللوجستية الدولية",
+    "pageTitle": "Sleet Logistics",
     "pageSub": "404",
     "code": "404",
     "message": "عذراً، الصفحة غير موجودة"

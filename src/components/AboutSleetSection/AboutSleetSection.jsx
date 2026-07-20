@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from '../../i18n/navigation';
 import { useTranslations } from 'next-intl';
-import Services from '../../api/Services';
+import Services from '../../lib/api/Services';
 
 const ClickHandler = () => {
     window.scrollTo(10, 0);

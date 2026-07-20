@@ -1067,8 +1067,18 @@
         margin-bottom: 7px;
     }
 
+    .field-hint {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 12px;
+        color: rgba($white, 0.75);
+    }
+
     .srv-validation-message {
-        display: none;
+        display: block;
+        margin-top: 6px;
+        font-size: 12px;
+        color: #ffc4c6;
     }
 
     .error {

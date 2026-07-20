@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import Services from '../../api/Services';
+import Services from '../../lib/api/Services';
 import { Link } from 'react-router-dom';
 import { useTranslations } from 'next-intl';
 import SimpleReactValidator from 'simple-react-validator';

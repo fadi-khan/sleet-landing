@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { localeAlternates } from "@/i18n/metadata";
-import Services from "@/api/Services";
+import Services from "@/lib/api/Services";
 import ServiceSinglePage from "@/main-component/ServiceSinglePage/ServiceSinglePage";
 
 export function generateStaticParams() {

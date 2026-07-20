@@ -139,7 +139,7 @@
     }
   },
   "about": {
-    "pageTitle": "Internation Logistics",
+    "pageTitle": "Sleet Logistics",
     "pageSub": "About us",
     "trustedTransport": "Trusted transport service",
     "heading": "Transport & Logistics Services We are the best",
@@ -154,7 +154,7 @@
     "ceoFounder": "Ceo & Founder"
   },
   "faqPage": {
-    "pageTitle": "Internation Logistics",
+    "pageTitle": "Sleet Logistics",
     "pageSub": "Faq",
     "accordion": [
       { "title": "What is Sleet Automation Logistics?", "content": "Sleet Automation Logistics is a logistics technology company that provides intelligent transportation solutions through four integrated services: Sleet Logistics, Sleet SaaS, Sleet TNC, and Sleet AI. Our platform helps businesses manage fleets, automate operations, and make data-driven decisions from a single dashboard." },
@@ -289,13 +289,12 @@
       "name": "Your Name",
       "email": "Email Address",
       "phone": "Your Number",
-      "trackingId": "Enter your tracking id",
       "message": "Write Message",
       "getInTouch": "Get In Touch"
     }
   },
   "errorPage": {
-    "pageTitle": "Internation Logistics",
+    "pageTitle": "Sleet Logistics",
     "pageSub": "404",
     "code": "404",
     "message": "we’re sorry page not found"

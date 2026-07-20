@@ -207,8 +207,18 @@
 	.contact-form {
 
 		.input-item {
-			position: relative;
 			margin-bottom: 40px;
+
+			.field-hint {
+				display: block;
+				margin-bottom: 8px;
+				font-size: 13px;
+				color: lighten($black, 55%);
+			}
+
+			.fild-wrap {
+				position: relative;
+			}
 
 			.fild {
 				padding-bottom: 20px;
@@ -238,7 +248,10 @@
 			}
 
 			.srv-validation-message {
-				display: none;
+				display: block;
+				margin-top: 6px;
+				font-size: 13px;
+				color: #e6494d;
 			}
 
 			.textarea {

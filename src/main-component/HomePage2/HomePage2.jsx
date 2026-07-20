@@ -2,19 +2,11 @@
 
 import React, { Fragment } from 'react';
 import NavbarS2 from '../../components/NavbarS2/NavbarS2';
-import Hero2 from '../../components/hero2/Hero2';
-import TrackSection from '../../components/TrackSection/TrackSection';
-import ServiceSectionS2 from '../../components/ServiceSectionS2/ServiceSectionS2';
 import FunFactS2 from '../../components/FunFactS2/FunFactS2';
 import AboutS2 from '../../components/aboutS2/aboutS2';
-import RequestQuateSection from '../../components/RequestQuateSection/RequestQuateSection';
 import ProcessSectionS2 from '../../components/ProcessSectionS2/ProcessSectionS2';
 import FeaturesSectionS2 from '../../components/FeaturesSectionS2/FeaturesSectionS2';
-import PricingSection from '../../components/PricingSection/PricingSection';
-import ProjectTestimonialSection from '../../components/ProjectTestimonialSection/ProjectTestimonialSection';
-import PartnersSection from '../../components/PartnersSection/PartnersSection';
 import FaqSection from '../../components/FaqSection/FaqSection';
-import BlogSectionS2 from '../../components/BlogSectionS2/BlogSectionS2';
 import GetTouchSection from '../../components/GetTouchSection/GetTouchSection';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import MapSection from '../../components/MapSection/MapSection';
