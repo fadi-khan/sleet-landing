@@ -148,12 +148,12 @@ const FooterS2 = () => {
                         </div>
                         <div className="col col-lg-4 col-12">
                             <ul>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img1.src} alt="" /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img2.src} alt="" /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img3.src} alt="" /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img4.src} alt="" /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img5.src} alt="" /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img6.src} alt="" /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img1.src} alt="" width={45} height={25} /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img2.src} alt="" width={45} height={25} /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img3.src} alt="" width={45} height={25} /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img4.src} alt="" width={45} height={25} /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img5.src} alt="" width={45} height={25} /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img6.src} alt="" width={45} height={25} /></Link></li>
                             </ul>
                         </div>
                     </div>

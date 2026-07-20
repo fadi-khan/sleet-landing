@@ -1,10 +1,12 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import CountUp from 'react-countup';
 import Shape1 from '../../images/left-shape-fun.svg'
 import Shape2 from '../../images/right-shape-fun.svg'
+import FunfactBg from '../../images/funfact-bg.png'
 import { IoIosPeople } from "react-icons/io";
 import { FaSmile } from "react-icons/fa";
 
@@ -13,6 +15,14 @@ const FunFactS2 = (props) => {
     const t = useTranslations();
     return (
         <section className={"" +props.hclass}>
+            <Image
+                src={FunfactBg}
+                alt=""
+                fill
+                priority
+                sizes="100vw"
+                style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1 }}
+            />
             <h3 className="d-none"> section title</h3>
             <div className="container">
                 <div className="wraper">

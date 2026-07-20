@@ -82,7 +82,7 @@ const ServiceSection = (props) => {
                                     alt=""
                                     width={425}
                                     height={425}
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
                                     style={{ width: '100%', height: 'auto' }}
                                 />
                                 <div className="content">

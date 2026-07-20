@@ -17,7 +17,7 @@ const ProcessSectionS2 = (props) => {
                         </div>
                         <h2>{t('home.process.step1')}</h2>
                         <div className="shape">
-                            <img src={Shape.src} alt="" />
+                            <img src={Shape.src} alt="" width={86} height={21} />
                         </div>
                     </div>
                     <div className="item">
@@ -27,7 +27,7 @@ const ProcessSectionS2 = (props) => {
                         </div>
                         <h2>{t('home.process.step2')}</h2>
                         <div className="shape">
-                            <img src={Shape.src} alt="" />
+                            <img src={Shape.src} alt="" width={86} height={21} />
                         </div>
                     </div>
                     <div className="item">
@@ -37,7 +37,7 @@ const ProcessSectionS2 = (props) => {
                         </div>
                         <h2>{t('home.process.step3')}</h2>
                         <div className="shape">
-                            <img src={Shape.src} alt="" />
+                            <img src={Shape.src} alt="" width={86} height={21} />
                         </div>
                     </div>
                     <div className="item">
@@ -47,7 +47,7 @@ const ProcessSectionS2 = (props) => {
                         </div>
                         <h2>{t('home.process.step4')}</h2>
                         <div className="shape">
-                            <img src={Shape.src} alt="" />
+                            <img src={Shape.src} alt="" width={86} height={21} />
                         </div>
                     </div>
 
