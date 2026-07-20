@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { Link } from '../../i18n/navigation';
 import CountUp from 'react-countup';
 import { useTranslations } from 'next-intl';
@@ -46,10 +47,10 @@ const AboutS2 = () => {
                                     {t('home.aboutS2.tracked')}</p>
                             </div>
                             <div className="shape">
-                                <img src={Ab21.src} alt="" />
+                                <img src={Ab21.src} alt="" width={155} height={165} />
                             </div>
                             <div className="image">
-                                <img src={Ab22.src} alt="" />
+                                <Image src={Ab22} alt="" sizes="(max-width: 991px) 100vw, 551px" style={{ width: '100%', height: 'auto' }} />
                             </div>
                         </div>
                     </div>

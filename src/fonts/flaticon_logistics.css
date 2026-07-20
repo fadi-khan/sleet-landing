@@ -1,5 +1,6 @@
 @font-face {
   font-family: "flaticon_logistics";
+  font-display: swap;
   src: url("./flaticon_logistics.woff2?646180958cb6f5edc8017ae50c5cfdf7") format("woff2"), url("./flaticon_logistics.woff?646180958cb6f5edc8017ae50c5cfdf7") format("woff"), url("./flaticon_logistics.eot?646180958cb6f5edc8017ae50c5cfdf7#iefix") format("embedded-opentype"), url("./flaticon_logistics.ttf?646180958cb6f5edc8017ae50c5cfdf7") format("truetype"), url("./flaticon_logistics.svg?646180958cb6f5edc8017ae50c5cfdf7#flaticon_logistics") format("svg");
 }
 i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {

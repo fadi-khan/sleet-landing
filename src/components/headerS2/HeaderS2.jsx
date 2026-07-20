@@ -1,16 +1,12 @@
 "use client";
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import { Link, useRouter, usePathname } from '../../i18n/navigation'
 import { useTranslations } from 'next-intl'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import HeaderTopS2 from '../HeaderTopS2/HeaderTopS2'
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
-import { useDispatch, useSelector } from "react-redux";
-import { totalPrice } from "../../utils";
-
-// ✅ redux toolkit action
-import { removeFromCart } from "../../store/slices/cartSlice";
 import LogoLight from '../../images/logo-light.png'
 
 const Header = (props) => {
@@ -47,7 +43,7 @@ const Header = (props) => {
                             <div className="col-lg-2 col-md-6 col-6">
                                 <div className="navbar-header">
                                     <Link onClick={ClickHandler} className="navbar-brand" href="/home">
-                                        <img className="" src={LogoLight.src} width="100" height="90" alt="logo" />
+                                        <Image src={LogoLight} width={100} height={90} alt="logo" priority />
                                     </Link>
                                 </div>
                             </div>

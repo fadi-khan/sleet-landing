@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from 'next/image';
 import { Link } from '../../i18n/navigation'
 import { useTranslations } from 'next-intl';
 import SectionTitle from "../SectionTitle/SectionTitle";
@@ -75,7 +76,15 @@ const ServiceSection = (props) => {
                                 {service.isCommingSoon && (
                                     <span className="coming-soon-badge">{t('serviceSingle.comingSoon')}</span>
                                 )}
-                                <img className="image " src={service.image} alt="" />
+                                <Image
+                                    className="image "
+                                    src={service.imageData}
+                                    alt=""
+                                    width={425}
+                                    height={425}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    style={{ width: '100%', height: 'auto' }}
+                                />
                                 <div className="content">
                                     <service.Icon />
                                     <div className="text">

@@ -50,10 +50,10 @@ const FunFactS2 = (props) => {
                 </div>
             </div>
             <div className="left-shape">
-                <img src={Shape1.src} alt="" />
+                <img src={Shape1.src} alt="" width={191} height={210} />
             </div>
             <div className="right-shape">
-                <img src={Shape2.src} alt="" />
+                <img src={Shape2.src} alt="" width={190} height={210} />
             </div>
         </section>
     );

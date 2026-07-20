@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Services from '../../lib/api/Services';
 import { Link } from '../../i18n/navigation';
 import { useTranslations } from 'next-intl';
@@ -139,7 +140,7 @@ const FooterS2 = () => {
                     <div className="row g-0 align-items-center">
                         <div className="col col-lg-2 col-12">
                             <div className="logo">
-                                <img src={logo.src} alt="blog" />
+                                <Image src={logo} alt="Sleet Logistics" width={100} height={90} />
                             </div>
                         </div>
                         <div className="col col-lg-6 col-12">

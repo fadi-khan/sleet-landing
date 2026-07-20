@@ -6,7 +6,6 @@ import { DM_Sans, Plus_Jakarta_Sans, Tajawal } from "next/font/google";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
 import { routing } from "@/i18n/routing";
 import { metadataBase, localeAlternates } from "@/i18n/metadata";
-import StoreProvider from "@/store/StoreProvider";
 import ToastProvider from "@/components/ToastProvider/ToastProvider";
 
 const dmSans = DM_Sans({
@@ -78,12 +77,10 @@ export default async function LocaleLayout({ children, params }) {
     >
       <body>
         <AppRouterCacheProvider>
-          <StoreProvider>
-            <NextIntlClientProvider messages={messages}>
-              {children}
-              <ToastProvider />
-            </NextIntlClientProvider>
-          </StoreProvider>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+            <ToastProvider />
+          </NextIntlClientProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
