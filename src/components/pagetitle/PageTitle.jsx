@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import Slider1 from '../../images/slider/sleet-hero-bg.jpg'
 
@@ -5,7 +7,7 @@ const PageTitle = (props) => {
     return (
         <section
             className="wpo-breadcumb-area"
-            style={{ backgroundImage: `url(${Slider1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            style={{ backgroundImage: `url(${Slider1.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
             <div className="container">
                 <div className="row text-center">

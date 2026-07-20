@@ -1,7 +1,9 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../../i18n/navigation';
 import CountUp from 'react-countup';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 // image
 import Ab from '../../images/about/ab5.png'
@@ -14,33 +16,33 @@ import Abd6 from '../../images/about/profile.jpg'
 import Abd7 from '../../images/about/signature.png'
 
 const About = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
     return (
         <section className={"" + props.hclass}>
             <div className="shape">
-                <img src={Ab} alt="" />
+                <img src={Ab.src} alt="" />
             </div>
             <div className="side-img">
-                <img src={Abd1} alt="" />
+                <img src={Abd1.src} alt="" />
             </div>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-12">
                         <div className="about-left">
                             <div className="image-1">
-                                <img src={Abd2} alt="" />
+                                <img src={Abd2.src} alt="" />
                             </div>
                             <div className="image-2">
-                                <img src={Abd3} alt="" />
+                                <img src={Abd3.src} alt="" />
                             </div>
                             <div className="image-3">
-                                <img src={Abd4} alt="" />
+                                <img src={Abd4.src} alt="" />
                             </div>
                             <div className="image-4">
-                                <img src={Abd5} alt="" />
+                                <img src={Abd5.src} alt="" />
                             </div>
 
                             <div className="since">
@@ -70,15 +72,15 @@ const About = (props) => {
                             <div className="author-btn">
                                 <div className="author">
                                     <div className="image">
-                                        <img src={Abd6} alt="" />
+                                        <img src={Abd6.src} alt="" />
                                     </div>
                                     <div className="text">
-                                        <img src={Abd7} alt="" />
+                                        <img src={Abd7.src} alt="" />
                                         <span>{t('about.ceoFounder')}</span>
                                     </div>
                                 </div>
                                 <div className="about-btn">
-                                    <Link onClick={ClickHandler} to="/about" className="theme-btn">
+                                    <Link onClick={ClickHandler} href="/about" className="theme-btn">
                                         {t('common.moreAboutUs')}
                                     </Link>
                                 </div>

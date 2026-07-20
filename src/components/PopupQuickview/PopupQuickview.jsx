@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { addToCart } from "../../store/actions/action";
 import { connect } from "react-redux";

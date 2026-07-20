@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Accordion from '../FaqSection/Accordion';
 import Shape from '../../images/faq-icon.svg'

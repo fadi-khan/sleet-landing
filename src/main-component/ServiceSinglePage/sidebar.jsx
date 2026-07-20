@@ -1,11 +1,13 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom'
-import { useTranslation } from 'react-i18next';
+import { Link } from '../../i18n/navigation'
+import { useTranslations } from 'next-intl';
 import Services from '../../api/Services';
 
 
 const ServiceSidebar = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
 
     const ClickHandler = () => {
         window.scrollTo(10, 0);
@@ -17,7 +19,7 @@ const ServiceSidebar = (props) => {
                 <ul>
                     {Services.map((serves, index) => (
                         <li key={index}>
-                            <Link to={`/service-single/${serves.slug}`}  onClick={ClickHandler}>
+                            <Link href={`/service-single/${serves.slug}`}  onClick={ClickHandler}>
                                 <span>{t(`servicesData.${serves.key}.title`)}{serves.isCommingSoon && <span className="soon-tag">{t('serviceSingle.soon')}</span>}</span>
                                 <i className="flaticon-right-arrow-1"></i>
                             </Link>

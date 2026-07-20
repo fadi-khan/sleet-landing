@@ -1,8 +1,8 @@
+"use client";
+
 import React from 'react';
 import Slider from 'react-slick';
-import { Link } from 'react-router-dom';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { Link } from '../../i18n/navigation';
 
 
 import Slide1 from '../../images/slider/sleet-hero-2.png'
@@ -50,13 +50,13 @@ const HeroSlider = () => {
                                     </p>
                                 </div>
                                 <div className="btns">
-                                    <Link onClick={ClickHandler} to="/services" className="theme-btn">Get Started</Link>
-                                    <Link onClick={ClickHandler} to="/about" className="hero-btn">
+                                    <Link onClick={ClickHandler} href="/services" className="theme-btn">Get Started</Link>
+                                    <Link onClick={ClickHandler} href="/about" className="hero-btn">
                                         <span>Book A Demo</span> <i className="ti-angle-right"></i>
                                     </Link>
                                 </div>
                                 <div className="slider-pic">
-                                    <img src={Slide1} alt="" />
+                                    <img src={Slide1.src} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -80,13 +80,13 @@ const HeroSlider = () => {
                                     <p>World’s leading global logistics provider. We support industry and trade through the global exchange of goods via land transport.</p>
                                 </div>
                                 <div className="btns">
-                                    <Link onClick={ClickHandler} to="/services" className="theme-btn">All Services</Link>
-                                    <Link onClick={ClickHandler} to="/about" className="hero-btn">
+                                    <Link onClick={ClickHandler} href="/services" className="theme-btn">All Services</Link>
+                                    <Link onClick={ClickHandler} href="/about" className="hero-btn">
                                         <span>Learn More</span> <i className="ti-angle-right"></i>
                                     </Link>
                                 </div>
                                 <div className="slider-pic">
-                                    <img src={Slide2} alt="" />
+                                    <img src={Slide2.src} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -94,7 +94,7 @@ const HeroSlider = () => {
                 </div>
             </Slider>
             <div className="shape">
-                <img src={Shape} alt="" />
+                <img src={Shape.src} alt="" />
             </div>
             <div className="shape-img"></div>
         </section>

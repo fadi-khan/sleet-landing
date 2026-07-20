@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Fragment } from 'react';
 import Collapse from "@mui/material/Collapse";
 import FontAwesome from "../UiStyle/FontAwesome";

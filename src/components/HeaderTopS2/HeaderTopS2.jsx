@@ -1,5 +1,7 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../../i18n/navigation';
 
 const ClickHandler = () => {
     window.scrollTo(10, 0);
@@ -22,15 +24,15 @@ const HeaderTopS2 = () => {
                         <div className="col-lg-7 col-12">
                             <div className="contact-into">
                                 <ul className="social-help">
-                                    <li><Link onClick={ClickHandler} to="#">Help</Link></li>
-                                    <li><Link onClick={ClickHandler} to="#">Support</Link></li>
-                                    <li><Link onClick={ClickHandler} to="#">Faqs</Link></li>
+                                    <li><Link onClick={ClickHandler} href="#">Help</Link></li>
+                                    <li><Link onClick={ClickHandler} href="#">Support</Link></li>
+                                    <li><Link onClick={ClickHandler} href="#">Faqs</Link></li>
                                 </ul>
                                 <ul className="social-media">
-                                    <li><Link onClick={ClickHandler} to="#"><i className="flaticon-facebook-app-symbol"></i></Link></li>
-                                    <li><Link onClick={ClickHandler} to="#"><i className="flaticon-linkedin-big-logo"></i></Link></li>
-                                    <li><Link onClick={ClickHandler} to="#"><i className="flaticon-twitter"></i></Link></li>
-                                    <li><Link onClick={ClickHandler} to="#"><i className="flaticon-vimeo"></i></Link></li>
+                                    <li><Link onClick={ClickHandler} href="#"><i className="flaticon-facebook-app-symbol"></i></Link></li>
+                                    <li><Link onClick={ClickHandler} href="#"><i className="flaticon-linkedin-big-logo"></i></Link></li>
+                                    <li><Link onClick={ClickHandler} href="#"><i className="flaticon-twitter"></i></Link></li>
+                                    <li><Link onClick={ClickHandler} href="#"><i className="flaticon-vimeo"></i></Link></li>
                                 </ul>
                             </div>
                         </div>

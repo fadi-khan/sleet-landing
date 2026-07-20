@@ -1,7 +1,7 @@
+"use client";
+
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import testimonials from '../../api/testimonialData';
 
 import Shape from '../../images/testimonial/feedback.svg'
@@ -23,7 +23,7 @@ const Testimonial = (props) => {
                         <Slider asNavFor={nav2} ref={(slider1) => setNav1(slider1)} arrows={false} fade={true}>
                             {testimonials.slice(0, 2).map((testimonial, item) => (
                                 <div className="item" key={item}>
-                                    <span className="feedback"><img src={Shape} alt="" />
+                                    <span className="feedback"><img src={Shape.src} alt="" />
                                         Feedback</span>
                                     <img src={testimonial.img} alt="" />
                                 </div>

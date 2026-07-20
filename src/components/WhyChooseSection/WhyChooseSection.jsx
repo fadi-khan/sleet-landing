@@ -1,5 +1,7 @@
+"use client";
+
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import {
     FaProjectDiagram, FaBrain, FaSatelliteDish, FaCloud, FaExpandArrowsAlt,
     FaShieldAlt, FaPlug, FaLaptopCode, FaChartLine, FaRocket
@@ -11,8 +13,8 @@ const icons = [
 ];
 
 const WhyChooseSection = (props) => {
-    const { t } = useTranslation();
-    const items = t('home.whyChoose.items', { returnObjects: true });
+    const t = useTranslations();
+    const items = t.raw('home.whyChoose.items');
     return (
         <section className={"wpo-why-choose-section section-padding" + (props.hclass ? ' ' + props.hclass : '')}>
             <div className="container">

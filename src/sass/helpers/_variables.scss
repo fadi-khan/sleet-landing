@@ -1,13 +1,16 @@
 /*---------------------------
 	Fonts
+	Loaded via next/font/google in src/app/[locale]/layout.jsx (self-hosted,
+	exposed as CSS custom properties on <html>) rather than a CSS @import
+	here — an @import inside a Sass partial isn't guaranteed to end up first
+	in the final bundled stylesheet once combined with Bootstrap/other CSS,
+	and browsers silently drop @import rules that aren't first.
 ----------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-
 
 // fonts
 $base-font-size: 15;
-$base-font: "DM Sans";
-$heading-font:  "Plus Jakarta Sans";
+$base-font: var(--font-dm-sans), sans-serif;
+$heading-font: var(--font-plus-jakarta-sans), sans-serif;
 
 
 

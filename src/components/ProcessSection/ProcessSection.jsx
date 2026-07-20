@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 
 import Shape from '../../images/process/item-shape.svg'
@@ -9,31 +11,31 @@ import img4 from '../../images/process/4.jpg'
 const ProcessData = [
     {
         id: '1',
-        Img: img1,
+        Img: img1.src,
         title: 'Select Services',
         desctiption: 'Pellentesque habitant morbi trist fames ac turp egestas. Aliquam enim feugiat mattis.',
-        Shapebg: Shape,
+        Shapebg: Shape.src,
     },
     {
         id: '2',
-        Img: img2,
+        Img: img2.src,
         title: 'Percel Information',
         desctiption: 'Pellentesque habitant morbi trist fames ac turp egestas. Aliquam enim feugiat mattis.',
-        Shapebg: Shape,
+        Shapebg: Shape.src,
     },
     {
         id: '3',
-        Img: img3,
+        Img: img3.src,
         title: 'Transportation',
         desctiption: 'Pellentesque habitant morbi trist fames ac turp egestas. Aliquam enim feugiat mattis.',
-        Shapebg: Shape,
+        Shapebg: Shape.src,
     },
     {
         id: '4',
-        Img: img4,
+        Img: img4.src,
         title: 'Takeover Products',
         desctiption: 'Pellentesque habitant morbi trist fames ac turp egestas. Aliquam enim feugiat mattis.',
-        Shapebg: Shape,
+        Shapebg: Shape.src,
     },
 ]
 

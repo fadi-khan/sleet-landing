@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState } from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
+import { Link, useRouter, usePathname } from '../../i18n/navigation'
+import { useTranslations } from 'next-intl'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import HeaderTopS2 from '../HeaderTopS2/HeaderTopS2'
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
@@ -12,10 +14,10 @@ import { removeFromCart } from "../../store/slices/cartSlice";
 import LogoLight from '../../images/logo-light.png'
 
 const Header = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     const ClickHandler = () => window.scrollTo(10, 0);
-    const navigate = useNavigate();
-    const location = useLocation();
+    const router = useRouter();
+    const pathname = usePathname();
 
     const scrollToServices = (e) => {
         e.preventDefault();
@@ -23,10 +25,10 @@ const Header = (props) => {
             const el = document.getElementById('services');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
         };
-        if (location.pathname === '/' || location.pathname === '/home' || location.pathname === '/home-2') {
+        if (pathname === '/' || pathname === '/home' || pathname === '/home-2') {
             scroll();
         } else {
-            navigate('/home');
+            router.push('/home');
             setTimeout(scroll, 300);
         }
     };
@@ -44,8 +46,8 @@ const Header = (props) => {
                             </div>
                             <div className="col-lg-2 col-md-6 col-6">
                                 <div className="navbar-header">
-                                    <Link onClick={ClickHandler} className="navbar-brand" to="/home">
-                                        <img className="" src={LogoLight} width="100" height="90" alt="logo" />
+                                    <Link onClick={ClickHandler} className="navbar-brand" href="/home">
+                                        <img className="" src={LogoLight.src} width="100" height="90" alt="logo" />
                                     </Link>
                                 </div>
                             </div>
@@ -54,20 +56,20 @@ const Header = (props) => {
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
                                         <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} to="/home">{t('nav.home')}</Link>
+                                            <Link onClick={ClickHandler} href="/home">{t('nav.home')}</Link>
 
                                         </li>
 
                                         <li className="menu-item-has-children">
-                                            <Link onClick={scrollToServices} to="/home#services">{t('nav.services')}</Link>
+                                            <Link onClick={scrollToServices} href="/home#services">{t('nav.services')}</Link>
 
                                         </li>
                                         <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} to="/faq">{t('nav.faq')}</Link>
+                                            <Link onClick={ClickHandler} href="/faq">{t('nav.faq')}</Link>
 
                                         </li>
 
-                                        <li><Link onClick={ClickHandler} to="/contact">{t('nav.contact')}</Link></li>
+                                        <li><Link onClick={ClickHandler} href="/contact">{t('nav.contact')}</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -77,7 +79,7 @@ const Header = (props) => {
                                     {/* CART */}
                                     <LanguageSelector />
                                     <div className="close-form">
-                                        <Link className="theme-btn" to="https://app.sleet.sa/login" target="_blank">{t('common.getStarted')}</Link>
+                                        <a className="theme-btn" href="https://app.sleet.sa/login" target="_blank" rel="noopener noreferrer">{t('common.getStarted')}</a>
                                     </div>
                                 </div>
                             </div>

@@ -1,9 +1,11 @@
+"use client";
+
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import Shape from '../../images/process-arrow-shape.svg'
 
 const ProcessSectionS2 = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     return (
         <section className={"" + props.hclass}>
             <div className="container">
@@ -15,7 +17,7 @@ const ProcessSectionS2 = (props) => {
                         </div>
                         <h2>{t('home.process.step1')}</h2>
                         <div className="shape">
-                            <img src={Shape} alt="" />
+                            <img src={Shape.src} alt="" />
                         </div>
                     </div>
                     <div className="item">
@@ -25,7 +27,7 @@ const ProcessSectionS2 = (props) => {
                         </div>
                         <h2>{t('home.process.step2')}</h2>
                         <div className="shape">
-                            <img src={Shape} alt="" />
+                            <img src={Shape.src} alt="" />
                         </div>
                     </div>
                     <div className="item">
@@ -35,7 +37,7 @@ const ProcessSectionS2 = (props) => {
                         </div>
                         <h2>{t('home.process.step3')}</h2>
                         <div className="shape">
-                            <img src={Shape} alt="" />
+                            <img src={Shape.src} alt="" />
                         </div>
                     </div>
                     <div className="item">
@@ -45,7 +47,7 @@ const ProcessSectionS2 = (props) => {
                         </div>
                         <h2>{t('home.process.step4')}</h2>
                         <div className="shape">
-                            <img src={Shape} alt="" />
+                            <img src={Shape.src} alt="" />
                         </div>
                     </div>
 

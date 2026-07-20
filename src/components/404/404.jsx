@@ -1,11 +1,13 @@
+"use client";
+
 import React from 'react'
-import {Link} from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
+import { Link } from '../../i18n/navigation'
+import { useTranslations } from 'next-intl'
 
 
 
 const Error = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     const ClickHandler = () =>{
         window.scrollTo(10, 0);
      }
@@ -19,7 +21,7 @@ const Error = (props) => {
                             <div className="error-message">
                                 <h3>{t('errorPage.code')}</h3>
                                 <h4>{t('errorPage.message')}</h4>
-                                <Link onClick={ClickHandler} to="/" className="theme-btn">{t('common.backToHome')}</Link>
+                                <Link onClick={ClickHandler} href="/" className="theme-btn">{t('common.backToHome')}</Link>
                             </div>
                         </div>
                     </div>

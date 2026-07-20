@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Grid from "@mui/material/Grid";
 import {Link} from "react-router-dom";

@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import { Link } from 'react-router-dom';

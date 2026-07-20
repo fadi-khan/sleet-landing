@@ -1,5 +1,7 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../../i18n/navigation';
 import Projects from '../../api/projects';
 import SectionTitle from '../SectionTitle/SectionTitle';
 
@@ -33,10 +35,10 @@ const ProjectSectionS2 = (props) => {
                                 </div>
                                 <div className="content">
                                     <div className="text">
-                                        <h2><Link onClick={ClickHandler} to={`/project-single/${project.slug}`}>{project.title}</Link></h2>
+                                        <h2><Link onClick={ClickHandler} href={`/project-single/${project.slug}`}>{project.title}</Link></h2>
                                         <p>{project.subtitle}</p>
                                     </div>
-                                    <Link onClick={ClickHandler} to={`/project-single/${project.slug}`} className="icon">
+                                    <Link onClick={ClickHandler} href={`/project-single/${project.slug}`} className="icon">
                                         <i className="flaticon-right-arrow"></i>
                                     </Link>
                                 </div>

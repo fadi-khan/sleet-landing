@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import HeaderS2 from '../headerS2/HeaderS2';
 

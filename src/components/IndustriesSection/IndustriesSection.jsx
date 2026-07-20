@@ -1,5 +1,7 @@
+"use client";
+
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import {
     FaTruckMoving, FaShippingFast, FaIndustry, FaStore, FaHardHat,
     FaOilCan, FaWarehouse, FaBoxes, FaShoppingCart, FaLandmark
@@ -11,8 +13,8 @@ const icons = [
 ];
 
 const IndustriesSection = (props) => {
-    const { t } = useTranslation();
-    const items = t('home.industries.items', { returnObjects: true });
+    const t = useTranslations();
+    const items = t.raw('home.industries.items');
     return (
         <section className={"wpo-industries-section section-padding" + (props.hclass ? ' ' + props.hclass : '')}>
             <div className="container">

@@ -1,5 +1,7 @@
+"use client";
+
 import React, { Fragment } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import HeaderTop from '../../components/HeaderTop/HeaderTop';
 import Navbar from '../../components/Navbar/Navbar'
 import PageTitle from '../../components/pagetitle/PageTitle'
@@ -20,7 +22,7 @@ import Scrollbar from '../../components/scrollbar/scrollbar';
 import Logo from '../../images/logo.png'
 
 const AboutPage = () => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     return (
         <Fragment>
             {/* <HeaderTop /> */}

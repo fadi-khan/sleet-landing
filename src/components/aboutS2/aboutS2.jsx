@@ -1,7 +1,9 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../../i18n/navigation';
 import CountUp from 'react-countup';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 
 
@@ -12,7 +14,7 @@ import Ab24 from '../../images/about/signature.png'
 import Ab25 from '../../images/homepage/delivery-man.jpeg'
 
 const AboutS2 = () => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
@@ -44,10 +46,10 @@ const AboutS2 = () => {
                                     {t('home.aboutS2.tracked')}</p>
                             </div>
                             <div className="shape">
-                                <img src={Ab21} alt="" />
+                                <img src={Ab21.src} alt="" />
                             </div>
                             <div className="image">
-                                <img src={Ab22} alt="" />
+                                <img src={Ab22.src} alt="" />
                             </div>
                         </div>
                     </div>
@@ -76,7 +78,7 @@ const AboutS2 = () => {
 
                             <div className="about-btn">
                                 <div className="btn-1">
-                                    <Link onClick={scrollToServices} to={'#services'} className="theme-btn">{t('common.exploreMore')} <i
+                                    <Link onClick={scrollToServices} href={'#services'} className="theme-btn">{t('common.exploreMore')} <i
                                         className="ti-angle-right"></i></Link>
                                 </div>
 
@@ -86,7 +88,7 @@ const AboutS2 = () => {
                 </div>
             </div>
             <div className="right-img">
-                <img src={Ab25} alt="" width={240} height={324}  />
+                <img src={Ab25.src} alt="" width={240} height={324}  />
             </div>
         </section>
     );

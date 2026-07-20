@@ -1,11 +1,13 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { Link } from '../../i18n/navigation';
+import { useTranslations } from 'next-intl';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import Services from "../../api/Services";
 
 const ServiceSectionS2 = (props) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
@@ -31,10 +33,10 @@ const ServiceSectionS2 = (props) => {
                                     <service.Icon />
                                 </div>
                                 <div className="content">
-                                    <h2><Link onClick={ClickHandler} to={`/service-single/${service.slug}`}>{t(`servicesData.${service.key}.title`)}</Link></h2>
+                                    <h2><Link onClick={ClickHandler} href={`/service-single/${service.slug}`}>{t(`servicesData.${service.key}.title`)}</Link></h2>
                                     <p>{t(`servicesData.${service.key}.description`)}</p>
                                     <div className="services-btn">
-                                        <Link onClick={ClickHandler} to={`/service-single/${service.slug}`}>{t('common.seeDetails')}</Link>
+                                        <Link onClick={ClickHandler} href={`/service-single/${service.slug}`}>{t('common.seeDetails')}</Link>
                                     </div>
                                 </div>
                             </div>

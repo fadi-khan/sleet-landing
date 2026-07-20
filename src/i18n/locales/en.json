@@ -1,4 +1,23 @@
 {
+  "meta": {
+    "titleTemplate": "%s | Sleet Logistics",
+    "home": {
+      "title": "Sleet Logistics | Smart Fleet Management & Logistics Platform",
+      "description": "Sleet Automation Logistics is an all-in-one logistics technology platform combining intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace."
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Logistika is the world's leading global logistics provider, facilitating industry and commerce in the international exchange of goods through land transport."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Everything you need to know about Sleet Automation Logistics, our fleet management, SaaS, TNC, and AI reporting services."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Get in touch with Sleet Logistics to discuss your fleet management and logistics needs."
+    }
+  },
   "nav": {
     "home": "Home",
     "services": "Services",

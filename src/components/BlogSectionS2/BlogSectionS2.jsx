@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import blogs from '../../api/blogs'
 // import SectionTitle from '../SectionTitle/SectionTitle';
@@ -5,7 +7,7 @@ import { Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Link } from 'react-router-dom';
+import { Link } from '../../i18n/navigation';
 
 
 const BlogSectionS2 = () => {
@@ -26,7 +28,7 @@ const BlogSectionS2 = () => {
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="f-btn">
-                            <Link onClick={ClickHandler} to="/blog" className="theme-btn">All Blogs</Link>
+                            <Link onClick={ClickHandler} href="/blog" className="theme-btn">All Blogs</Link>
                         </div>
                     </div>
                 </div>
@@ -62,10 +64,10 @@ const BlogSectionS2 = () => {
                                         <li><i className="flaticon-comments"></i> <span>Comments(5)</span></li>
                                     </ul>
                                     <h2>
-                                        <Link onClick={ClickHandler} to={`/blog-single/${bloge.slug}`}>{bloge.title}</Link>
+                                        <Link onClick={ClickHandler} href={`/blog-single/${bloge.slug}`}>{bloge.title}</Link>
                                     </h2>
                                     <div className="b-btn">
-                                        <Link onClick={ClickHandler} to={`/blog-single/${bloge.slug}`}>Read More <i className="flaticon-right-arrow"></i></Link>
+                                        <Link onClick={ClickHandler} href={`/blog-single/${bloge.slug}`}>Read More <i className="flaticon-right-arrow"></i></Link>
                                     </div>
                                 </div>
                             </div>

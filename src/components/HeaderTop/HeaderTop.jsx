@@ -1,5 +1,7 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../../i18n/navigation';
 
 const HeaderTop = () => {
     return (
@@ -28,10 +30,10 @@ const HeaderTop = () => {
                             </div>
                             <ul className="social-media">
                                 <li><span>Follow Us :</span></li>
-                                <li><Link to="#"><i className="flaticon-facebook-app-symbol"></i></Link></li>
-                                <li><Link to="#"><i className="flaticon-linkedin-big-logo"></i></Link></li>
-                                <li><Link to="#"><i className="flaticon-twitter"></i></Link></li>
-                                <li><Link to="#"><i className="flaticon-vimeo"></i></Link></li>
+                                <li><Link href="#"><i className="flaticon-facebook-app-symbol"></i></Link></li>
+                                <li><Link href="#"><i className="flaticon-linkedin-big-logo"></i></Link></li>
+                                <li><Link href="#"><i className="flaticon-twitter"></i></Link></li>
+                                <li><Link href="#"><i className="flaticon-vimeo"></i></Link></li>
                             </ul>
                         </div>
                     </div>

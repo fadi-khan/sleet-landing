@@ -1,3 +1,5 @@
+"use client";
+
 
 import React, { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator';

@@ -1,7 +1,7 @@
+"use client";
+
 import React, { Fragment } from 'react';
-import { useParams } from 'react-router-dom'
-import { useTranslation } from 'react-i18next';
-import Services from '../../api/Services';
+import { useTranslations } from 'next-intl';
 import ServiceSidebar from './sidebar'
 import HeaderTop from '../../components/HeaderTop/HeaderTop'
 import Navbar from '../../components/Navbar/Navbar'
@@ -12,19 +12,17 @@ import FooterS2 from '../../components/FooterS2/FooterS2';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Logo from '../../images/logo.png'
 
-const ServiceSinglePage = (props) => {
+const ServiceSinglePage = ({ serviceDetails }) => {
 
-    const { t } = useTranslation();
-    const { slug } = useParams()
-    const serviceDetails = Services.find(item => item.slug === slug)
+    const t = useTranslations();
     const dataKey = `servicesData.${serviceDetails.key}`
     const title = t(`${dataKey}.title`)
     const subtitle = t(`${dataKey}.subtitle`)
     const description = t(`${dataKey}.description`)
-    const features = t(`${dataKey}.features`, { returnObjects: true, defaultValue: [] })
-    const note = t(`${dataKey}.note`, { defaultValue: '' })
-    const sampleQuestions = t(`${dataKey}.sampleQuestions`, { returnObjects: true, defaultValue: [] })
-    const outputFormats = t(`${dataKey}.outputFormats`, { returnObjects: true, defaultValue: [] })
+    const features = t.has(`${dataKey}.features`) ? t.raw(`${dataKey}.features`) : []
+    const note = t.has(`${dataKey}.note`) ? t(`${dataKey}.note`) : ''
+    const sampleQuestions = t.has(`${dataKey}.sampleQuestions`) ? t.raw(`${dataKey}.sampleQuestions`) : []
+    const outputFormats = t.has(`${dataKey}.outputFormats`) ? t.raw(`${dataKey}.outputFormats`) : []
 
     return (
         <Fragment>
