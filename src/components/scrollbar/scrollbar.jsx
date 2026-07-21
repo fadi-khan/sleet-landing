@@ -1,7 +1,11 @@
 "use client";
 
 import React from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+
+const scrollToTop = (e) => {
+    e.preventDefault();
+    window.scroll({ top: 0, behavior: 'smooth' });
+}
 
 const Scrollbar = () => {
 
@@ -9,11 +13,11 @@ const Scrollbar = () => {
         <div className="col-lg-12">
             <div className="header-menu">
                 <ul className="smothscroll">
-                    <li><AnchorLink href='#scrool'><i className="ti-arrow-up"></i></AnchorLink></li>
+                    <li><a href='#' onClick={scrollToTop}><i className="ti-arrow-up"></i></a></li>
                 </ul>
             </div>
         </div>
-        
+
     )
 }
 

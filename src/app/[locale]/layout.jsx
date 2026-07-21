@@ -31,8 +31,6 @@ import "../../css/themify-icons.css";
 import "../../css/flaticon_logistics.css";
 import "../../sass/style.scss";
 import "react-toastify/dist/ReactToastify.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "../../components/FaqSection/Accordion.css";
 import "../../components/MobileMenu/style.css";
 import "../../components/scrollbar/style.css";

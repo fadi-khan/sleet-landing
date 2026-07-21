@@ -43,7 +43,7 @@ const Header = (props) => {
                             <div className="col-lg-2 col-md-6 col-6">
                                 <div className="navbar-header">
                                     <Link onClick={ClickHandler} className="navbar-brand" href="/home">
-                                        <Image src={LogoLight} width={100} height={90} alt="logo" priority />
+                                        <Image src={LogoLight} width={105} height={65} alt="Sleet Logistics logo" priority />
                                     </Link>
                                 </div>
                             </div>

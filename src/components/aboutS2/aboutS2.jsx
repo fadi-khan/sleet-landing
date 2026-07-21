@@ -50,7 +50,7 @@ const AboutS2 = () => {
                                 <img src={Ab21.src} alt="" width={155} height={165} />
                             </div>
                             <div className="image">
-                                <Image src={Ab22} alt="" sizes="(max-width: 991px) 100vw, 551px" style={{ width: '100%', height: 'auto' }} />
+                                <Image src={Ab22} alt="Sleet fleet management platform showing live GPS tracking and maintenance scheduling for trucks and delivery vans" sizes="(max-width: 991px) 100vw, 551px" style={{ width: '100%', height: 'auto' }} />
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@ const AboutS2 = () => {
                 </div>
             </div>
             <div className="right-img">
-                <img src={Ab25.src} alt="" width={240} height={324}  />
+                <img src={Ab25.src} alt="Sleet delivery driver holding a clipboard next to packages ready for goods delivery" width={240} height={324}  />
             </div>
         </section>
     );

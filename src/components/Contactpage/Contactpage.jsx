@@ -65,7 +65,7 @@ const Contactpage = () => {
                                 <div className="contact-left">
                                     <h2>{t('contact.getInTouch')}</h2>
                                     <p>{t('contact.getInTouchDesc')}</p>
-                                    <img className="image" src={Img01.src} alt="" />
+                                    <img className="image" src={Img01.src} alt="Sleet Automation Logistics team member assisting with fleet management and delivery tracking in a warehouse" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-12">

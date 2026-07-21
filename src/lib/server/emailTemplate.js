@@ -58,7 +58,7 @@ export const renderInquiryEmail = ({ heading, intro, rows }) => {
               <td style="background-color:${BRAND.primary};padding:28px 32px;">
                 ${
                   logoUrl
-                    ? `<img src="${logoUrl}" alt="Sleet Logistics" height="32" style="display:block;height:32px;" />`
+                    ? `<img src="${logoUrl}" alt="Sleet Logistics" width="44" height="32" style="display:block;width:44px;height:32px;" />`
                     : `<span style="font-family:'Segoe UI',Arial,sans-serif;font-size:20px;font-weight:700;color:#ffffff;">Sleet Logistics</span>`
                 }
               </td>

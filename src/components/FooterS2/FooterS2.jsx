@@ -113,7 +113,7 @@ const FooterS2 = () => {
                                             onChange={handleChange}
                                         />
                                         {validator.message('email', formData.email, 'required|email')}
-                                        <button type="submit"><i className="flaticon-arrowhead-up"></i></button>
+                                        <button type="submit" aria-label={t('footer.newsletter')}><i className="flaticon-arrowhead-up"></i></button>
 
                                         <div className="terms">
                                             <input
@@ -140,7 +140,7 @@ const FooterS2 = () => {
                     <div className="row g-0 align-items-center">
                         <div className="col col-lg-2 col-12">
                             <div className="logo">
-                                <Image src={logo} alt="Sleet Logistics" width={100} height={90} />
+                                <Image src={logo} alt="Sleet Logistics logo" width={125} height={90} />
                             </div>
                         </div>
                         <div className="col col-lg-6 col-12">
@@ -148,12 +148,12 @@ const FooterS2 = () => {
                         </div>
                         <div className="col col-lg-4 col-12">
                             <ul>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img1.src} alt="" width={45} height={25} /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img2.src} alt="" width={45} height={25} /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img3.src} alt="" width={45} height={25} /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img4.src} alt="" width={45} height={25} /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img5.src} alt="" width={45} height={25} /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img6.src} alt="" width={45} height={25} /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img1.src} alt="Visa payment icon" width={45} height={25} /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img2.src} alt="Mastercard payment icon" width={45} height={25} /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img3.src} alt="PayPal payment icon" width={45} height={25} /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img4.src} alt="Skrill payment icon" width={45} height={25} /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img5.src} alt="Maestro payment icon" width={45} height={25} /></Link></li>
+                                <li><Link onClick={ClickHandler} href="/"><img src={Img6.src} alt="Visa Electron payment icon" width={45} height={25} /></Link></li>
                             </ul>
                         </div>
                     </div>

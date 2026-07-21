@@ -20,8 +20,8 @@ const HeroSlider = () => {
         <section className="hero-section ">
             <div className="slider-item">
                 <div className="bg-image">
-                    <Image className="animated" src={Slider1} alt="" fill priority
-                        sizes="100vw" data-animation-in="zoomInImage" />
+                    <Image className="animated" priority={true} src={Slider1} alt="truck on road" fill
+                        sizes="100vw" data-animation-in="zoomInImage" loading='eager' />
                 </div>
                 <div className="container">
                     <div className="content mt-5 pt-lg-5">

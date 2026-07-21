@@ -79,7 +79,7 @@ const ServiceSection = (props) => {
                                 <Image
                                     className="image "
                                     src={service.imageData}
-                                    alt=""
+                                    alt={`${t(`servicesData.${service.key}.title`)} - ${t(`servicesData.${service.key}.subtitle`)}`}
                                     width={425}
                                     height={425}
                                     sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
@@ -90,7 +90,7 @@ const ServiceSection = (props) => {
                                     <div className="text">
                                         <h2><Link href={`/service-single/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
                                         <p className="">{t(`servicesData.${service.key}.subtitle`)}</p>
-                                        <Link href={`/service-single/${service.slug}`} onClick={ClickHandler} className="service-single-link">
+                                        <Link href={`/service-single/${service.slug}`} onClick={ClickHandler} className="service-single-link" aria-label={`${t('common.seeDetails')}: ${t(`servicesData.${service.key}.title`)}`}>
                                             <i className="flaticon-right-arrow"></i>
                                         </Link>
                                     </div>
