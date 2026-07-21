@@ -3,19 +3,23 @@
     "titleTemplate": "%s | Sleet Logistics",
     "home": {
       "title": "Sleet Logistics | Smart Fleet Management & Logistics Platform",
-      "description": "Sleet Automation Logistics is an all-in-one logistics technology platform combining intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace."
+      "description": "Sleet Automation Logistics is an all-in-one logistics technology platform combining intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace.",
+      "keywords": "Sleet, Sleet Logistics, delivery, goods delivery, logistics company, fleet management, freight delivery, shipping company, truck delivery, cargo delivery, logistics platform, delivery services, transportation company, supply chain, courier services, fleet tracking, logistics software, digital truck marketplace, AI logistics"
     },
     "about": {
       "title": "About Us",
-      "description": "Logistika is the world's leading global logistics provider, facilitating industry and commerce in the international exchange of goods through land transport."
+      "description": "Logistika is the world's leading global logistics provider, facilitating industry and commerce in the international exchange of goods through land transport.",
+      "keywords": "about Sleet Logistics, logistics company, goods delivery company, freight and delivery provider, global logistics provider, land transport company, supply chain company"
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Everything you need to know about Sleet Automation Logistics, our fleet management, SaaS, TNC, and AI reporting services."
+      "description": "Everything you need to know about Sleet Automation Logistics, our fleet management, SaaS, TNC, and AI reporting services.",
+      "keywords": "logistics FAQ, delivery questions, fleet management FAQ, goods delivery FAQ, logistics company FAQ, shipping questions"
     },
     "contact": {
       "title": "Contact Us",
-      "description": "Get in touch with Sleet Logistics to discuss your fleet management and logistics needs."
+      "description": "Get in touch with Sleet Logistics to discuss your fleet management and logistics needs.",
+      "keywords": "contact Sleet Logistics, contact logistics company, delivery quote, goods delivery contact, freight delivery contact, request a demo"
     }
   },
   "nav": {
@@ -39,8 +43,8 @@
   "home": {
     "hero": {
       "title": "Sleet",
-      "subtitle": "The Future of Smart Logistics Starts with Sleet",
-      "description": "Sleet Automation Logistics is an all-in-one logistics technology platform that combines intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace to help businesses move faster, operate smarter, and scale with confidence."
+      "subtitle": "The Future of Smart Logistics & Goods Delivery Starts with Sleet",
+      "description": "Sleet Automation Logistics is an all-in-one logistics technology platform that combines intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace — helping logistics companies deliver goods faster, operate smarter, and scale with confidence."
     },
     "funfact": {
       "happyCustomers": "Happy Customers",
@@ -49,14 +53,14 @@
       "totalServices": "Total Services"
     },
     "service": {
-      "subtitle": "Trusted transport service",
-      "title": "Transport & Logistics Services We are the best"
+      "subtitle": "Trusted goods delivery & transport service",
+      "title": "Transport, Logistics & Goods Delivery Services — We Are the Best"
     },
     "aboutSleet": {
       "title": "About Sleet",
       "subtitle": "Driving the future of logistics",
-      "p1": "Sleet Automation Logistics is transforming the logistics industry through technology. Our integrated ecosystem brings together transportation, fleet management, artificial intelligence, and digital logistics services into one powerful platform.",
-      "p2": "Whether you manage a single fleet or thousands of vehicles, Sleet gives you complete visibility, automation, and control through intelligent software built for modern logistics."
+      "p1": "Sleet Automation Logistics is transforming the logistics industry through technology. Our integrated ecosystem brings together transportation, fleet management, artificial intelligence, and digital logistics services into one powerful platform for reliable goods delivery.",
+      "p2": "Whether you manage a single fleet or thousands of vehicles, Sleet gives you complete visibility, automation, and control through intelligent software built for modern logistics and freight delivery."
     },
     "aboutS2": {
       "builtFor": "Built for",
@@ -65,7 +69,7 @@
       "tracked": "Tracked",
       "poweringTitle": "Powering modern logistics",
       "poweringSubtitle": "One platform for your entire fleet",
-      "description": "Sleet Automation Logistics is a logistics technology company that provides intelligent transportation solutions through four integrated services — Sleet Logistics, Sleet SaaS, Sleet TNC, and Sleet AI.",
+      "description": "Sleet Automation Logistics is a logistics technology company that provides intelligent transportation and goods delivery solutions through four integrated services — Sleet Logistics, Sleet SaaS, Sleet TNC, and Sleet AI.",
       "realTimeVisibility": "Real-Time Fleet Visibility",
       "tripManagement": "End-to-End Trip Management",
       "liveGps": "Live GPS Tracking",
@@ -96,13 +100,13 @@
     },
     "features": {
       "subtitle": "Trusted transport service",
-      "title": "Logistics features that we can provideing",
+      "title": "Logistics and goods delivery features we provide",
       "warehouseTitle": "Warehouse",
-      "warehouseDesc": "Warehouse: hub for storage, distribution, and logistics.",
+      "warehouseDesc": "A secure hub for storage, distribution, and freight delivery operations.",
       "supportTitle": "Support 24/7",
-      "supportDesc": "Warehouse: hub for storage, distribution, and logistics.",
+      "supportDesc": "Round-the-clock support for every delivery and logistics request.",
       "cargoTitle": "Cargo Insurance",
-      "cargoDesc": "Warehouse: hub for storage, distribution, and logistics."
+      "cargoDesc": "Protect every shipment with reliable cargo and goods delivery insurance."
     },
     "industries": {
       "title": "Industries We Serve",
@@ -141,9 +145,9 @@
   "about": {
     "pageTitle": "Sleet Logistics",
     "pageSub": "About us",
-    "trustedTransport": "Trusted transport service",
-    "heading": "Transport & Logistics Services We are the best",
-    "subContent": "Logistika is the world's leading global logistics provider — we expertly facilitate industry and commerce in the international exchange of goods through land transport.",
+    "trustedTransport": "Trusted goods delivery service",
+    "heading": "Transport, Logistics & Goods Delivery Services — We Are the Best",
+    "subContent": "Logistika is the world's leading global logistics company — we expertly facilitate industry and commerce in the international exchange of goods through land transport and reliable delivery services.",
     "operations": "operations around the world and across various transporation sectors.",
     "list": [
       "Domestic and International Service emergency support",
@@ -194,6 +198,7 @@
     "sleetLogistics": {
       "subtitle": "Our Fleet Management Solution For Your Business",
       "title": "Sleet Logistics",
+      "keywords": "fleet management, logistics company, goods delivery, delivery tracking, fleet tracking software, freight delivery, GPS fleet tracking, logistics platform",
       "description": "Operate your fleet with complete visibility using Sleet's intelligent logistics platform. Our fleet management system combines advanced tracking technology with a powerful dashboard to help businesses monitor vehicles, drivers, trips, fuel consumption, maintenance, and operational performance in real time.",
       "features": [
         "Live GPS Tracking",
@@ -211,6 +216,7 @@
     "sleetSaas": {
       "subtitle": "Your Fleet. Your Brand. Our Technology.",
       "title": "Sleet SaaS",
+      "keywords": "logistics software, SaaS logistics platform, delivery management software, logistics company software, cloud fleet management, freight operator software",
       "description": "Sleet SaaS allows logistics companies to run their entire operations using our cloud-based platform. Instead of building expensive software from scratch, businesses can subscribe to Sleet and instantly access enterprise-grade logistics technology.",
       "features": [
         "Cloud Dashboard",
@@ -229,6 +235,7 @@
     "sleetTnc": {
       "subtitle": "The Uber for Trucks",
       "title": "Sleet TNC",
+      "keywords": "truck delivery, goods delivery marketplace, on-demand truck booking, freight delivery marketplace, truck for hire, delivery services",
       "description": "Sleet TNC connects businesses with available trucks through a fast and intelligent digital marketplace. Customers can request transportation in minutes while fleet owners receive new delivery opportunities without unnecessary paperwork or long phone calls.",
       "features": [
         "Instant Truck Booking",
@@ -245,6 +252,7 @@
     "sleetAi": {
       "subtitle": "Your Intelligent Logistics Assistant",
       "title": "Sleet AI",
+      "keywords": "AI logistics, logistics reporting AI, fleet analytics AI, delivery insights, logistics automation, AI-powered logistics platform",
       "description": "Sleet AI transforms operational data into meaningful insights with the power of artificial intelligence. Simply describe what you need in plain language, and Sleet AI will analyze your logistics data, generate reports, summarize operations, and provide actionable recommendations.",
       "features": [
         "Natural Language Queries",
@@ -282,7 +290,7 @@
     "phoneNumber": "Phone Number",
     "addressLabel": "Address",
     "getInTouch": "Get in touch",
-    "getInTouchDesc": "Have questions about our logistics services? Need a customized shipping solution? Our team is here to help you optimize your supply chain and streamline your operations. Reach out to us today and let's discuss how we can support your business needs.",
+    "getInTouchDesc": "Have questions about our logistics and goods delivery services? Need a customized freight delivery solution? Our team is here to help you optimize your supply chain and streamline your operations. Reach out to us today and let's discuss how we can support your business needs.",
     "fillForm": "Fill Up The Form",
     "fillFormDesc": "Your email address will not be published. Required fields are marked *",
     "form": {

@@ -49,7 +49,17 @@ export async function generateMetadata({ params }) {
       default: t("home.title"),
     },
     description: t("home.description"),
+    keywords: t("home.keywords"),
     alternates: localeAlternates(""),
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+    },
   };
 }
 
@@ -68,6 +78,17 @@ export default async function LocaleLayout({ children, params }) {
   const messages = await getMessages();
   const dir = locale === "ar" ? "rtl" : "ltr";
 
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Sleet Logistics",
+    alternateName: "Sleet Automation Logistics",
+    url: metadataBase.toString(),
+    logo: new URL("/icon.png", metadataBase).toString(),
+    description:
+      "Sleet Automation Logistics is an all-in-one logistics technology platform combining intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace for goods delivery.",
+  };
+
   return (
     <html
       lang={locale}
@@ -75,6 +96,10 @@ export default async function LocaleLayout({ children, params }) {
       className={`${dmSans.variable} ${plusJakartaSans.variable} ${tajawal.variable}`}
     >
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <AppRouterCacheProvider>
           <NextIntlClientProvider messages={messages}>
             {children}

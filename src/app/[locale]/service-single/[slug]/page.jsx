@@ -24,15 +24,25 @@ export async function generateMetadata({ params }) {
   const dataKey = service.key;
   const title = t(`${dataKey}.title`);
   const description = t(`${dataKey}.description`);
+  const keywords = t(`${dataKey}.keywords`);
 
   return {
     title,
     description,
+    keywords,
     alternates: localeAlternates(`/service-single/${slug}`),
     openGraph: {
       title,
       description,
+      type: "website",
+      siteName: "Sleet Logistics",
       images: [{ url: service.banner }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [service.banner],
     },
   };
 }

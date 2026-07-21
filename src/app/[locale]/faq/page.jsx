@@ -9,7 +9,19 @@ export async function generateMetadata({ params }) {
   return {
     title: t("faq.title"),
     description: t("faq.description"),
+    keywords: t("faq.keywords"),
     alternates: localeAlternates("/faq"),
+    openGraph: {
+      title: t("faq.title"),
+      description: t("faq.description"),
+      type: "website",
+      siteName: "Sleet Logistics",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("faq.title"),
+      description: t("faq.description"),
+    },
   };
 }
 
