@@ -621,6 +621,13 @@
 		padding: 0 10px;
 		font-size: 12px;
 	}
+
+	@media (max-width:767px) {
+		gap: 0;
+		height: 32px;
+		margin-right: 6px;
+		padding: 0 8px;
+	}
 }
 
 .lang-toggle-flag {
@@ -637,6 +644,10 @@
 
 .lang-toggle-label {
 	white-space: nowrap;
+
+	@media (max-width:767px) {
+		display: none;
+	}
 }
 
 .wpo-site-header-s2 .lang-toggle {

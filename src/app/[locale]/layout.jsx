@@ -25,7 +25,7 @@ const tajawal = Tajawal({
   display: "swap",
 });
 
-import "bootstrap/dist/css/bootstrap.min.css";
+import "../../css/bootstrap.min.css";
 import "../../css/font-awesome.min.css";
 import "../../css/themify-icons.css";
 import "../../css/flaticon_logistics.css";

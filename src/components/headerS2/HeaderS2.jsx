@@ -74,7 +74,7 @@ const Header = (props) => {
 
                                     {/* CART */}
                                     <LanguageSelector />
-                                    <div className="close-form">
+                                    <div className="close-form ">
                                         <a className="theme-btn" href="https://app.sleet.sa/login" target="_blank" rel="noopener noreferrer">{t('common.getStarted')}</a>
                                     </div>
                                 </div>

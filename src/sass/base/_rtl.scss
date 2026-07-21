@@ -17,6 +17,15 @@ html[dir="rtl"] {
 	}
 
 	/* ---------- header / navigation ---------- */
+	/* the LTR rule zeroes the physical right edge (where the flag/CTA
+	   column sits in English); mirror it to the physical left edge here,
+	   since RTL flips the column order and puts the mobile-menu toggle
+	   on the right instead - it needs its own edge padding restored. */
+	.wpo-site-header .container-fluid {
+		padding-right: 12px;
+		padding-left: 0;
+	}
+
 	.wpo-site-header .header-right {
 		margin-left: 0;
 		margin-right: -80px;
