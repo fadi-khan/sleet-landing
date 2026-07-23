@@ -275,6 +275,65 @@ html[dir="rtl"] {
 	}
 
 	/* ---------- wpo-about-section-s2 ---------- */
+	/* RTL flips the row order, so .about-left (the photo card) sits on
+	   the right and .about-content (text) on the left. The LTR bleed
+	   uses a negative margin-left to push the fixed-width card past the
+	   left edge of its own (left-hand) column - mirrored unchanged, that
+	   same physical-left pull now drags the card off its right-hand
+	   column and straight over the text column instead. Mirror it to
+	   margin-right so the card bleeds outward on its own side again. */
+	.wpo-about-section-s2 .about-left {
+		margin-left: 0;
+		margin-right: -180px;
+
+		@include media-query(1650px) {
+			margin-right: -100px;
+		}
+
+		@include media-query(1499px) {
+			margin-right: 0px;
+		}
+
+		/* The card is 703px wide but the fleet photo inside is only
+		   551px, so there's always a ~150px strip of raw card
+		   background left over. In LTR that strip sits under the
+		   photo's un-anchored side and gets pushed off-page by the
+		   bleed above. Anchoring the photo/badge to "right" only made
+		   sense with the box's left edge live - now that the box
+		   bleeds right instead, the photo has to hug the left edge so
+		   the same leftover strip ends up on the (now bled-off) right
+		   side again instead of showing as a bare dark bar. */
+		h3 {
+			left: auto;
+			right: -95px;
+		}
+
+		.people {
+			right: auto;
+			left: 20px;
+
+			&::before {
+				right: auto;
+				left: -20px;
+				clip-path: polygon(100% 0, 100% 100%, 0% 100%);
+			}
+		}
+
+		.image {
+			right: auto;
+			left: 0;
+		}
+	}
+
+	/* the delivery-man decoration is positioned relative to the whole
+	   section, not the row, so it doesn't move with the flipped
+	   columns on its own - pin it to the text column's corner instead
+	   of the photo card's. */
+	.wpo-about-section-s2 .right-img {
+		right: auto;
+		left: 0;
+	}
+
 	.wpo-about-section-s2 .about-content {
 		p {
 			padding-left: 0;
