@@ -416,6 +416,30 @@
         }
 
     }
+
+    &.is-coming-soon {
+        background: #FAFBFE;
+        border-style: dashed;
+
+        .icon,
+        h2 {
+            opacity: 0.55;
+        }
+
+        p {
+            opacity: 0.7;
+        }
+
+        &:hover {
+            background: #FAFBFE;
+            box-shadow: 0px 7px 28px rgba(0, 0, 0, 0.03);
+
+            h2 a,
+            p {
+                color: inherit;
+            }
+        }
+    }
 }
 
 /*5.3 wpo-funfact-section-s2 */

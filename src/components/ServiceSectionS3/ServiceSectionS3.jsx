@@ -71,7 +71,7 @@ const ServiceSectionS3 = (props) => {
             <div className="service-slider-s2">
                 <Slider {...settings}>
                     {Services.map((service, item) => (
-                        <div className="service-card-s2" key={item}>
+                        <div className={"service-card-s2" + (service.isCommingSoon ? " is-coming-soon" : "")} key={item}>
                             {service.isCommingSoon && (
                                 <span className="coming-soon-badge">{t('serviceSingle.comingSoon')}</span>
                             )}
@@ -82,7 +82,7 @@ const ServiceSectionS3 = (props) => {
                                 <h2><Link href={`/service-single/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
                                 <p>{t(`servicesData.${service.key}.description`)}</p>
                                 <div className="services-btn">
-                                    <Link href={`/service-single/${service.slug}`} onClick={ClickHandler}>{t('common.seeDetails')} </Link>
+                                    <Link href={`/service-single/${service.slug}`} onClick={ClickHandler}>{service.isCommingSoon ? t('serviceSingle.notifyMe') : t('common.seeDetails')} </Link>
                                 </div>
                             </div>
                             <div className="top-shape">

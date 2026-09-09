@@ -80,6 +80,30 @@
                 color: $white;
             }
         }
+
+        &.is-coming-soon {
+            background: #FAFBFE;
+            border-style: dashed;
+
+            svg,
+            h3 {
+                opacity: 0.55;
+            }
+
+            p {
+                opacity: 0.7;
+            }
+
+            &:hover {
+                background: #FAFBFE;
+
+                svg,
+                h3,
+                p {
+                    color: inherit;
+                }
+            }
+        }
     }
 }
 

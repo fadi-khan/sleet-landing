@@ -72,7 +72,7 @@ const ServiceSection = (props) => {
                 <Swiper {...swiperParams} className="service-slider">
                     {Services.map((service, item) => (
                         <SwiperSlide key={item}>
-                            <div className="service-card">
+                            <div className={"service-card" + (service.isCommingSoon ? " is-coming-soon" : "")}>
                                 {service.isCommingSoon && (
                                     <span className="coming-soon-badge">{t('serviceSingle.comingSoon')}</span>
                                 )}
@@ -90,7 +90,7 @@ const ServiceSection = (props) => {
                                     <div className="text">
                                         <h2><Link href={`/service-single/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
                                         <p className="">{t(`servicesData.${service.key}.subtitle`)}</p>
-                                        <Link href={`/service-single/${service.slug}`} onClick={ClickHandler} className="service-single-link" aria-label={`${t('common.seeDetails')}: ${t(`servicesData.${service.key}.title`)}`}>
+                                        <Link href={`/service-single/${service.slug}`} onClick={ClickHandler} className="service-single-link" aria-label={`${service.isCommingSoon ? t('serviceSingle.notifyMe') : t('common.seeDetails')}: ${t(`servicesData.${service.key}.title`)}`}>
                                             <i className="flaticon-right-arrow"></i>
                                         </Link>
                                     </div>

@@ -485,6 +485,11 @@
         object-fit: cover;
         position: relative;
         z-index: -1;
+        transition: filter .3s ease-in-out;
+    }
+
+    &.is-coming-soon .image {
+        filter: grayscale(0.8);
     }
 
     .content {
@@ -645,7 +650,8 @@
             }
 
             &::before {
-                width: 0;
+                width: 100%;
+                background: rgba(6, 34, 41, 0.92);
             }
 
             .text {
@@ -662,7 +668,7 @@
                 }
 
                 p {
-                    color: #C2C2C2;
+                    color: #E4E4E4;
                 }
 
                 .service-single-link {

@@ -9,13 +9,6 @@ import SimpleReactValidator from 'simple-react-validator';
 
 import logo from '../../images/logo-light.png'
 
-import Img1 from '../../images/banck/1.png'
-import Img2 from '../../images/banck/2.png'
-import Img3 from '../../images/banck/3.png'
-import Img4 from '../../images/banck/4.png'
-import Img5 from '../../images/banck/5.png'
-import Img6 from '../../images/banck/6.png'
-
 const ClickHandler = () => {
     window.scrollTo(10, 0);
 }
@@ -91,9 +84,9 @@ const FooterS2 = () => {
                                     <h3>{t('footer.usefulLinks')}</h3>
                                 </div>
                                 <ul>
-                                    <li><Link onClick={ClickHandler} href="/contact">{t('footer.termsConditions')}</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/terms">{t('footer.termsConditions')}</Link></li>
                                     <li><Link onClick={ClickHandler} href="/contact">{t('footer.contactUs')}</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/contact">{t('footer.privacyPolicy')}</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/privacy-policy">{t('footer.privacyPolicy')}</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -124,7 +117,7 @@ const FooterS2 = () => {
                                                 onChange={handleChange}
                                             />
                                             <label htmlFor="Insurance">
-                                                {t('footer.agreeText')} <Link onClick={handleChange} href="/">{t('footer.terms')}</Link> {t('footer.andPolicies')}
+                                                {t('footer.agreeText')} <Link href="/terms">{t('footer.terms')}</Link> {t('footer.andPolicies')}
                                             </label>
                                             {validator.message('agree', formData.agree, 'accepted')}
                                         </div>
@@ -143,18 +136,8 @@ const FooterS2 = () => {
                                 <Image src={logo} alt="Sleet Logistics logo" width={125} height={90} />
                             </div>
                         </div>
-                        <div className="col col-lg-6 col-12">
-                            <p className="copyright"> &copy; 2026 <Link onClick={ClickHandler} href="/home">Sleet Logistics</Link> - {t('footer.copyrightSuffix')}</p>
-                        </div>
-                        <div className="col col-lg-4 col-12">
-                            <ul>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img1.src} alt="Visa payment icon" width={45} height={25} /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img2.src} alt="Mastercard payment icon" width={45} height={25} /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img3.src} alt="PayPal payment icon" width={45} height={25} /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img4.src} alt="Skrill payment icon" width={45} height={25} /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img5.src} alt="Maestro payment icon" width={45} height={25} /></Link></li>
-                                <li><Link onClick={ClickHandler} href="/"><img src={Img6.src} alt="Visa Electron payment icon" width={45} height={25} /></Link></li>
-                            </ul>
+                        <div className="col col-lg-10 col-12">
+                            <p className="copyright"> &copy; {new Date().getFullYear()} <Link onClick={ClickHandler} href="/home">Sleet Logistics</Link> - {t('footer.copyrightSuffix')}</p>
                         </div>
                     </div>
                 </div>

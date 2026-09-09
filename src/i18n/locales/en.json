@@ -185,6 +185,8 @@
     "pageTitle": "Our Solutions",
     "comingSoon": "Coming Soon",
     "soon": "Soon",
+    "notifyMe": "Notify Me When Available",
+    "comingSoonNotice": "This service is currently in development and not yet available. Contact us to join the early access list and be the first to know when it launches.",
     "features": "Features",
     "generateReports": "Generate Reports In Seconds",
     "askQuestions": "Ask questions like:",
@@ -197,7 +199,7 @@
   "servicesData": {
     "sleetLogistics": {
       "subtitle": "Our Fleet Management Solution For Your Business",
-      "title": "Sleet Logistics",
+      "title": "Sleet Logistics — Fleet Management",
       "keywords": "fleet management, logistics company, goods delivery, delivery tracking, fleet tracking software, freight delivery, GPS fleet tracking, logistics platform",
       "description": "Operate your fleet with complete visibility using Sleet's intelligent logistics platform. Our fleet management system combines advanced tracking technology with a powerful dashboard to help businesses monitor vehicles, drivers, trips, fuel consumption, maintenance, and operational performance in real time.",
       "features": [
@@ -215,7 +217,7 @@
     },
     "sleetSaas": {
       "subtitle": "Your Fleet. Your Brand. Our Technology.",
-      "title": "Sleet SaaS",
+      "title": "Sleet SaaS — Logistics Platform",
       "keywords": "logistics software, SaaS logistics platform, delivery management software, logistics company software, cloud fleet management, freight operator software",
       "description": "Sleet SaaS allows logistics companies to run their entire operations using our cloud-based platform. Instead of building expensive software from scratch, businesses can subscribe to Sleet and instantly access enterprise-grade logistics technology.",
       "features": [
@@ -234,7 +236,7 @@
     },
     "sleetTnc": {
       "subtitle": "The Uber for Trucks",
-      "title": "Sleet TNC",
+      "title": "Sleet TNC — Truck Marketplace",
       "keywords": "truck delivery, goods delivery marketplace, on-demand truck booking, freight delivery marketplace, truck for hire, delivery services",
       "description": "Sleet TNC connects businesses with available trucks through a fast and intelligent digital marketplace. Customers can request transportation in minutes while fleet owners receive new delivery opportunities without unnecessary paperwork or long phone calls.",
       "features": [
@@ -251,7 +253,7 @@
     },
     "sleetAi": {
       "subtitle": "Your Intelligent Logistics Assistant",
-      "title": "Sleet AI",
+      "title": "Sleet AI — Smart Reporting",
       "keywords": "AI logistics, logistics reporting AI, fleet analytics AI, delivery insights, logistics automation, AI-powered logistics platform",
       "description": "Sleet AI transforms operational data into meaningful insights with the power of artificial intelligence. Simply describe what you need in plain language, and Sleet AI will analyze your logistics data, generate reports, summarize operations, and provide actionable recommendations.",
       "features": [

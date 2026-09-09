@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Link } from '../../i18n/navigation';
+import { Link, useRouter, usePathname } from '../../i18n/navigation';
 import { useTranslations } from 'next-intl';
 import Services from '../../lib/api/Services';
 
@@ -11,16 +11,18 @@ const ClickHandler = () => {
 
 const AboutSleetSection = (props) => {
     const t = useTranslations();
+    const router = useRouter();
+    const pathname = usePathname();
     const scrollToServices = (e) => {
         e.preventDefault();
         const scroll = () => {
             const el = document.getElementById('services');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
         };
-        if (location.pathname === '/' || location.pathname === '/home' || location.pathname === '/home-2') {
+        if (pathname === '/' || pathname === '/home' || pathname === '/home-2') {
             scroll();
         } else {
-            navigate('/home');
+            router.push('/home');
             setTimeout(scroll, 300);
         }
     };
@@ -40,7 +42,7 @@ const AboutSleetSection = (props) => {
                     <div className="col-lg-6 col-12">
                         <div className="about-sleet-grid">
                             {Services.map((service, index) => (
-                                <Link href={`/service-single/${service.slug}`} onClick={ClickHandler} className="about-sleet-card" key={index}>
+                                <Link href={`/service-single/${service.slug}`} onClick={ClickHandler} className={"about-sleet-card" + (service.isCommingSoon ? " is-coming-soon" : "")} key={index}>
                                     {service.isCommingSoon && <span className="soon-tag">{t('serviceSingle.comingSoon')}</span>}
                                     <service.Icon />
                                     <h3>{t(`servicesData.${service.key}.title`)}</h3>

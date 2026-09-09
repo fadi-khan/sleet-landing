@@ -6,6 +6,7 @@ import ServiceSidebar from './sidebar'
 import HeaderTop from '../../components/HeaderTop/HeaderTop'
 import Navbar from '../../components/Navbar/Navbar'
 import PageTitle from '../../components/pagetitle/PageTitle'
+import { Link } from '../../i18n/navigation';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import MapSection from '../../components/MapSection/MapSection';
 import FooterS2 from '../../components/FooterS2/FooterS2';
@@ -36,6 +37,15 @@ const ServiceSinglePage = ({ serviceDetails }) => {
                             <div className="service-single-wrap">
                                 <span className="s-subtitle">{subtitle}</span>
                                 <h2>{title}</h2>
+
+                                {serviceDetails.isCommingSoon && (
+                                    <div className="coming-soon-notice">
+                                        <span className="soon-tag">{t('serviceSingle.comingSoon')}</span>
+                                        <p>{t('serviceSingle.comingSoonNotice')}</p>
+                                        <Link href="/contact" className="theme-btn">{t('serviceSingle.notifyMe')}</Link>
+                                    </div>
+                                )}
+
                                 <p>{description}</p>
 
                                 {features.length > 0 && (
@@ -73,9 +83,6 @@ const ServiceSinglePage = ({ serviceDetails }) => {
                                 )}
 
                                 <div className="title-image">
-                                    {serviceDetails.isCommingSoon && (
-                                        <span className="coming-soon-badge">{t('serviceSingle.comingSoon')}</span>
-                                    )}
                                     <img src={serviceDetails.simag} alt={title} />
                                 </div>
                             </div>
