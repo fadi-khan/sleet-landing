@@ -10,6 +10,60 @@
     box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
     overflow-x: auto;
     overflow-y: scroll;
+    /* closed drawer stays out of the tab order */
+    visibility: hidden;
+}
+
+.mobileMenu.show {
+    visibility: visible;
+}
+
+.mobileMenu-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    background: rgba(4, 20, 26, 0.55);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.mobileMenu-backdrop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobileMenu .clox {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mobileMenu-cta {
+    padding: 25px 35px;
+}
+
+.mobileMenu-cta .theme-btn {
+    display: block;
+    padding: 14px 18px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+html[dir="rtl"] .mobileMenu {
+    left: auto;
+    right: -300px;
+}
+
+html[dir="rtl"] .mobileMenu.show {
+    left: auto;
+    right: 0;
 }
 
 .responsivemenu .card-body {
@@ -148,7 +202,8 @@
         margin-bottom: 5px;
     }
 
-    .mobileMenu {
+    .mobileMenu,
+    .mobileMenu-backdrop {
         display: block;
     }
 }
@@ -172,6 +227,15 @@
     .mobileMenu {
         left: -260px;
         width: 260px;
+    }
+
+    html[dir="rtl"] .mobileMenu {
+        left: auto;
+        right: -260px;
+    }
+
+    .mobileMenu-cta {
+        padding: 20px 25px;
     }
 
     .responsivemenu li a,

@@ -4,6 +4,14 @@ ul.smothscroll {
     right: 30px;
     list-style: none;
     z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+ul.smothscroll.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -28,8 +36,8 @@ ul.smothscroll a:hover {
 
 @media(max-width:767px) {
     ul.smothscroll a {
-        width: 30px;
-        height: 30px;
-        line-height: 25px;
+        width: 44px;
+        height: 44px;
+        line-height: 40px;
     }
 }

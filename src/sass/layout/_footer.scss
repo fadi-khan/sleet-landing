@@ -465,6 +465,14 @@
                 font-weight: 500;
                 line-height: 28px;
                 display: block;
+
+                a {
+                    color: inherit;
+
+                    &:hover {
+                        color: #04cfe6;
+                    }
+                }
             }
         }
     }
@@ -507,6 +515,7 @@
                 &:focus-visible {
                     outline: -webkit-focus-ring-color auto transparent;
                     outline: 0;
+                    border-bottom-color: #04cfe6;
                 }
 
 
@@ -519,7 +528,7 @@
                 line-height: 25px;
                 font-size: 20px;
                 text-align: center;
-                color: #FF7940;
+                color: #04cfe6;
                 display: block;
                 background: transparent;
                 border: 1px solid transparent;
@@ -537,8 +546,8 @@
 
             &:hover {
                 button {
-                    color: $white;
-                    background: #FF7940;
+                    color: $theme-primary-color;
+                    background: #04cfe6;
 
 
                 }
@@ -823,6 +832,7 @@
                 &:focus-visible {
                     outline: -webkit-focus-ring-color auto transparent;
                     outline: 0;
+                    border-bottom-color: #04cfe6;
                 }
 
                 &::before {

@@ -13,8 +13,8 @@ const GetTouchSection = (props) => {
                 <div className="row justify-content-end">
                     <div className="col-lg-7 col-12">
                         <div className="wpo-section-title">
-                            <h2>{t('home.getTouch.subtitle')}</h2>
-                            <h3>{t('home.getTouch.title')}</h3>
+                            <h2 role="presentation">{t('home.getTouch.subtitle')}</h2>
+                            <h3 aria-level={2}>{t('home.getTouch.title')}</h3>
                         </div>
                         <MyForm />
                     </div>

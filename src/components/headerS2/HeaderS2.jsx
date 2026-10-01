@@ -52,7 +52,7 @@ const Header = (props) => {
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
                                         <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} href="/home">{t('nav.home')}</Link>
+                                            <Link onClick={ClickHandler} href="/home" className={pathname === '/' ? 'active' : ''}>{t('nav.home')}</Link>
 
                                         </li>
 
@@ -61,11 +61,11 @@ const Header = (props) => {
 
                                         </li>
                                         <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} href="/faq">{t('nav.faq')}</Link>
+                                            <Link onClick={ClickHandler} href="/faq" className={pathname === '/faq' ? 'active' : ''}>{t('nav.faq')}</Link>
 
                                         </li>
 
-                                        <li><Link onClick={ClickHandler} href="/contact">{t('nav.contact')}</Link></li>
+                                        <li><Link onClick={ClickHandler} href="/contact" className={pathname === '/contact' ? 'active' : ''}>{t('nav.contact')}</Link></li>
                                     </ul>
                                 </div>
                             </div>

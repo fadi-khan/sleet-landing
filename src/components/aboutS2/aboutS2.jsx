@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Link } from '../../i18n/navigation';
+import { Link, useRouter, usePathname } from '../../i18n/navigation';
 import CountUp from 'react-countup';
 import { useTranslations } from 'next-intl';
 
@@ -16,9 +16,8 @@ import Ab25 from '../../images/homepage/delivery-man.jpeg'
 
 const AboutS2 = () => {
     const t = useTranslations();
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
+    const router = useRouter();
+    const pathname = usePathname();
 
         const scrollToServices = (e) => {
         e.preventDefault();
@@ -26,10 +25,10 @@ const AboutS2 = () => {
             const el = document.getElementById('services');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
         };
-        if (location.pathname === '/' || location.pathname === '/home' || location.pathname === '/home-2') {
+        if (pathname === '/' || pathname === '/home' || pathname === '/home-2') {
             scroll();
         } else {
-            navigate('/home');
+            router.push('/home');
             setTimeout(scroll, 300);
         }
     };
@@ -40,9 +39,9 @@ const AboutS2 = () => {
                 <div className="row">
                     <div className="col-lg-6 col-12">
                         <div className="about-left">
-                            <h3>{t('home.aboutS2.builtFor')} <span>{t('home.aboutS2.modernFleets')}</span></h3>
+                            <h3 role="presentation">{t('home.aboutS2.builtFor')} <span>{t('home.aboutS2.modernFleets')}</span></h3>
                             <div className="people">
-                                <h2><CountUp end={20} enableScrollSpy />k+</h2>
+                                <h2 role="presentation"><CountUp end={20} enableScrollSpy />k+</h2>
                                 <p>{t('home.aboutS2.fleetTripsTracked')} <br />
                                     {t('home.aboutS2.tracked')}</p>
                             </div>
@@ -57,8 +56,8 @@ const AboutS2 = () => {
                     <div className="col-lg-6 col-12">
                         <div className="about-content">
                             <div className="wpo-section-title">
-                                <h2>{t('home.aboutS2.poweringTitle')}</h2>
-                                <h3>{t('home.aboutS2.poweringSubtitle')}</h3>
+                                <h2 role="presentation">{t('home.aboutS2.poweringTitle')}</h2>
+                                <h3 aria-level={2}>{t('home.aboutS2.poweringSubtitle')}</h3>
                             </div>
                             <p>{t('home.aboutS2.description')}
                             </p>

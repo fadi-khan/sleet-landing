@@ -20,27 +20,22 @@ const HeroSlider = () => {
         <section className="hero-section ">
             <div className="slider-item">
                 <div className="bg-image">
-                    <Image className="animated" priority={true} src={Slider1} alt="truck on road" fill
+                    <Image className="animated" priority={true} src={Slider1} alt="" fill
                         sizes="100vw" data-animation-in="zoomInImage" loading='eager' />
                 </div>
                 <div className="container">
                     <div className="content mt-5 pt-lg-5">
-                        <h2 className="animated pt-5 fs-1  " data-animation-in="fadeInUp">{t('home.hero.title')}</h2>
-                        <h3 className="animated d-lg-none " data-animation-in="fadeInUp">{t('home.hero.subtitle')}</h3>
-                        <h3
-                        style={{fontSize:'60px'}}
-                        className="animated d-none d-lg-block " data-animation-in="fadeInUp">{t('home.hero.subtitle')}</h3>
+                        <h1 className="animated" data-animation-in="fadeInUp">{t('home.hero.subtitle')}</h1>
 
                         <p className="animated" data-animation-in="fadeInUp">{t('home.hero.description')}</p>
-                        <div className="hero-btn animated d-flex gap-4" data-animation-in="fadeInUp">
-                            <div className="btn-1">
-                                <a onClick={ClickHandler} href="https://app.sleet.sa" target="_blank" rel="noopener noreferrer" className="theme-btn">{t('common.getStarted')}</a>
-                            </div>
-                            <Link onClick={ClickHandler} href="/contact" className="hero-btn text-info fs-5 fw-bold ">
-                                <span className=''>{t('common.bookADemo')}</span> <i className={` ${language === 'ar' ? 'ti-angle-left ms-2' : 'ti-angle-right '} `}></i>
+                        <div className="hero-actions animated" data-animation-in="fadeInUp">
+                            <a onClick={ClickHandler} href="https://app.sleet.sa/login" target="_blank" rel="noopener noreferrer" className="theme-btn">{t('common.getStarted')}</a>
+                            <Link onClick={ClickHandler} href="/contact" className="hero-demo-btn">
+                                <span>{t('common.bookADemo')}</span>
+                                <i className={language === 'ar' ? 'ti-angle-left' : 'ti-angle-right'}></i>
                             </Link>
                         </div>
-                        <ul className="hero-social-list animated d-flex gap-3 mt-4 pb-5" data-animation-in="fadeInUp">
+                        <ul className="hero-social-list animated" data-animation-in="fadeInUp">
                             <li><a href="https://www.linkedin.com/company/sleet-sa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fa fa-linkedin"></i></a></li>
                             <li><a href="https://www.instagram.com/sleet.sa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa fa-instagram"></i></a></li>
                             <li><a href="https://x.com/sleet_sa?s=21&t=Pp3MNfVjHFWqTcUrnmTAmw" target="_blank" rel="noopener noreferrer" aria-label="X"><i className="fa fa-twitter"></i></a></li>

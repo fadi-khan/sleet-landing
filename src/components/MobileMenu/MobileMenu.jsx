@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
-import ListItem from "@mui/material/List";
+import React, { useEffect, useState } from 'react';
 import { Link, useRouter, usePathname } from '../../i18n/navigation';
 import { useTranslations } from 'next-intl';
 
@@ -11,6 +10,20 @@ const MobileMenu = () => {
     const [menuActive, setMenuState] = useState(false);
     const router = useRouter();
     const pathname = usePathname();
+
+    // while the drawer is open: Escape closes it and the page behind doesn't scroll
+    useEffect(() => {
+        if (!menuActive) return;
+        const onKeyDown = (e) => {
+            if (e.key === 'Escape') setMenuState(false);
+        };
+        document.addEventListener('keydown', onKeyDown);
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.removeEventListener('keydown', onKeyDown);
+            document.body.style.overflow = '';
+        };
+    }, [menuActive]);
 
     const menus = [
         {
@@ -58,28 +71,41 @@ const MobileMenu = () => {
 
     return (
         <div>
-            <div className={`mobileMenu ${menuActive ? "show" : ""}`}>
+            <div className={`mobileMenu-backdrop ${menuActive ? "show" : ""}`} onClick={() => setMenuState(false)}></div>
+
+            <div id="mobile-menu" className={`mobileMenu ${menuActive ? "show" : ""}`} aria-hidden={!menuActive}>
                 <div className="menu-close">
-                    <div className="clox" onClick={() => setMenuState(!menuActive)}><i className="ti-close"></i></div>
+                    <button type="button" className="clox" onClick={() => setMenuState(false)} aria-label={t('nav.closeMenu')}><i className="ti-close"></i></button>
                 </div>
 
                 <ul className="responsivemenu">
                     {menus.map((item, mn) => {
                         return (
-                            <ListItem key={mn}>
+                            <li key={mn}>
                                 <Link
                                     onClick={item.isServicesLink ? scrollToServices : ClickHandler}
                                     href={item.link}
                                 >{item.title}</Link>
-                            </ListItem>
+                            </li>
                         )
                     })}
                 </ul>
 
+                <div className="mobileMenu-cta">
+                    <a className="theme-btn" href="https://app.sleet.sa/login" target="_blank" rel="noopener noreferrer">{t('common.getStarted')}</a>
+                </div>
+
             </div>
 
-            <div className="showmenu mobail-menu" onClick={() => setMenuState(!menuActive)}>
-                <button type="button" className="navbar-toggler open-btn">
+            <div className="showmenu mobail-menu">
+                <button
+                    type="button"
+                    className="navbar-toggler open-btn"
+                    onClick={() => setMenuState(!menuActive)}
+                    aria-label={t('nav.openMenu')}
+                    aria-expanded={menuActive}
+                    aria-controls="mobile-menu"
+                >
                     <span className="icon-bar first-angle"></span>
                     <span className="icon-bar middle-angle"></span>
                     <span className="icon-bar last-angle"></span>

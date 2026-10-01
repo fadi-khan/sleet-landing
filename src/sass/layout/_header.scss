@@ -1857,12 +1857,17 @@
 		align-items: center;
 		justify-content: center;
 		width: 143px;
-		color: #FFF;
+		color: $theme-primary-color;
 		font-family: $base-font;
 		font-size: 15px;
-		font-weight: 500;
+		font-weight: 600;
 		border-radius: 6px;
 		height: 42px;
+
+		&:hover,
+		&:focus-visible {
+			color: $white;
+		}
 	}
 
 	.wpo-site-header {
@@ -1968,6 +1973,49 @@
 		margin-bottom: 0px;
 	}
 
+}
+
+/* sticky state: NavbarS2 adds .active to .fixed-navbar once the page scrolls */
+.fixed-navbar.active .wpo-site-header-s2 {
+	position: fixed;
+	z-index: 999;
+	background: #0B3742;
+	box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+	animation: sticky-slide-down .35s ease-out;
+
+	.wpo-site-header .navigation {
+		background: transparent;
+		border-radius: 0;
+		margin-top: 0;
+	}
+
+	@media screen and (min-width: 992px) {
+		.wpo-site-header #navbar>ul>li>a {
+			padding-top: 24px;
+			padding-bottom: 24px;
+		}
+	}
+
+	.lang-toggle {
+		border-color: rgba(255, 255, 255, 0.5);
+		color: $white;
+	}
+}
+
+@keyframes sticky-slide-down {
+	from {
+		transform: translateY(-100%);
+	}
+
+	to {
+		transform: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.fixed-navbar.active .wpo-site-header-s2 {
+		animation: none;
+	}
 }
 
 /* wpo-site-header-s3 */

@@ -22,13 +22,18 @@ const ServiceSection = (props) => {
 
     const { SectionTitleShow = true, ServiceAllBtn = true } = props
 
+    // no auto-advancing slides for visitors who ask for reduced motion
+    const reduceMotion = typeof window !== 'undefined'
+        && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     const swiperParams = {
         modules: [Pagination, Autoplay],
         spaceBetween: 30,
         slidesPerView: 3,
-        autoplay: {
-            delay: 30000,
+        autoplay: reduceMotion ? false : {
+            delay: 6000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
         pagination: {
             clickable: true,
@@ -88,7 +93,7 @@ const ServiceSection = (props) => {
                                 <div className="content">
                                     <service.Icon />
                                     <div className="text">
-                                        <h2><Link href={`/service-single/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
+                                        <h2 aria-level={3}><Link href={`/service-single/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
                                         <p className="">{t(`servicesData.${service.key}.subtitle`)}</p>
                                         <Link href={`/service-single/${service.slug}`} onClick={ClickHandler} className="service-single-link" aria-label={`${service.isCommingSoon ? t('serviceSingle.notifyMe') : t('common.seeDetails')}: ${t(`servicesData.${service.key}.title`)}`}>
                                             <i className="flaticon-right-arrow"></i>

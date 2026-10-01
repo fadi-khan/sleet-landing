@@ -23,7 +23,6 @@ const FunFactS2 = (props) => {
                 sizes="100vw"
                 style={{ objectFit: 'cover', objectPosition: 'center', zIndex: -1 }}
             />
-            <h3 className="d-none"> section title</h3>
             <div className="container">
                 <div className="wraper">
                     <div className="row g-0">
@@ -31,28 +30,28 @@ const FunFactS2 = (props) => {
                             <div className="item">
                                 <IoIosPeople size={60} />
 
-                                <h2><CountUp end={5000} enableScrollSpy />+</h2>
+                                <h2 role="presentation"><CountUp end={5000} enableScrollSpy />+</h2>
                                 <p>{t('home.funfact.happyCustomers')}</p>
                             </div>
                         </div>
                         <div className="col col-lg-3 col-md-6 col-12">
                             <div className="item">
                                 <FaSmile size={42} className='mb-3' />
-                                <h2><CountUp end={100} enableScrollSpy />%</h2>
+                                <h2 role="presentation"><CountUp end={100} enableScrollSpy />%</h2>
                                 <p>{t('home.funfact.customerSatisfaction')}</p>
                             </div>
                         </div>
                         <div className="col col-lg-3 col-md-6 col-12">
                             <div className="item">
                                 <i className="flaticon-globe"></i>
-                                <h2><CountUp end={10} enableScrollSpy />+</h2>
+                                <h2 role="presentation"><CountUp end={10} enableScrollSpy />+</h2>
                                 <p>{t('home.funfact.citiesCovered')}</p>
                             </div>
                         </div>
                         <div className="col col-lg-3 col-md-6 col-12">
                             <div className="item">
                                 <i className="flaticon-order"></i>
-                                <h2><CountUp end={30} enableScrollSpy />+</h2>
+                                <h2 role="presentation"><CountUp end={30} enableScrollSpy />+</h2>
                                 <p>{t('home.funfact.totalServices')}</p>
                             </div>
                         </div>

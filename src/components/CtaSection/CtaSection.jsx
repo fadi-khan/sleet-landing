@@ -16,8 +16,8 @@ const CtaSection = (props) => {
             <div className="container">
                 <div className="cta-wrapr">
                     <div className="wpo-section-title">
-                        <h2>{t('cta.title')}</h2>
-                        <h3>{t('cta.subtitle')}</h3>
+                        <h2 role="presentation">{t('cta.title')}</h2>
+                        <h3 aria-level={2}>{t('cta.subtitle')}</h3>
                         <Link onClick={ClickHandler} href="/contact" className="theme-btn">{t('cta.requestDemo')}</Link>
                     </div>
                     <div className="contact-info">
@@ -27,7 +27,7 @@ const CtaSection = (props) => {
                             </div>
                             <div className="text">
                                 <span>{t('cta.callForInquiry')}</span>
-                                <p dir="ltr">+966 53 775 0600</p>
+                                <p dir="ltr"><a href="tel:+966537750600">+966 53 775 0600</a></p>
                             </div>
                         </div>
                         <div className="item">

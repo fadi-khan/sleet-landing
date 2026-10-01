@@ -57,7 +57,7 @@ const FooterS2 = () => {
                                 <p>{t('footer.addressText')}</p>
                                 <ul>
                                     <li dir="ltr"><a href="mailto:mohammad@sleet.sa" target="_blank" rel="noopener noreferrer">mohammad@sleet.sa</a></li>
-                                    <li dir="ltr">+966 53 775 0600</li>
+                                    <li dir="ltr"><a href="tel:+966537750600">+966 53 775 0600</a></li>
                                 </ul>
                                 <ul className="social-list">
                                     <li><a href="https://www.linkedin.com/company/sleet-sa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fa fa-linkedin"></i></a></li>
@@ -101,6 +101,8 @@ const FooterS2 = () => {
                                             className="fild"
                                             type="email"
                                             name="email"
+                                            autoComplete="email"
+                                            aria-label={t('footer.enterEmail')}
                                             placeholder={t('footer.enterEmail')}
                                             value={formData.email}
                                             onChange={handleChange}

@@ -345,6 +345,7 @@
 
         .theme-btn {
             background: #0B3742;
+            color: $white;
 
             @media (max-width:399px) {
                 margin-top: 20px;
@@ -365,7 +366,7 @@
 .wpo-service-section {
     position: relative;
     z-index: 1;
-    background: #FFF5F0;
+    background: #F2FAFB;
 
     .wpo-section-title {
         text-align: left;
@@ -474,8 +475,8 @@
         width: 0;
         height: 100%;
         content: '';
-        background: radial-gradient(272.74% 97.55% at 66.64% 8.36%, rgba(0, 7, 31, 0.00) 0%, rgba(4, 43, 51, 0.91) 99.98%, rgba(4, 43, 51, 0.91) 99.99%);
-        transition: all .4s ease-in-out;
+        background: radial-gradient(272.74% 97.55% at 66.64% 8.36%, rgba(0, 7, 31, 0.00) 0%, rgba(4, 43, 51, 0.30) 99.98%, rgba(4, 43, 51, 0.30) 99.99%);
+        transition: all .7s cubic-bezier(0.65, 0, 0.35, 1);
         z-index: 1;
     }
 
@@ -529,14 +530,14 @@
             height: 100%;
             content: '';
             background: #fff;
-            transition: all 1.5s ease-in-out;
+            transition: transform .7s cubic-bezier(0.65, 0, 0.35, 1);
             z-index: -1;
         }
 
         i, svg {
             color: $small-black;
             font-size: 78px;
-            transition: all 1.5s ease-in-out;
+            transition: all .4s ease-in-out;
 
             @media (max-width:991px) {
                 font-size: 50px;
@@ -548,6 +549,17 @@
         }
 
         .text {
+            // transparent at rest; becomes the readable backing panel on hover
+            margin: 0 -16px;
+            padding: 16px;
+            border-radius: 12px;
+            background: transparent;
+            transition: all .4s ease-in-out;
+
+            @media (max-width:575px) {
+                margin: 0;
+                padding: 10px;
+            }
 
             span {
                 color: $text-light-color-s3;
@@ -566,12 +578,6 @@
             h2 {
                 display: inline-block;
                 margin-bottom: 20px;
-                padding: 6px 16px;
-                border-radius: 10px;
-                background: transparent;
-                backdrop-filter: blur(0);
-                -webkit-backdrop-filter: blur(0);
-                transition: all .4s ease-in-out;
 
                 @media (max-width:991px) {
                     margin-bottom: 10px;
@@ -585,7 +591,7 @@
                     line-height: 30px;
                     letter-spacing: -0.72px;
                     text-transform: capitalize;
-                    transition: all 1.5s ease-in-out;
+                    transition: all .4s ease-in-out;
                 }
             }
 
@@ -594,7 +600,7 @@
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 26px;
-                transition: all 1.5s ease-in-out;
+                transition: all .4s ease-in-out;
             }
 
             .service-single-link {
@@ -602,16 +608,16 @@
                 height: 47px;
                 line-height: 47px;
                 border-radius: 23.5px;
-                background: #F6F2ED;
-                display: block;
-                text-align: center;
+                background: #EAF6F8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 margin-top: 30px;
 
                 @media (max-width:575px) {
                     margin-top: 0px;
                     width: 50px;
                     height: 30px;
-                    line-height: 47px;
                 }
 
                 i {
@@ -619,19 +625,10 @@
                     color: #222;
                     font-size: 16px;
                     font-weight: 400;
-                    line-height: 45px;
-                    position: absolute;
-                    left: 70px;
-
-                    @media (max-width:991px) {
-                        left: 60px;
-                        line-height: 45px;
-                    }
+                    line-height: 1;
 
                     @media (max-width:575px) {
-                        left: 28px;
                         font-size: 13px;
-                        line-height: 32px;
                     }
                 }
             }
@@ -649,18 +646,19 @@
                 visibility: hidden;
             }
 
+            // the white panel slides away to reveal the photo; the text gets
+            // its own backing instead
             &::before {
-                width: 100%;
-                background: rgba(6, 34, 41, 0.92);
+                transform: translateX(-101%);
             }
 
             .text {
+                background: rgba(6, 34, 41, 0.82);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
 
                 h2 {
-                    background: rgba(255, 255, 255, 0.08);
-                    backdrop-filter: blur(10px);
-                    -webkit-backdrop-filter: blur(10px);
-                    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
 
                     a {
                         color: $white;
@@ -1242,6 +1240,7 @@
         margin-top: 24px;
         width: 100%;
         background: $small-black;
+        color: $white;
         border-radius: 8px;
         border: 0;
         padding: 19px 0;
@@ -2060,6 +2059,11 @@
             text-align: left;
             margin-bottom: 0;
 
+            // sits on the dark banner, so it keeps the bright accent
+            h2 {
+                color: #04cfe6;
+            }
+
             @media(max-width:991px) {
                 width: 100%;
                 margin-bottom: 50px;
@@ -2150,6 +2154,14 @@
                         @media(max-width:575px) {
                             font-size: 15px;
                             line-height: 25px;
+                        }
+
+                        a {
+                            color: inherit;
+
+                            &:hover {
+                                color: #04cfe6;
+                            }
                         }
                     }
                 }

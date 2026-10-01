@@ -26,7 +26,9 @@
     "home": "Home",
     "services": "Services",
     "faq": "FAQ",
-    "contact": "Contact"
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "common": {
     "getStarted": "Get Started",
@@ -34,7 +36,9 @@
     "bookADemo": "Book a Demo",
     "allServices": "All Services",
     "seeDetails": "See Details",
-    "exploreMore": "Explore more about",
+    "exploreMore": "Explore Our Services",
+    "viewAllFaqs": "View All FAQs",
+    "backToTop": "Back to top",
     "sendUsMessages": "Send Us Messages",
     "moreAboutUs": "more about us",
     "backToHome": "Back To Home",
@@ -43,7 +47,7 @@
   "home": {
     "hero": {
       "title": "Sleet",
-      "subtitle": "The Future of Smart Logistics & Goods Delivery Starts with Sleet",
+      "subtitle": "Smarter Logistics Starts with Sleet",
       "description": "Sleet Automation Logistics is an all-in-one logistics technology platform that combines intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace — helping logistics companies deliver goods faster, operate smarter, and scale with confidence."
     },
     "funfact": {
@@ -54,7 +58,7 @@
     },
     "service": {
       "subtitle": "Trusted goods delivery & transport service",
-      "title": "Transport, Logistics & Goods Delivery Services — We Are the Best"
+      "title": "Transport, Logistics & Goods Delivery Services"
     },
     "aboutSleet": {
       "title": "About Sleet",
@@ -99,7 +103,7 @@
       "step4": "Delivery Completed"
     },
     "features": {
-      "subtitle": "Trusted transport service",
+      "subtitle": "What we offer",
       "title": "Logistics and goods delivery features we provide",
       "warehouseTitle": "Warehouse",
       "warehouseDesc": "A secure hub for storage, distribution, and freight delivery operations.",
@@ -138,7 +142,7 @@
       "cloudBasedPlatform": "Cloud-Based Platform"
     },
     "getTouch": {
-      "subtitle": "Trusted transport service",
+      "subtitle": "Get in touch",
       "title": "Let’s Work Together"
     }
   },
@@ -291,6 +295,7 @@
     "addressText": "Street 1b, Al Khaleej road, Al Muhammadiyah, Dammam",
     "phoneNumber": "Phone Number",
     "addressLabel": "Address",
+    "mapTitle": "Map showing the Sleet Logistics office in Dammam",
     "getInTouch": "Get in touch",
     "getInTouchDesc": "Have questions about our logistics and goods delivery services? Need a customized freight delivery solution? Our team is here to help you optimize your supply chain and streamline your operations. Reach out to us today and let's discuss how we can support your business needs.",
     "fillForm": "Fill Up The Form",

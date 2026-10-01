@@ -9,8 +9,8 @@ const VisionSection = (props) => {
         <section className={"wpo-vision-section" + (props.hclass ? ' ' + props.hclass : '')}>
             <div className="container">
                 <div className="vision-wrap">
-                    <span className="s-subtitle">{t('home.vision.subtitle')}</span>
-                    <h2>{t('home.vision.title')}</h2>
+                    <h2 className="s-subtitle">{t('home.vision.subtitle')}</h2>
+                    <p className="vision-text">{t('home.vision.title')}</p>
                 </div>
             </div>
         </section>

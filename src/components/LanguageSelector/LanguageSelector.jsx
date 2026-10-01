@@ -37,16 +37,17 @@ const LanguageSelector = () => {
     const pathname = usePathname();
     const router = useRouter();
     const current = languages[locale] || languages.en;
+    // the button shows the language you'll switch to, not the one you're on
+    const target = current.value === 'en' ? languages.ar : languages.en;
 
     const handleToggle = () => {
-        const nextLocale = current.value === 'en' ? 'ar' : 'en';
-        router.replace(pathname, { locale: nextLocale });
+        router.replace(pathname, { locale: target.value });
     };
 
     return (
-        <button type="button" className="lang-toggle fs-5 px-4" onClick={handleToggle} aria-label="Toggle language">
-            <span className="lang-toggle-flag ">{current.flag}</span>
-            <span className="lang-toggle-label">{current.label}</span>
+        <button type="button" className="lang-toggle fs-5 px-4" onClick={handleToggle} lang={target.value} aria-label={target.label}>
+            <span className="lang-toggle-flag ">{target.flag}</span>
+            <span className="lang-toggle-label">{target.label}</span>
         </button>
     );
 };

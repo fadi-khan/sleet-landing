@@ -253,6 +253,11 @@ html[dir="rtl"] {
 		}
 	}
 
+	/* "next" chevrons point forward, which is left in RTL */
+	.theme-btn i.ti-angle-right {
+		transform: scaleX(-1);
+	}
+
 	/* ---------- section titles / text blocks ---------- */
 	.wpo-section-title {
 		h2 {

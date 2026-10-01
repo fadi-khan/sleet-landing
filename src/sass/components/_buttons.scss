@@ -1,6 +1,6 @@
 .theme-btn {
 	background: $theme-primary-color-s2;
-	color: $white;
+	color: $theme-primary-color;
 	display: inline-block;
 	padding: 21px 45px;
 	border: 0;
@@ -47,17 +47,24 @@
 		z-index: -1;
 	}
 
-	&:hover,
+	// text only turns white together with the dark hover fill
 	&:focus,
 	&:active {
+		color: $theme-primary-color;
+	}
+
+	&:hover,
+	&:focus-visible {
 		color: $white;
 	}
 
-	&:hover::before {
+	&:hover::before,
+	&:focus-visible::before {
 		height: 100%;
 	}
 
-	&:hover:after {
+	&:hover:after,
+	&:focus-visible:after {
 		height: 100%;
 	}
 

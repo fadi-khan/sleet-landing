@@ -60,11 +60,14 @@ const MyForm = () => {
         <form id="myForm" onSubmit={handleSubmit}>
             <div className="row">
                 <div className="col-lg-6 col-md-6 col-12">
-                    <small className="field-hint">{t('contact.form.nameHint')}</small>
+                    <small id="name-hint" className="field-hint">{t('contact.form.nameHint')}</small>
                     <input
                         id="name"
                         className="fild"
                         type="text"
+                        autoComplete="name"
+                        aria-label={t('contact.form.name')}
+                        aria-describedby="name-hint"
                         placeholder={t('contact.form.name')}
                         value={formData.name}
                         onChange={handleChange}
@@ -73,11 +76,14 @@ const MyForm = () => {
                     {validator.message('name', formData.name, 'required|alpha_space')}
                 </div>
                 <div className="col-lg-6 col-md-6 col-12">
-                    <small className="field-hint">{t('contact.form.emailHint')}</small>
+                    <small id="email-hint" className="field-hint">{t('contact.form.emailHint')}</small>
                     <input
                         id="email"
                         className="fild"
                         type="email"
+                        autoComplete="email"
+                        aria-label={t('contact.form.email')}
+                        aria-describedby="email-hint"
                         placeholder={t('contact.form.email')}
                         value={formData.email}
                         onChange={handleChange}
@@ -86,11 +92,14 @@ const MyForm = () => {
                     {validator.message('email', formData.email, 'required|email')}
                 </div>
                 <div className="col-12">
-                    <small className="field-hint">{t('contact.form.phoneHint')}</small>
+                    <small id="phone-hint" className="field-hint">{t('contact.form.phoneHint')}</small>
                     <input
                         id="phone"
                         className="fild"
-                        type="text"
+                        type="tel"
+                        autoComplete="tel"
+                        aria-label={t('contact.form.phone')}
+                        aria-describedby="phone-hint"
                         placeholder={t('contact.form.phone')}
                         value={formData.phone}
                         onChange={handleChange}
@@ -99,10 +108,12 @@ const MyForm = () => {
                     {validator.message('phone', formData.phone, 'required|phone')}
                 </div>
                 <div className="col-12">
-                    <small className="field-hint">{t('contact.form.messageHint')}</small>
+                    <small id="message-hint" className="field-hint">{t('contact.form.messageHint')}</small>
                     <textarea
                         id="message"
                         className="fild fild-textarea"
+                        aria-label={t('contact.form.message')}
+                        aria-describedby="message-hint"
                         placeholder={t('contact.form.message')}
                         value={formData.message}
                         onChange={handleChange}

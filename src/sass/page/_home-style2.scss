@@ -1439,6 +1439,10 @@
             text-align: left;
             margin-bottom: 0;
 
+            h2 {
+                color: #04cfe6;
+            }
+
             h3 {
                 color: $white;
             }
@@ -2714,6 +2718,7 @@
 
     .theme-btn {
         background: #0D3944;
+        color: $white;
         text-transform: capitalize;
         font-weight: 600;
 

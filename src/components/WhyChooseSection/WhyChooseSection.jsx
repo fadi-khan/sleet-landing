@@ -19,8 +19,8 @@ const WhyChooseSection = (props) => {
         <section className={"wpo-why-choose-section section-padding" + (props.hclass ? ' ' + props.hclass : '')}>
             <div className="container">
                 <div className="wpo-section-title">
-                    <h2>{t('home.whyChoose.title')}</h2>
-                    <h3>{t('home.whyChoose.subtitle')}</h3>
+                    <h2 role="presentation">{t('home.whyChoose.title')}</h2>
+                    <h3 aria-level={2}>{t('home.whyChoose.subtitle')}</h3>
                     <p>{t('home.whyChoose.description')}</p>
                 </div>
                 <div className="why-choose-grid">

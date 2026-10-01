@@ -19,8 +19,8 @@ const IndustriesSection = (props) => {
         <section className={"wpo-industries-section section-padding" + (props.hclass ? ' ' + props.hclass : '')}>
             <div className="container">
                 <div className="wpo-section-title">
-                    <h2>{t('home.industries.title')}</h2>
-                    <h3>{t('home.industries.subtitle')}</h3>
+                    <h2 role="presentation">{t('home.industries.title')}</h2>
+                    <h3 aria-level={2}>{t('home.industries.subtitle')}</h3>
                 </div>
                 <div className="industries-grid">
                     {items.map((title, index) => {
