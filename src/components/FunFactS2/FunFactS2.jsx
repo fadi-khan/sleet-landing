@@ -8,7 +8,6 @@ import Shape1 from '../../images/left-shape-fun.svg'
 import Shape2 from '../../images/right-shape-fun.svg'
 import FunfactBg from '../../images/funfact-bg.png'
 import { IoIosPeople } from "react-icons/io";
-import { FaSmile } from "react-icons/fa";
 
 
 const FunFactS2 = (props) => {
@@ -26,7 +25,7 @@ const FunFactS2 = (props) => {
             <div className="container">
                 <div className="wraper">
                     <div className="row g-0">
-                        <div className="col col-lg-3 col-md-6 col-12">
+                        <div className="col col-lg-4 col-md-4 col-12">
                             <div className="item">
                                 <IoIosPeople size={60} />
 
@@ -34,21 +33,15 @@ const FunFactS2 = (props) => {
                                 <p>{t('home.funfact.happyCustomers')}</p>
                             </div>
                         </div>
-                        <div className="col col-lg-3 col-md-6 col-12">
-                            <div className="item">
-                                <FaSmile size={42} className='mb-3' />
-                                <h2 role="presentation"><CountUp end={100} enableScrollSpy />%</h2>
-                                <p>{t('home.funfact.customerSatisfaction')}</p>
-                            </div>
-                        </div>
-                        <div className="col col-lg-3 col-md-6 col-12">
+                        {/* customer satisfaction removed: it isn't measured yet */}
+                        <div className="col col-lg-4 col-md-4 col-12">
                             <div className="item">
                                 <i className="flaticon-globe"></i>
                                 <h2 role="presentation"><CountUp end={10} enableScrollSpy />+</h2>
                                 <p>{t('home.funfact.citiesCovered')}</p>
                             </div>
                         </div>
-                        <div className="col col-lg-3 col-md-6 col-12">
+                        <div className="col col-lg-4 col-md-4 col-12">
                             <div className="item">
                                 <i className="flaticon-order"></i>
                                 <h2 role="presentation"><CountUp end={30} enableScrollSpy />+</h2>

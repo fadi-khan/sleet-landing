@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import HeaderTopS2 from '../HeaderTopS2/HeaderTopS2'
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
+import ServicesMegaMenu from '../ServicesMegaMenu/ServicesMegaMenu'
 import LogoLight from '../../images/logo-light.png'
 
 const Header = (props) => {
@@ -56,9 +57,9 @@ const Header = (props) => {
 
                                         </li>
 
-                                        <li className="menu-item-has-children">
-                                            <Link onClick={scrollToServices} href="/home#services">{t('nav.services')}</Link>
-
+                                        <li className="has-mega">
+                                            <Link onClick={scrollToServices} href="/home#services" aria-haspopup="true">{t('nav.services')} <i className="ti-angle-down nav-caret"></i></Link>
+                                            <ServicesMegaMenu />
                                         </li>
                                         <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} href="/faq" className={pathname === '/faq' ? 'active' : ''}>{t('nav.faq')}</Link>

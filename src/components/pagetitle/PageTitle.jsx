@@ -13,8 +13,9 @@ const PageTitle = (props) => {
                 <div className="row text-center">
                     <div className="col col-xs-12">
                         <div className="wpo-breadcumb-wrap">
-                            <h2>{props.pageTitle}</h2>
-                            <h3>{props.pagesub}</h3>
+                            <p className="breadcumb-brand">{props.pageTitle}</p>
+                            {/* long titles drop to a smaller size so they don't fill the banner */}
+                            <h1 className={String(props.pagesub).length > 22 ? 'is-long' : undefined}>{props.pagesub}</h1>
                         </div>
                     </div>
                 </div>

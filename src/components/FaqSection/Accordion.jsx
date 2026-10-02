@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-const Accordion = ({ limit }) => {
+// `items` ({ title, content }[]) overrides the default site-wide FAQ list.
+const Accordion = ({ limit, items }) => {
     const t = useTranslations();
     const [activeIndex, setActiveIndex] = useState(null);
 
@@ -11,7 +12,7 @@ const Accordion = ({ limit }) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
-    const allItems = t.raw('faqPage.accordion');
+    const allItems = items || t.raw('faqPage.accordion');
     const accordionData = limit ? allItems.slice(0, limit) : allItems;
 
     return (

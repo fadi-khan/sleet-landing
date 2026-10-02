@@ -44,13 +44,15 @@
 			margin-top: 0;
 		}
 
-		h2 {
+		h2,
+		.breadcumb-brand {
 			margin-top: -10px;
 			margin-bottom: 20px;
 			color: $theme-primary-color-s2;
 			font-family: $base-font;
 			font-size: 20px;
 			font-weight: 600;
+			line-height: 1.2;
 
 			@media(max-width:991px) {
 				font-size: 17px;
@@ -59,6 +61,7 @@
 			}
 		}
 
+		h1,
 		h3 {
 			color: #FFF;
 			font-size: 80px;
@@ -70,6 +73,17 @@
 				font-size: 30px;
 				line-height: 35px;
 				margin-bottom: 10px;
+			}
+		}
+
+		h1.is-long {
+			font-size: 48px;
+			line-height: 58px;
+			max-width: 900px;
+
+			@media(max-width:991px) {
+				font-size: 28px;
+				line-height: 35px;
 			}
 		}
 

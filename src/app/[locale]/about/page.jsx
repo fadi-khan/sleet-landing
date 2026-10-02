@@ -10,7 +10,10 @@ export async function generateMetadata({ params }) {
     title: t("about.title"),
     description: t("about.description"),
     keywords: t("about.keywords"),
-    alternates: localeAlternates("/about"),
+    alternates: localeAlternates("/about", locale),
+    // The page body is still template content; keep it out of search results
+    // until it is rewritten.
+    robots: { index: false, follow: true },
     openGraph: {
       title: t("about.title"),
       description: t("about.description"),

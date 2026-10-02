@@ -5,6 +5,7 @@ import { Link, useRouter, usePathname } from '../../i18n/navigation'
 import { useTranslations, useLocale } from 'next-intl'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
+import ServicesMegaMenu from '../ServicesMegaMenu/ServicesMegaMenu'
 import Call from '../../images/call.svg'
 
 const Header = (props) => {
@@ -59,8 +60,9 @@ const Header = (props) => {
                                         <li className="menu-item">
                                             <Link onClick={ClickHandler} href="/home">{t('nav.home')}</Link>
                                         </li>
-                                        <li className="menu-item">
-                                            <Link onClick={scrollToServices} href="/home#services">{t('nav.services')}</Link>
+                                        <li className="menu-item has-mega">
+                                            <Link onClick={scrollToServices} href="/home#services" aria-haspopup="true">{t('nav.services')} <i className="ti-angle-down nav-caret"></i></Link>
+                                            <ServicesMegaMenu />
                                         </li>
                                         {/* <li className="menu-item">
                                             <Link onClick={ClickHandler} href="/about">About</Link>

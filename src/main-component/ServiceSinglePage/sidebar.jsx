@@ -19,7 +19,7 @@ const ServiceSidebar = (props) => {
                 <ul>
                     {Services.map((serves, index) => (
                         <li key={index}>
-                            <Link href={`/service-single/${serves.slug}`}  onClick={ClickHandler}>
+                            <Link href={`/solutions/${serves.slug}`}  onClick={ClickHandler}>
                                 <span>{t(`servicesData.${serves.key}.title`)}{serves.isCommingSoon && <span className="soon-tag">{t('serviceSingle.soon')}</span>}</span>
                                 <i className="flaticon-right-arrow-1"></i>
                             </Link>

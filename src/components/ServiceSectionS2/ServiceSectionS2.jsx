@@ -33,10 +33,10 @@ const ServiceSectionS2 = (props) => {
                                     <service.Icon />
                                 </div>
                                 <div className="content">
-                                    <h2><Link onClick={ClickHandler} href={`/service-single/${service.slug}`}>{t(`servicesData.${service.key}.title`)}</Link></h2>
+                                    <h2><Link onClick={ClickHandler} href={`/solutions/${service.slug}`}>{t(`servicesData.${service.key}.title`)}</Link></h2>
                                     <p>{t(`servicesData.${service.key}.description`)}</p>
                                     <div className="services-btn">
-                                        <Link onClick={ClickHandler} href={`/service-single/${service.slug}`}>{t('common.seeDetails')}</Link>
+                                        <Link onClick={ClickHandler} href={`/solutions/${service.slug}`}>{t('common.seeDetails')}</Link>
                                     </div>
                                 </div>
                             </div>

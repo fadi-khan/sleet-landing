@@ -11,6 +11,7 @@ import CtaSection from '../../components/CtaSection/CtaSection';
 import MapSection from '../../components/MapSection/MapSection';
 import FooterS2 from '../../components/FooterS2/FooterS2';
 import Scrollbar from '../../components/scrollbar/scrollbar';
+import { getLandingPageByKey, landingPath } from '../../lib/api/landingPages';
 import Logo from '../../images/logo.png'
 
 const ServiceSinglePage = ({ serviceDetails }) => {
@@ -21,6 +22,8 @@ const ServiceSinglePage = ({ serviceDetails }) => {
     const subtitle = t(`${dataKey}.subtitle`)
     const description = t(`${dataKey}.description`)
     const features = t.has(`${dataKey}.features`) ? t.raw(`${dataKey}.features`) : []
+    const details = t.has(`${dataKey}.details`) ? t.raw(`${dataKey}.details`) : []
+    const related = (serviceDetails.related || []).map(getLandingPageByKey).filter(Boolean)
     const note = t.has(`${dataKey}.note`) ? t(`${dataKey}.note`) : ''
     const sampleQuestions = t.has(`${dataKey}.sampleQuestions`) ? t.raw(`${dataKey}.sampleQuestions`) : []
     const outputFormats = t.has(`${dataKey}.outputFormats`) ? t.raw(`${dataKey}.outputFormats`) : []
@@ -59,7 +62,30 @@ const ServiceSinglePage = ({ serviceDetails }) => {
                                     </div>
                                 )}
 
-                                {serviceDetails.slug === 'sleet-ai' && (
+                                {details.length > 0 && (
+                                    <div className="detail-block">
+                                        <h3>{t('serviceSingle.detailsTitle')}</h3>
+                                        {details.map((item, index) => (
+                                            <div className="detail-item" key={index}>
+                                                <h4>{item.title}</h4>
+                                                <p>{item.text}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+
+                                {related.length > 0 && (
+                                    <div className="detail-block">
+                                        <h3>{t('serviceSingle.relatedTitle')}</h3>
+                                        <div className="related-links">
+                                            {related.map((page) => (
+                                                <Link href={landingPath(page)} key={page.key}>{t(`landing.pages.${page.key}.navTitle`)}</Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {serviceDetails.key === 'sleetAi' && (
                                     <div className="ai-extra-block">
                                         <h3>{t('serviceSingle.generateReports')}</h3>
                                         <p>{t('serviceSingle.askQuestions')}</p>

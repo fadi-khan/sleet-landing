@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
     title: t("contact.title"),
     description: t("contact.description"),
     keywords: t("contact.keywords"),
-    alternates: localeAlternates("/contact"),
+    alternates: localeAlternates("/contact", locale),
     openGraph: {
       title: t("contact.title"),
       description: t("contact.description"),

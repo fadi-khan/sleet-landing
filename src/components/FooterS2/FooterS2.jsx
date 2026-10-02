@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Services from '../../lib/api/Services';
+import { getLandingPagesByGroup, landingPath } from '../../lib/api/landingPages';
 import { Link } from '../../i18n/navigation';
 import { useTranslations } from 'next-intl';
 import SimpleReactValidator from 'simple-react-validator';
@@ -73,7 +74,10 @@ const FooterS2 = () => {
                                 </div>
                                 <ul>
                                     {Services.slice(0, 5).map((service, item) => (
-                                        <li key={item}><Link onClick={ClickHandler} href={`/service-single/${service.slug}`}>{t(`servicesData.${service.key}.title`)}</Link></li>
+                                        <li key={item}><Link onClick={ClickHandler} href={`/solutions/${service.slug}`}>{t(`servicesData.${service.key}.title`)}</Link></li>
+                                    ))}
+                                    {getLandingPagesByGroup('industries').map((page) => (
+                                        <li key={page.key}><Link onClick={ClickHandler} href={landingPath(page)}>{t(`landing.pages.${page.key}.navTitle`)}</Link></li>
                                     ))}
                                 </ul>
                             </div>
@@ -81,12 +85,12 @@ const FooterS2 = () => {
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="widget link-widget">
                                 <div className="widget-title">
-                                    <h3>{t('footer.usefulLinks')}</h3>
+                                    <h3>{t('footer.features')}</h3>
                                 </div>
                                 <ul>
-                                    <li><Link onClick={ClickHandler} href="/terms">{t('footer.termsConditions')}</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/contact">{t('footer.contactUs')}</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/privacy-policy">{t('footer.privacyPolicy')}</Link></li>
+                                    {getLandingPagesByGroup('features').map((page) => (
+                                        <li key={page.key}><Link onClick={ClickHandler} href={landingPath(page)}>{t(`landing.pages.${page.key}.navTitle`)}</Link></li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -140,6 +144,12 @@ const FooterS2 = () => {
                         </div>
                         <div className="col col-lg-10 col-12">
                             <p className="copyright"> &copy; {new Date().getFullYear()} <Link onClick={ClickHandler} href="/home">Sleet Logistics</Link> - {t('footer.copyrightSuffix')}</p>
+                            <div className="footer-legal">
+                                <Link onClick={ClickHandler} href="/contact">{t('footer.contactUs')}</Link>
+                                <Link onClick={ClickHandler} href="/faq">{t('nav.faq')}</Link>
+                                <Link onClick={ClickHandler} href="/terms">{t('footer.termsConditions')}</Link>
+                                <Link onClick={ClickHandler} href="/privacy-policy">{t('footer.privacyPolicy')}</Link>
+                            </div>
                         </div>
                     </div>
                 </div>
