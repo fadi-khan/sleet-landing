@@ -1,16 +1,19 @@
 import { routing } from "@/i18n/routing";
 import { metadataBase } from "@/i18n/metadata";
 import Services from "@/lib/api/Services";
+import LandingPages, { landingPath } from "@/lib/api/landingPages";
 
-const staticPaths = ["", "/about", "/faq", "/contact"];
-const servicePaths = Services.map((service) => `/service-single/${service.slug}`);
+// /about is left out on purpose: it is still template content and is marked
+// noindex until rewritten.
+const staticPaths = ["", "/faq", "/contact", "/terms", "/privacy-policy"];
+const servicePaths = Services.map((service) => `/solutions/${service.slug}`);
+const landingPaths = LandingPages.map(landingPath);
 
 export default function sitemap() {
-  const paths = [...staticPaths, ...servicePaths];
+  const paths = [...staticPaths, ...servicePaths, ...landingPaths];
 
   return paths.map((path) => ({
     url: new URL(`/${routing.defaultLocale}${path}`, metadataBase).toString(),
-    lastModified: new Date(),
     alternates: {
       languages: Object.fromEntries(
         routing.locales.map((locale) => [

@@ -8,6 +8,9 @@ import Simg4 from '../../images/homepage/service4.png'
 
 import sassBanner from '../../images/homepage/sass-banner.jpg'
 
+// Slugs are the public URLs (/solutions/<slug>) and are chosen for search,
+// not for the product names. If one changes, add a redirect from the old
+// path in next.config.mjs.
 const Services = [
     {
         id: 1,
@@ -17,7 +20,9 @@ const Services = [
         simag: Simg1.src,
         banner: Simg1.src,
         Icon: FaTruck,
-        slug: 'sleet-logistics'
+        // landing page keys (src/lib/api/landingPages.js) linked from this page
+        related: ['dashcam', 'temperature', 'fuel', 'documentExpiry', 'transport'],
+        slug: 'fleet-management-system'
     },
     {
         id: 2,
@@ -27,7 +32,8 @@ const Services = [
         simag: Simg2.src,
         banner: Simg2.src,
         Icon: FaCloud,
-        slug: 'sleet-saas'
+        related: ['proofOfDelivery', 'ecommerce', 'transport'],
+        slug: 'logistics-management-system'
     },
     {
         id: 3,
@@ -38,7 +44,7 @@ const Services = [
         banner: Simg3.src,
         Icon: FaTaxi,
         isCommingSoon: true,
-        slug: 'sleet-tnc'
+        slug: 'truck-booking-marketplace'
     },
     {
         id: 4,
@@ -49,7 +55,7 @@ const Services = [
         banner: Simg4.src,
         Icon: FaRobot,
         isCommingSoon: true,
-        slug: 'sleet-ai'
+        slug: 'ai-logistics-reporting'
     }
 ];
 export default Services;

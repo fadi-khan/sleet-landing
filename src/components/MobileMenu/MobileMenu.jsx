@@ -3,11 +3,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useRouter, usePathname } from '../../i18n/navigation';
 import { useTranslations } from 'next-intl';
+import { useServicesMenuGroups } from '../ServicesMegaMenu/ServicesMegaMenu';
 
 const MobileMenu = () => {
 
     const t = useTranslations();
     const [menuActive, setMenuState] = useState(false);
+    const [servicesOpen, setServicesOpen] = useState(false);
+    const serviceGroups = useServicesMenuGroups();
     const router = useRouter();
     const pathname = usePathname();
 
@@ -80,10 +83,40 @@ const MobileMenu = () => {
 
                 <ul className="responsivemenu">
                     {menus.map((item, mn) => {
+                        if (item.isServicesLink) {
+                            return (
+                                <li key={mn}>
+                                    <button
+                                        type="button"
+                                        className="submenu-toggle"
+                                        onClick={() => setServicesOpen(!servicesOpen)}
+                                        aria-expanded={servicesOpen}
+                                        aria-controls="mobile-services-menu"
+                                    >
+                                        {item.title}
+                                        <i className="ti-angle-down"></i>
+                                    </button>
+                                    {servicesOpen && (
+                                        <div id="mobile-services-menu" className="submenu-panel">
+                                            <Link onClick={scrollToServices} href={item.link}>{t('common.allServices')}</Link>
+                                            {serviceGroups.map((group) => (
+                                                <React.Fragment key={group.key}>
+                                                    <span className="submenu-title">{group.title}</span>
+                                                    {group.links.map((link) => (
+                                                        <Link onClick={ClickHandler} href={link.href} key={link.key}>{link.title}</Link>
+                                                    ))}
+                                                </React.Fragment>
+                                            ))}
+                                        </div>
+                                    )}
+                                </li>
+                            )
+                        }
+
                         return (
                             <li key={mn}>
                                 <Link
-                                    onClick={item.isServicesLink ? scrollToServices : ClickHandler}
+                                    onClick={ClickHandler}
                                     href={item.link}
                                 >{item.title}</Link>
                             </li>

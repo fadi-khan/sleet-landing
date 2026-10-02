@@ -18,6 +18,7 @@ import HeroSlider from '../../components/HeroSlider/HeroSlider';
 // import AboutSleetSection from '../../components/AboutSleetSection/AboutSleetSection';
 import WhyChooseSection from '../../components/WhyChooseSection/WhyChooseSection';
 import IndustriesSection from '../../components/IndustriesSection/IndustriesSection';
+import FeatureGridSection from '../../components/FeatureGridSection/FeatureGridSection';
 import VisionSection from '../../components/VisionSection/VisionSection';
 
 const HomePage2 = () => {
@@ -30,6 +31,7 @@ const HomePage2 = () => {
             <ServiceSection hclass={"wpo-service-section section-padding"} SectionTitleShow={true} ServiceBtn={true} />
             {/* repeats the four services shown in the carousel directly above */}
             {/* <AboutSleetSection /> */}
+            <FeatureGridSection />
             <AboutS2 />
             <WhyChooseSection />
             <ProcessSectionS2 hclass={'wpo-process-section-s2'} />

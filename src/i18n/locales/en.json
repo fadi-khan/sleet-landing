@@ -2,13 +2,13 @@
   "meta": {
     "titleTemplate": "%s | Sleet Logistics",
     "home": {
-      "title": "Sleet Logistics | Smart Fleet Management & Logistics Platform",
-      "description": "Sleet Automation Logistics is an all-in-one logistics technology platform combining intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace.",
+      "title": "Logistics Management System & Fleet Monitoring | Sleet",
+      "description": "Sleet is a logistics management system with real-time logistics monitoring, GPS fleet tracking, trip management and AI reports — built for fleets in Saudi Arabia.",
       "keywords": "Sleet, Sleet Logistics, delivery, goods delivery, logistics company, fleet management, freight delivery, shipping company, truck delivery, cargo delivery, logistics platform, delivery services, transportation company, supply chain, courier services, fleet tracking, logistics software, digital truck marketplace, AI logistics"
     },
     "about": {
       "title": "About Us",
-      "description": "Logistika is the world's leading global logistics provider, facilitating industry and commerce in the international exchange of goods through land transport.",
+      "description": "Learn about Sleet Logistics, the Saudi logistics technology company behind the Sleet fleet and logistics management platform.",
       "keywords": "about Sleet Logistics, logistics company, goods delivery company, freight and delivery provider, global logistics provider, land transport company, supply chain company"
     },
     "faq": {
@@ -27,6 +27,9 @@
     "services": "Services",
     "faq": "FAQ",
     "contact": "Contact",
+    "solutions": "Solutions",
+    "features": "Features",
+    "industries": "Who it's for",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
@@ -47,8 +50,8 @@
   "home": {
     "hero": {
       "title": "Sleet",
-      "subtitle": "Smarter Logistics Starts with Sleet",
-      "description": "Sleet Automation Logistics is an all-in-one logistics technology platform that combines intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace — helping logistics companies deliver goods faster, operate smarter, and scale with confidence."
+      "subtitle": "The Smarter Logistics Management System",
+      "description": "Sleet brings fleet management, real-time logistics monitoring, AI-powered reporting, and a digital truck marketplace into one platform — so you deliver faster, operate smarter, and scale with confidence."
     },
     "funfact": {
       "happyCustomers": "Happy Customers",
@@ -163,7 +166,7 @@
   },
   "faqPage": {
     "pageTitle": "Sleet Logistics",
-    "pageSub": "Faq",
+    "pageSub": "Frequently Asked Questions",
     "accordion": [
       { "title": "What is Sleet Automation Logistics?", "content": "Sleet Automation Logistics is a logistics technology company that provides intelligent transportation solutions through four integrated services: Sleet Logistics, Sleet SaaS, Sleet TNC, and Sleet AI. Our platform helps businesses manage fleets, automate operations, and make data-driven decisions from a single dashboard." },
       { "title": "What is Sleet SaaS?", "content": "Sleet SaaS is a cloud-based logistics management platform designed for logistics companies, transport providers, and enterprises. It enables businesses to manage fleets, drivers, customers, deliveries, and operations without developing software from scratch." },
@@ -192,6 +195,8 @@
     "notifyMe": "Notify Me When Available",
     "comingSoonNotice": "This service is currently in development and not yet available. Contact us to join the early access list and be the first to know when it launches.",
     "features": "Features",
+    "detailsTitle": "What it looks like in practice",
+    "relatedTitle": "Explore the features",
     "generateReports": "Generate Reports In Seconds",
     "askQuestions": "Ask questions like:",
     "outputFormats": "Output Formats",
@@ -204,6 +209,8 @@
     "sleetLogistics": {
       "subtitle": "Our Fleet Management Solution For Your Business",
       "title": "Sleet Logistics — Fleet Management",
+      "metaTitle": "Fleet Management & Logistics Monitoring System",
+      "metaDescription": "Monitor your fleet in real time with Sleet: live GPS tracking, trip and driver management, fuel and maintenance monitoring, and performance reports in one dashboard.",
       "keywords": "fleet management, logistics company, goods delivery, delivery tracking, fleet tracking software, freight delivery, GPS fleet tracking, logistics platform",
       "description": "Operate your fleet with complete visibility using Sleet's intelligent logistics platform. Our fleet management system combines advanced tracking technology with a powerful dashboard to help businesses monitor vehicles, drivers, trips, fuel consumption, maintenance, and operational performance in real time.",
       "features": [
@@ -217,11 +224,19 @@
         "Route Optimization",
         "Real-Time Dashboard",
         "Performance Reports"
+      ],
+      "details": [
+        { "title": "Live monitoring", "text": "See every vehicle's position, speed, ignition, odometer, fuel and temperature in the Monitor page, updated as the tracker reports." },
+        { "title": "Dashcam video", "text": "Open a live camera stream from equipped vehicles, right beside the map." },
+        { "title": "Document and service tracking", "text": "Registration, insurance and service dates are kept on each vehicle, with lists of what has expired and what is due within 60 days." },
+        { "title": "Expenses and logs", "text": "Record expenses per vehicle, review receipts, and export fleet logs and expense reports." }
       ]
     },
     "sleetSaas": {
       "subtitle": "Your Fleet. Your Brand. Our Technology.",
-      "title": "Sleet SaaS — Logistics Platform",
+      "title": "Sleet SaaS — Logistics Management System",
+      "metaTitle": "Logistics Management System for Fleets & Carriers",
+      "metaDescription": "Sleet SaaS is a cloud logistics management system: manage orders, fleets, drivers and customers, with reporting, API integration and mobile apps included.",
       "keywords": "logistics software, SaaS logistics platform, delivery management software, logistics company software, cloud fleet management, freight operator software",
       "description": "Sleet SaaS allows logistics companies to run their entire operations using our cloud-based platform. Instead of building expensive software from scratch, businesses can subscribe to Sleet and instantly access enterprise-grade logistics technology.",
       "features": [
@@ -236,11 +251,19 @@
         "Role-Based Access Control",
         "Secure Cloud Infrastructure"
       ],
+      "details": [
+        { "title": "Delivery planning", "text": "Upload orders from a sheet; Sleet groups them into optimised routes by driver and time slot." },
+        { "title": "Proof of delivery", "text": "QR-coded boxes and signatures at pickup and drop-off, with a status history for every order." },
+        { "title": "Performance dashboard", "text": "On-time rate, average delivery time, pickup accuracy and driver performance in one view." },
+        { "title": "Your company, your access", "text": "Each company's data is kept separate, and roles and permissions control what every employee can do." }
+      ],
       "note": "Perfect for logistics companies, freight operators, transport businesses, and enterprise fleets."
     },
     "sleetTnc": {
       "subtitle": "The Uber for Trucks",
       "title": "Sleet TNC — Truck Marketplace",
+      "metaTitle": "On-Demand Truck Booking Marketplace",
+      "metaDescription": "Book trucks on demand with Sleet TNC: smart matching, live driver tracking, digital payments and delivery status updates for businesses and fleet owners. Coming soon.",
       "keywords": "truck delivery, goods delivery marketplace, on-demand truck booking, freight delivery marketplace, truck for hire, delivery services",
       "description": "Sleet TNC connects businesses with available trucks through a fast and intelligent digital marketplace. Customers can request transportation in minutes while fleet owners receive new delivery opportunities without unnecessary paperwork or long phone calls.",
       "features": [
@@ -258,6 +281,8 @@
     "sleetAi": {
       "subtitle": "Your Intelligent Logistics Assistant",
       "title": "Sleet AI — Smart Reporting",
+      "metaTitle": "AI Logistics Reporting & Fleet Analytics",
+      "metaDescription": "Ask Sleet AI in plain language and get fleet, driver, fuel and delivery reports in seconds, exported to PDF, Word, Excel or CSV. Coming soon.",
       "keywords": "AI logistics, logistics reporting AI, fleet analytics AI, delivery insights, logistics automation, AI-powered logistics platform",
       "description": "Sleet AI transforms operational data into meaningful insights with the power of artificial intelligence. Simply describe what you need in plain language, and Sleet AI will analyze your logistics data, generate reports, summarize operations, and provide actionable recommendations.",
       "features": [
@@ -313,6 +338,341 @@
       "briefMessageHint": "Briefly describe your logistics needs."
     }
   },
+  "landing": {
+    "common": {
+      "groups": {
+        "features": "Platform features",
+        "industries": "Who Sleet is for"
+      },
+      "screenshotNote": "Screenshot placeholder",
+      "challengesEyebrow": "The problem",
+      "capabilitiesEyebrow": "What you get",
+      "stepsEyebrow": "How it works",
+      "stepsTitle": "Up and running in three steps",
+      "faqEyebrow": "Questions",
+      "faqTitle": "Frequently asked questions",
+      "relatedEyebrow": "Keep exploring",
+      "relatedTitle": "Related pages",
+      "learnMore": "Learn more"
+    },
+    "home": {
+      "featuresEyebrow": "Platform features",
+      "featuresTitle": "Everything you need to monitor your fleet",
+      "featuresText": "Live today in the Sleet dashboard, for fleets across Saudi Arabia.",
+      "industriesEyebrow": "Who Sleet is for",
+      "industriesTitle": "Built for the fleets we work with every day"
+    },
+    "pages": {
+      "dashcam": {
+        "metaTitle": "Fleet Dashcam Live Video Monitoring",
+        "metaDescription": "Watch live dashcam video from your trucks in Saudi Arabia, next to each vehicle's GPS position, speed and ignition status, in one fleet monitoring dashboard.",
+        "navTitle": "Live Dashcam Video",
+        "cardText": "Watch live camera streams from any vehicle, beside its location and status.",
+        "title": "Fleet Dashcam Live Video",
+        "heading": "See what your drivers see, live",
+        "intro": [
+          "Sleet streams live video from the cameras in your vehicles straight to the Monitor page. Pick a vehicle, choose a camera channel, and watch the road or the cabin in real time, without calling the driver.",
+          "The video sits beside the vehicle's live position, speed and ignition status, so you see what is happening and where at the same moment."
+        ],
+        "screenshot": "Monitor page with a live dashcam stream open",
+        "challengesTitle": "Tracking a dot on a map only tells you half the story",
+        "challenges": [
+          { "title": "Calls instead of facts", "text": "When something goes wrong on the road, the only source is a phone call to the driver." },
+          { "title": "Disputes you can't settle", "text": "Without a view of the road, incident and delivery disputes come down to one word against another." },
+          { "title": "Separate camera and tracking apps", "text": "Video in one system and GPS in another means switching screens to understand a single event." }
+        ],
+        "capabilitiesTitle": "Live video inside your fleet dashboard",
+        "capabilities": [
+          { "title": "Live streaming on demand", "text": "Start a stream from any connected vehicle in a few seconds and stop it when you're done." },
+          { "title": "Multiple camera channels", "text": "Switch between the cameras fitted to the vehicle, such as road-facing and cabin-facing." },
+          { "title": "Video beside the map", "text": "Watch the stream next to the vehicle's live position, speed, ignition and odometer." },
+          { "title": "Works in the browser", "text": "No extra software for dispatchers: streams play directly in the Sleet dashboard." },
+          { "title": "Your vehicles only", "text": "Each company sees only its own vehicles and cameras." }
+        ],
+        "steps": [
+          "Install a supported dashcam tracker in the vehicle and add its IMEI in Sleet.",
+          "Open the Monitor page and select the vehicle.",
+          "Press play on a camera channel to start the live stream."
+        ],
+        "screenshot2": "Vehicle panel showing speed, ignition, temperature and fuel",
+        "faq": [
+          { "title": "Which cameras are supported?", "content": "Sleet works with dashcam trackers that connect through our tracking server. Contact us with your device model and we'll confirm compatibility." },
+          { "title": "Can I watch more than one camera?", "content": "Yes. If the device has several channels, you can switch between them in the player." },
+          { "title": "Does live video use a lot of mobile data?", "content": "Video is only streamed while someone is watching, and the stream stops when you close it, so data is used on demand rather than all day." }
+        ]
+      },
+      "temperature": {
+        "metaTitle": "Truck Temperature Monitoring System",
+        "metaDescription": "Monitor the temperature of refrigerated trucks in real time with Sleet. See each vehicle's live reading beside its location, speed and ignition status.",
+        "navTitle": "Temperature Monitoring",
+        "cardText": "Live temperature readings from refrigerated vehicles, beside location and speed.",
+        "title": "Truck Temperature Monitoring",
+        "heading": "Know the temperature of every load, live",
+        "intro": [
+          "For chilled and frozen goods, the temperature inside the truck matters as much as where the truck is. Sleet reads the temperature sensor connected to the vehicle's tracking device and shows it live in the Monitor page.",
+          "Dispatchers see the reading together with location, speed and ignition, so a warm truck is noticed while there is still time to act."
+        ],
+        "screenshot": "Monitor page showing a vehicle's live temperature reading",
+        "challengesTitle": "A failed cooling unit shouldn't be discovered by your customer",
+        "challenges": [
+          { "title": "Problems found at the door", "text": "A cooling failure is often noticed only when the customer rejects the delivery." },
+          { "title": "No evidence for the customer", "text": "Without readings from the journey, you can't show that goods stayed within range." },
+          { "title": "Drivers reporting by phone", "text": "Manual checks are slow, easy to skip and impossible to verify." }
+        ],
+        "capabilitiesTitle": "Temperature, location and status in one view",
+        "capabilities": [
+          { "title": "Live temperature per vehicle", "text": "The current reading appears on each vehicle in the Monitor page." },
+          { "title": "Location and temperature together", "text": "See where the truck is, whether the engine is on, and how cold the load is, in one panel." },
+          { "title": "Recorded with every position", "text": "Each position update from the vehicle carries its sensor readings, building a trail for the journey." },
+          { "title": "Uses your tracking device", "text": "Temperature comes from a sensor wired to the same GPS tracker, with no separate system to manage." },
+          { "title": "Built for delivery operations", "text": "Combine temperature with routes, time slots and proof of delivery for chilled last-mile work." }
+        ],
+        "steps": [
+          "Fit a temperature sensor to a supported tracking device.",
+          "Assign the device to the vehicle in Sleet.",
+          "Watch the live reading in the Monitor page."
+        ],
+        "screenshot2": "Vehicle panel with temperature beside speed and fuel",
+        "faq": [
+          { "title": "Which sensors work with Sleet?", "content": "Sensors that connect to supported GPS trackers and report temperature with the vehicle's position. Send us your device model to confirm." },
+          { "title": "Can I see temperature and location together?", "content": "Yes. The Monitor page shows temperature beside speed, ignition, fuel and odometer for the selected vehicle." },
+          { "title": "Is this suitable for food and pharma transport?", "content": "It gives you live visibility of load temperature. Ask us about your specific compliance requirements before relying on it for regulated goods." }
+        ]
+      },
+      "fuel": {
+        "metaTitle": "Fleet Fuel Monitoring System",
+        "metaDescription": "Track fuel across your fleet with Sleet: live fuel readings from vehicle sensors, fuel expense records per vehicle, and cost analytics to spot waste early.",
+        "navTitle": "Fuel Monitoring",
+        "cardText": "Live fuel readings plus fuel cost records and analytics per vehicle.",
+        "title": "Fleet Fuel Monitoring",
+        "heading": "See where your fuel budget goes",
+        "intro": [
+          "Fuel is usually the largest running cost of a fleet and the hardest to check. Sleet brings together the fuel level reported by the vehicle's sensor and the fuel expenses your team records, vehicle by vehicle.",
+          "With both in one place, unusual consumption stands out, and monthly fuel cost stops being a single unexplained number."
+        ],
+        "screenshot": "Expense analytics showing fuel cost by vehicle",
+        "challengesTitle": "Fuel is your biggest cost and your least visible one",
+        "challenges": [
+          { "title": "Receipts in a drawer", "text": "Fuel spending is recorded late, on paper, or not at all." },
+          { "title": "No link between fuel and distance", "text": "Without odometer and fuel data together, you can't tell an efficient vehicle from a wasteful one." },
+          { "title": "Losses noticed too late", "text": "Leaks, misuse and theft only show up at the end of the month." }
+        ],
+        "capabilitiesTitle": "Fuel level, fuel spend and distance together",
+        "capabilities": [
+          { "title": "Live fuel level", "text": "The fuel reading from the vehicle's sensor is shown in the Monitor page with speed and odometer." },
+          { "title": "Fuel expense records", "text": "Log fuel and other expenses against each vehicle, with receipts and a review status." },
+          { "title": "Expense analytics", "text": "See spending by type and by vehicle over time in the dashboard." },
+          { "title": "Downloadable reports", "text": "Export expense reports for accounting or review." },
+          { "title": "Odometer tracking", "text": "Distance comes from the tracker, so cost per kilometre is based on real mileage." }
+        ],
+        "steps": [
+          "Connect a fuel sensor through a supported tracker, or start with expense records alone.",
+          "Upload fuel receipts against each vehicle.",
+          "Review fuel level, spending and distance in the dashboard."
+        ],
+        "screenshot2": "Receipt management list with review status",
+        "faq": [
+          { "title": "Do I need a fuel sensor?", "content": "No. Expense tracking and analytics work without one. A sensor adds the live fuel level." },
+          { "title": "How are fuel receipts handled?", "content": "Receipts are uploaded against the vehicle and then reviewed by your team." },
+          { "title": "Can I export fuel costs?", "content": "Yes. Expense reports can be downloaded for the period you choose." }
+        ]
+      },
+      "proofOfDelivery": {
+        "metaTitle": "Proof of Delivery Software with QR & Signatures",
+        "metaDescription": "Capture proof of delivery with Sleet: QR-coded boxes, pickup and delivery signatures, notes for partial or cancelled orders, and a full status history.",
+        "navTitle": "Proof of Delivery",
+        "cardText": "QR-coded boxes, driver-captured signatures and a status history for every order.",
+        "title": "Proof of Delivery",
+        "heading": "Every box scanned, every delivery signed",
+        "intro": [
+          "Sleet records each step of a delivery, from the warehouse to the customer's door. Boxes carry QR codes, drivers collect signatures at pickup and at drop-off, and every status change is stored with its time.",
+          "When a customer asks what happened to an order, the answer is on screen: who delivered it, when, and who signed for it."
+        ],
+        "screenshot": "Delivery detail with signatures and status history",
+        "challengesTitle": "Paper delivery notes can't answer a customer's question",
+        "challenges": [
+          { "title": "Paper that goes missing", "text": "Signed delivery notes get lost, arrive days later, and can't be searched." },
+          { "title": "\"We never received it\"", "text": "Without a signature and a timestamp, disputed deliveries cost you the goods and the customer." },
+          { "title": "No view of partial deliveries", "text": "Returns and short deliveries are settled by phone and memory." }
+        ],
+        "capabilitiesTitle": "A digital record for every order",
+        "capabilities": [
+          { "title": "QR code per box", "text": "Print QR codes for each box so the right items are loaded and handed over." },
+          { "title": "Pickup and delivery signatures", "text": "Drivers capture a signature when collecting from the warehouse and when delivering to the customer." },
+          { "title": "Partial, returned and cancelled orders", "text": "Record what was delivered, what came back and why, with a note on each case." },
+          { "title": "Status history", "text": "Each order keeps a timeline: at warehouse, at pickup, in route, delivered or cancelled." },
+          { "title": "Driver mobile app", "text": "Drivers start their route, mark arrival and complete deliveries from their phone." },
+          { "title": "Delivery reports", "text": "List and summary reports show completed, cancelled and on-time deliveries." }
+        ],
+        "steps": [
+          "Upload the day's orders from a sheet; Sleet groups them into routes.",
+          "Print the QR codes and load the vehicle.",
+          "The driver delivers each stop and collects a signature on the phone."
+        ],
+        "screenshot2": "QR code sheet for a delivery group",
+        "faq": [
+          { "title": "Do customers need an app to sign?", "content": "No. The signature is captured on the driver's phone at the door." },
+          { "title": "What happens with a partial delivery?", "content": "The driver records it as partial with a note, and the order keeps a count of returns." },
+          { "title": "Can I upload orders in bulk?", "content": "Yes. Orders are uploaded from a sheet and assigned to routes and drivers." }
+        ]
+      },
+      "documentExpiry": {
+        "metaTitle": "Vehicle & Driver Document Expiry Alerts",
+        "metaDescription": "Never miss a renewal: Sleet tracks vehicle registration (istimara) and insurance dates plus driver ID and licence expiry, and flags them 60 days ahead.",
+        "navTitle": "Document Expiry Alerts",
+        "cardText": "Registration, insurance, ID and licence dates flagged before they expire.",
+        "title": "Document Expiry Alerts",
+        "heading": "No vehicle off the road over a missed renewal",
+        "intro": [
+          "An expired registration or insurance policy can take a vehicle off the road and bring fines. Sleet keeps the expiry dates for every vehicle and driver and shows which documents have expired and which are due within the next 60 days.",
+          "Your team gets a notification in the dashboard when a vehicle's document expires, with a link straight to that vehicle."
+        ],
+        "screenshot": "Document Expiry list with Expired and Expiring Soon badges",
+        "challengesTitle": "Renewal dates live in spreadsheets until one is missed",
+        "challenges": [
+          { "title": "Dates scattered everywhere", "text": "Registration, insurance, IDs and licences each expire on a different day for every vehicle and driver." },
+          { "title": "Found out at a checkpoint", "text": "An expired document is often discovered when the vehicle is already stopped." },
+          { "title": "Nobody owns the list", "text": "A spreadsheet only works while someone remembers to open it." }
+        ],
+        "capabilitiesTitle": "One list of what expires next",
+        "capabilities": [
+          { "title": "Vehicle documents", "text": "Track registration and insurance expiry for each vehicle, with the document number and a copy on file." },
+          { "title": "Driver documents", "text": "Track ID or iqama and driving licence expiry for every driver." },
+          { "title": "Expired and expiring soon", "text": "Each document is marked Expired or Expiring Soon, looking 60 days ahead." },
+          { "title": "Dashboard notifications", "text": "Expired vehicle documents raise a notification that opens the vehicle's record." },
+          { "title": "Operating card and service dates", "text": "Keep operating card and service dates on the vehicle record with the rest of its details." }
+        ],
+        "steps": [
+          "Add your vehicles and drivers with their document dates, or import vehicles in bulk.",
+          "Open Document Expiry to see what has expired and what is due soon.",
+          "Renew, update the date, and the item leaves the list."
+        ],
+        "screenshot2": "Vehicle record with registration and insurance details",
+        "faq": [
+          { "title": "Which documents does Sleet track?", "content": "Vehicle registration and insurance, and driver ID or iqama and driving licence. Operating card and service dates are stored on the vehicle record." },
+          { "title": "How far ahead does it warn?", "content": "Documents due within the next 60 days are listed as Expiring Soon." },
+          { "title": "Can I import my vehicles?", "content": "Yes. Vehicles can be added one by one or uploaded in bulk." }
+        ]
+      },
+      "wasl": {
+        "metaTitle": "Wasl Integration for Fleet Tracking",
+        "metaDescription": "Connect your fleet to Wasl through Sleet: register your company, vehicles and drivers, and send live vehicle locations to the Transport General Authority platform.",
+        "navTitle": "Wasl Integration",
+        "cardText": "Register vehicles and drivers with Wasl and report live locations automatically.",
+        "title": "Wasl Integration",
+        "heading": "Stay compliant with Wasl without extra work",
+        "intro": [
+          "Licensed transport companies in Saudi Arabia must report their vehicles' live locations to Wasl, the Transport General Authority's tracking platform. Sleet does this for you from the same dashboard you already use to run your fleet.",
+          "Your company, vehicles and drivers are registered with Wasl once, and every position your trackers send is forwarded automatically."
+        ],
+        "screenshot": "Fleet list with Wasl registration status per vehicle",
+        "challengesTitle": "Compliance shouldn't need a second tracking system",
+        "challenges": [
+          { "title": "Two systems for one fleet", "text": "A separate provider just for Wasl means double the devices, logins and cost." },
+          { "title": "Rejected registrations", "text": "A wrong plate letter or sequence number is rejected, and finding out why takes days." },
+          { "title": "Silent gaps", "text": "If locations stop reaching Wasl, you usually learn about it from a violation." }
+        ],
+        "capabilitiesTitle": "Wasl reporting built into your fleet dashboard",
+        "capabilities": [
+          { "title": "Company registration", "text": "Register your operating company with Wasl from your Sleet settings." },
+          { "title": "Vehicle registration", "text": "Send each vehicle's plate, sequence number and tracker IMEI to Wasl." },
+          { "title": "Driver registration", "text": "Register drivers with their ID or iqama details." },
+          { "title": "Automatic location reporting", "text": "Every position from your trackers is forwarded to Wasl with speed and vehicle status." },
+          { "title": "Status you can see", "text": "Each vehicle and driver shows whether it is registered, pending or rejected, with the reason." },
+          { "title": "Retry on failure", "text": "Failed sends are retried automatically, so a brief outage doesn't leave a gap." }
+        ],
+        "steps": [
+          "Enter your company's commercial registration details and switch Wasl on.",
+          "Sleet registers your vehicles and drivers and shows the result for each.",
+          "Locations are reported to Wasl automatically from then on."
+        ],
+        "screenshot2": "Wasl settings with company registration details",
+        "faq": [
+          { "title": "Who needs Wasl?", "content": "Transport companies licensed by the Transport General Authority, including goods transport and other regulated activities." },
+          { "title": "Do I need new tracking devices?", "content": "Not if your current trackers are supported by Sleet. Send us your device model to confirm." },
+          { "title": "What happens if a registration is rejected?", "content": "The vehicle or driver is marked as rejected with the reason Wasl returned, so you can correct the details and retry." }
+        ]
+      },
+      "ecommerce": {
+        "metaTitle": "Last-Mile Delivery Software for E-commerce & Retail",
+        "metaDescription": "Run retail and e-commerce deliveries in Saudi Arabia with Sleet: bulk order upload, optimised routes, time slots, QR-coded boxes and proof of delivery.",
+        "navTitle": "E-commerce & Retail Delivery",
+        "cardText": "Bulk order upload, optimised routes, time slots and proof of delivery.",
+        "title": "E-commerce & Retail Delivery",
+        "heading": "From a sheet of orders to signed deliveries",
+        "intro": [
+          "Retail and e-commerce delivery is a daily cycle: orders come in, routes are planned, boxes go out, and customers want to know when. Sleet runs that cycle from one dashboard.",
+          "Upload the day's orders, let Sleet group them into optimised routes for your drivers, and follow every box until it is signed for."
+        ],
+        "screenshot": "Dashboard with today's delivery statistics",
+        "challengesTitle": "More orders shouldn't mean more phone calls",
+        "challenges": [
+          { "title": "Routes planned by hand", "text": "Dispatchers sort addresses every morning, and drivers criss-cross the city." },
+          { "title": "\"Where is my order?\"", "text": "Customer service has no answer without calling the driver." },
+          { "title": "Late deliveries nobody measures", "text": "Without on-time figures, the same delays repeat every week." }
+        ],
+        "capabilitiesTitle": "The daily delivery cycle, in one system",
+        "capabilities": [
+          { "title": "Bulk order upload", "text": "Upload orders from a sheet with customer, invoice, box size and time slot." },
+          { "title": "Optimised routes", "text": "Orders are grouped into routes and sequenced for each driver." },
+          { "title": "Morning and evening slots", "text": "Plan deliveries into time slots that match when customers are available." },
+          { "title": "QR-coded boxes", "text": "Each box gets a QR code, so the right items reach the right door." },
+          { "title": "Proof of delivery", "text": "Signatures at pickup and drop-off, with notes for partial or cancelled orders." },
+          { "title": "Delivery performance", "text": "Track on-time rate, average delivery time, successful delivery rate and driver performance." }
+        ],
+        "steps": [
+          "Add your warehouses, customers and drivers.",
+          "Upload each day's orders and let Sleet build the routes.",
+          "Follow deliveries live and review the day's performance."
+        ],
+        "screenshot2": "Live Tracking map with drivers on their routes",
+        "faq": [
+          { "title": "Can I use my existing order sheet?", "content": "Orders are uploaded from a sheet. We'll share the template so your export matches it." },
+          { "title": "Do drivers need special hardware?", "content": "No. Drivers use the Sleet app on their phone." },
+          { "title": "Can I deliver chilled goods?", "content": "Yes. With a temperature sensor on the vehicle, you can watch the load temperature live." }
+        ]
+      },
+      "transport": {
+        "metaTitle": "Fleet Management Software for Transport Companies",
+        "metaDescription": "Fleet management for Saudi transport companies: live GPS and dashcam monitoring, fuel and expense control, document expiry tracking and driver performance.",
+        "navTitle": "Transport & Fleet Companies",
+        "cardText": "Live monitoring, cost control and document tracking for multi-vehicle fleets.",
+        "title": "Transport & Fleet Companies",
+        "heading": "Run every vehicle from one screen",
+        "intro": [
+          "When you operate more than a handful of vehicles, the questions pile up: where is each truck, which ones are idle, what is each costing, and whose documents are about to expire. Sleet answers them in one dashboard.",
+          "It is built for companies that own or rent their vehicles and want to see the whole fleet, not just a map."
+        ],
+        "screenshot": "Monitor page with the whole fleet on the map",
+        "challengesTitle": "A bigger fleet needs more than a tracking app",
+        "challenges": [
+          { "title": "Tracking without context", "text": "A map shows where a vehicle is, not what it costs or whether it is legal to drive." },
+          { "title": "Costs spread across files", "text": "Fuel, maintenance and other expenses live in different places, per vehicle, per month." },
+          { "title": "Everyone sees everything", "text": "Without roles, either the whole team has full access or the manager does it all." }
+        ],
+        "capabilitiesTitle": "Monitoring, cost and compliance together",
+        "capabilities": [
+          { "title": "Live fleet monitoring", "text": "Position, speed, ignition, odometer, fuel and temperature for every vehicle." },
+          { "title": "Dashcam video", "text": "Open a live camera stream from any equipped vehicle." },
+          { "title": "Expenses and receipts", "text": "Record expenses against each vehicle, review them and download reports." },
+          { "title": "Document expiry", "text": "See expired and soon-to-expire registration, insurance, IDs and licences." },
+          { "title": "Owned and rented vehicles", "text": "Keep owned, rental and other vehicles in one list, with status and activity logs." },
+          { "title": "Roles and permissions", "text": "Give each employee access to only what their job needs." }
+        ],
+        "steps": [
+          "Add your vehicles and drivers, one by one or in bulk.",
+          "Assign a tracking device to each vehicle.",
+          "Invite your team with the right roles and start monitoring."
+        ],
+        "screenshot2": "Fleet list with status and logs",
+        "faq": [
+          { "title": "How many vehicles can Sleet handle?", "content": "Sleet works for small fleets and scales as you add vehicles. Tell us your fleet size and we'll walk you through it." },
+          { "title": "Can I use my existing trackers?", "content": "Often, yes. Send us the device model and we'll confirm whether it can connect." },
+          { "title": "Can each branch or team have its own access?", "content": "Yes. Roles and permissions control what each employee can see and do." }
+        ]
+      }
+    }
+  },
   "errorPage": {
     "pageTitle": "Sleet Logistics",
     "pageSub": "404",
@@ -335,6 +695,7 @@
     "addressText": "Street 1b, Al Khaleej road, Al Muhammadiyah, Dammam",
     "services": "Services",
     "usefulLinks": "Useful links",
+    "features": "Features",
     "termsConditions": "Terms & Conditions",
     "contactUs": "Contact Us",
     "privacyPolicy": "Privacy Policy",

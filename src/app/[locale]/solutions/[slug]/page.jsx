@@ -22,15 +22,17 @@ export async function generateMetadata({ params }) {
 
   const t = await getTranslations({ locale, namespace: "servicesData" });
   const dataKey = service.key;
-  const title = t(`${dataKey}.title`);
-  const description = t(`${dataKey}.description`);
+  // metaTitle/metaDescription are written for search results (keyword-led,
+  // length-limited); the on-page title and description stay as they are.
+  const title = `${t(`${dataKey}.metaTitle`)} | Sleet`;
+  const description = t(`${dataKey}.metaDescription`);
   const keywords = t(`${dataKey}.keywords`);
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords,
-    alternates: localeAlternates(`/service-single/${slug}`),
+    alternates: localeAlternates(`/solutions/${slug}`, locale),
     openGraph: {
       title,
       description,

@@ -79,10 +79,10 @@ const ServiceSectionS3 = (props) => {
                                 <service.Icon />
                             </div>
                             <div className="content">
-                                <h2><Link href={`/service-single/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
+                                <h2><Link href={`/solutions/${service.slug}`} onClick={ClickHandler}>{t(`servicesData.${service.key}.title`)}</Link></h2>
                                 <p>{t(`servicesData.${service.key}.description`)}</p>
                                 <div className="services-btn">
-                                    <Link href={`/service-single/${service.slug}`} onClick={ClickHandler}>{service.isCommingSoon ? t('serviceSingle.notifyMe') : t('common.seeDetails')} </Link>
+                                    <Link href={`/solutions/${service.slug}`} onClick={ClickHandler}>{service.isCommingSoon ? t('serviceSingle.notifyMe') : t('common.seeDetails')} </Link>
                                 </div>
                             </div>
                             <div className="top-shape">

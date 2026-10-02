@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
     },
     description: t("home.description"),
     keywords: t("home.keywords"),
-    alternates: localeAlternates(""),
+    alternates: localeAlternates("", locale),
     robots: {
       index: true,
       follow: true,
@@ -76,16 +76,46 @@ export default async function LocaleLayout({ children, params }) {
   const messages = await getMessages();
   const dir = locale === "ar" ? "rtl" : "ltr";
 
-  const organizationJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Sleet Logistics",
-    alternateName: "Sleet Automation Logistics",
-    url: metadataBase.toString(),
-    logo: new URL("/icon.png", metadataBase).toString(),
-    description:
-      "Sleet Automation Logistics is an all-in-one logistics technology platform combining intelligent fleet management, SaaS solutions, AI-powered automation, and a digital truck marketplace for goods delivery.",
-  };
+  const t = await getTranslations({ locale, namespace: "meta" });
+  const siteUrl = new URL(`/${locale}`, metadataBase).toString();
+
+  const organizationJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": `${metadataBase.toString()}#organization`,
+      name: "Sleet Logistics",
+      alternateName: "Sleet Automation Logistics",
+      url: siteUrl,
+      logo: new URL("/icon.png", metadataBase).toString(),
+      description: t("home.description"),
+      email: "mohammad@sleet.sa",
+      telephone: "+966537750600",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Street 1b, Al Khaleej Road, Al Muhammadiyah",
+        addressLocality: "Dammam",
+        addressCountry: "SA",
+      },
+      areaServed: { "@type": "Country", name: "Saudi Arabia" },
+      sameAs: [
+        "https://www.linkedin.com/company/sleet-sa/",
+        "https://www.instagram.com/sleet.sa/",
+        "https://x.com/sleet_sa",
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "Sleet",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      url: siteUrl,
+      description: t("home.description"),
+      inLanguage: locale,
+      publisher: { "@id": `${metadataBase.toString()}#organization` },
+    },
+  ];
 
   return (
     <html

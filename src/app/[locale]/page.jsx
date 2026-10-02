@@ -7,10 +7,12 @@ export async function generateMetadata({ params }) {
   const t = await getTranslations({ locale, namespace: "meta" });
 
   return {
-    title: t("home.title"),
+    // absolute: the home title already ends with the brand, so the layout's
+    // "%s | Sleet Logistics" template must not be appended to it
+    title: { absolute: t("home.title") },
     description: t("home.description"),
     keywords: t("home.keywords"),
-    alternates: localeAlternates(""),
+    alternates: localeAlternates("", locale),
     authors: [{ name: "Sleet Logistics" }],
     openGraph: {
       title: t("home.title"),

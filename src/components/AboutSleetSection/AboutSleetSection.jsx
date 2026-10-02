@@ -42,7 +42,7 @@ const AboutSleetSection = (props) => {
                     <div className="col-lg-6 col-12">
                         <div className="about-sleet-grid">
                             {Services.map((service, index) => (
-                                <Link href={`/service-single/${service.slug}`} onClick={ClickHandler} className={"about-sleet-card" + (service.isCommingSoon ? " is-coming-soon" : "")} key={index}>
+                                <Link href={`/solutions/${service.slug}`} onClick={ClickHandler} className={"about-sleet-card" + (service.isCommingSoon ? " is-coming-soon" : "")} key={index}>
                                     {service.isCommingSoon && <span className="soon-tag">{t('serviceSingle.comingSoon')}</span>}
                                     <service.Icon />
                                     <h3>{t(`servicesData.${service.key}.title`)}</h3>
